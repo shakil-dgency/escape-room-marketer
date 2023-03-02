@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Genos:wght@600&family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@500;600;700&family=Permanent+Marker&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow-x: hidden;
+  
+}
+.g-page_structure{
+  padding: 0 20%;
+
+}
+
+
+@media only screen and (max-width: 480px) {
+  .g-page_structure{
+    padding: 0 15px;
+  
+  }
+}
+.image{
+  /* position: absolute; */
+  /* height: 75px; */
+  /* background-repeat: repeat-x; */
+  /* background-repeat: repeat-x; */
+  /* background-size: 1600px 80px; */
+  /* z-index: 20; */
+  /* background-position-x: center;  */
+}
