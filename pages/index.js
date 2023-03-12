@@ -1,3 +1,4 @@
+ "use client"
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
@@ -5,6 +6,7 @@ import { RiErrorWarningFill } from "react-icons/ri";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import Image from "next/image";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -66,10 +68,10 @@ export default function Home() {
 					</div>
 					<div className="section-img flex justify-center">
 						<div ref={myRef} className=" md:h-[400px] md:w-[600px] relative">
-							<img src="/multiple-marketing.jpg" className="h-[400px] w-[600px] mt-4 " alt="" />
+							<img src="/multiple-marketing.jpg" className="md:h-[400px] md:w-[600px] mt-4 " alt="" />
 							<div className="cta-mobileresponsive flex md:flex-none flex-col gap-4">
 								<div className={`${myElementIsVisible ? styles.cta : ""}`}>
-									<div className="overflow-hidden rounded  shadow-[0px_0px_40px_5px_rgba(0,0,0,0.2)]  pl-3 pr-8 block md:absolute top-6 left-0 md:translate-x-[-80%] bg-white  md:bg-[#ececec]   ">
+									<div className="overflow-hidden rounded  shadow pl-3 pr-8 block md:absolute top-6 left-0 md:translate-x-[-80%] bg-white ">
 										<div className="flex items-center gap-3">
 											<RiErrorWarningFill className={`${myElementIsVisible ? styles.error_warning : ""}`} />
 											<div className={`${myElementIsVisible ? styles.text_wrapper : ""}`}>
@@ -80,7 +82,7 @@ export default function Home() {
 									</div>
 								</div>
 								<div className={`${myElementIsVisible ? styles.cta : ""}`}>
-									<div className="rounded shadow-[0px_0px_40px_5px_rgba(0,0,0,0.2)]  pl-3 pr-8 md:absolute top-6 right-0  md:translate-x-[80%] bg-white  md:bg-[#ececec]  ">
+									<div className="rounded shadow  pl-3 pr-8 md:absolute top-6 right-0  md:translate-x-[80%] bg-white ">
 										<div className="flex items-center gap-3">
 											<RiErrorWarningFill className={`${myElementIsVisible ? styles.error_warning : ""}`} />
 											<div className={`${myElementIsVisible ? styles.text_wrapper : ""}`}>
@@ -91,7 +93,7 @@ export default function Home() {
 									</div>
 								</div>
 								<div className={`${myElementIsVisible ? styles.cta : ""}`}>
-									<div className="rounded shadow-[0px_0px_40px_5px_rgba(0,0,0,0.2)]  pl-3 pr-8 md:absolute bottom-8 left-0 md:translate-x-[-80%] bg-white  md:bg-[#ececec]  ">
+									<div className="rounded shadow  pl-3 pr-8 md:absolute bottom-8 left-0 md:translate-x-[-80%] bg-white ">
 										<div className="flex items-center gap-3">
 											<RiErrorWarningFill className={`${myElementIsVisible ? styles.error_warning : ""}`} />
 											<div className={`${myElementIsVisible ? styles.text_wrapper : ""}`}>
@@ -102,7 +104,7 @@ export default function Home() {
 									</div>
 								</div>
 								<div className={`${myElementIsVisible ? styles.cta : ""}`}>
-									<div className="rounded shadow-[0px_0px_40px_5px_rgba(0,0,0,0.2)] pl-3 pr-8 md:absolute bottom-8 right-0  md:translate-x-[80%] bg-white  md:bg-[#ececec] ">
+									<div className="rounded shadow pl-3 pr-8 md:absolute bottom-8 right-0  md:translate-x-[80%] bg-white ">
 										<div className="flex items-center gap-3">
 											<RiErrorWarningFill className={`${myElementIsVisible ? styles.error_warning : ""}`} />
 											<div className={`${myElementIsVisible ? styles.text_wrapper : ""}`}>
@@ -219,7 +221,7 @@ export default function Home() {
 							Outsource all your marketing to us or have us help your internal team get better. You choose the style of engagement.
 						</p>
 					</div>
-					<div className="q-card mt-10 md:mt-20 grid gap-x-20 gap-y-12 md:grid-cols-2">
+					<div className="q-card mb-8 mt-10 md:mt-20 grid gap-x-20 gap-y-12 md:grid-cols-2">
 						<div className="px-10 pt-10 pb-4 md:col-span-2 rounded bg-white shadow-md  grid md:grid-cols-2 items-center">
 							<div className=" text-center ">
 								<p className="font-bold text-xl">Ongoing Expert Management</p>
@@ -255,18 +257,145 @@ export default function Home() {
 							<img src="/Speedometer.svg" alt="" className="mt-6 w-" />
 						</div>
 					</div>
-					<Link href={"/"} className="group flex items-center justify-center gap-4 text-2xl list-none text-red-500 mt-12 pb-8">
-						<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
-							<p className="font-medium text-center leading-[0px] px-4">
-								Let us know which partnership you prefer
-								<span class="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
-							</p>
-							{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 absolute right-0 translate-y-[-90%] translate-x-[-250%] md:static" /> */}
-						</Link>
-						{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 mt-2" /> */}
+
+					<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
+						<p className="font-medium pb-8 text-center leading-[0px] px-4">
+							Let us know which partnership you prefer
+							<span class="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
+						</p>
+						{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 absolute right-0 translate-y-[-90%] translate-x-[-250%] md:static" /> */}
 					</Link>
+					{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 mt-2" /> */}
 				</div>
 				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center   rotate-180 bg-[#FAFAFA]"></div>
+				<div className="custom_marketing_plan g-page_structure">
+					<div className="main-content  m-auto">
+						<h1 className="text-center md:px-16 md:pt-14 pt-4 text-xl md:text-3xl xl:text-5xl font-bold">
+							Your Custom Marketing Plan Shows The Exact Steps We’ll Take To Hit Your Goals
+						</h1>
+						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-6">
+							Get years of data-driven experimentation, through hundreds of millions of marketing spend, across thousands of companies, absolutely
+							free.
+						</p>
+					</div>
+					<div className="flex justify-center my-10">
+						<Image src="/proposal-manila-folder.svg" width={400} height={400} />
+					</div>
+					<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
+						<p className="font-medium pb-8 text-center leading-[0px] px-4 mb-10">
+							See what we`d fix, how we`d fix it, and what it`d cost
+							<span class="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
+						</p>
+					</Link>
+				</div>
+				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-6 bg-[#FAFAFA] "></div>
+				<div className="dedicated_marketing_team g-page_structure bg-[#FAFAFA] ">
+					<div className="main-content  m-auto">
+						<h1 className="text-center md:px-16 md:pt-14 pt-4 text-xl md:text-3xl xl:text-5xl font-bold">
+							Meet Your Dedicated Marketing Team Before You Start Working With Us
+						</h1>
+						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-6">
+							Grill us on our approach and make sure you`ve got the right people working with you before you pay us a penny.
+						</p>
+					</div>
+					<div className="flex justify-center my-10">
+						<Image src="/TeamInABox.webp" width={400} height={400} className="" />
+					</div>
+					<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
+						<p className="font-medium pb-8 text-center leading-[0px] px-4 ">
+							See what we`d fix, how we`d fix it, and what it`d cost
+							<span class="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
+						</p>
+					</Link>
+				</div>
+				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center  rotate-180 bg-[#FAFAFA] "></div>
+				<div className="big_goals g-page_structure relative">
+					<div className="main-content  m-auto">
+						<h1 className="text-center md:px-16 md:pt-8 md:text-3xl xl:text-5xl font-bold">
+							Like Your Big Goals, Your Team Will Be Surprisingly Easy To Reach
+						</h1>
+						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
+							You tell us how (and how often) you want to communicate. We`ll connect the way you prefer.
+						</p>
+					</div>
+					<div className="q-card mb-8 mt-10 md:mt-20 grid gap-x-20 gap-y-12 md:grid-cols-2">
+						<div className="px-10 pt-10 pb-4 md:col-span-2 rounded bg-white shadow-2xl  grid md:grid-cols-2 items-center">
+							<div className=" text-center ">
+								<p className="font-bold text-xl">BoostFlow</p>
+								<p className="text-lg mt-2">
+									See past experiments, what we’re working on today, and what we plan for the future. We score, track, and prioritize marketing
+									experiments in a process we call BoostFlow™ that you get access to.
+								</p>
+							</div>
+							<img src="/Boostflow.svg" alt="" className="mt-6 " />
+						</div>
+						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-2xl">
+							<p className="font-bold text-xl text-center">Reporting Dashboards</p>
+							<p className="text-lg pt-2 text-center">
+								See all your important metrics for all your acquisition channels at a glance, while being able to change the date ranges as well.
+							</p>
+							<img src="/MagGlass.svg" alt="" className="mt-6 w-" />
+						</div>
+						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-2xl">
+							<p className="font-bold text-xl text-center">Quarterly Business Reviews</p>
+							<p className="text-lg pt-2 text-center">
+								Get detailed analysis of winning and losing experiments in relation to your goals. We’ll also share future strategies and tactics.
+							</p>
+							<img src="/Hardhat.svg" alt="" className="mt-6 w-" />
+						</div>
+						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-2xl">
+							<p className="font-bold text-xl text-center">Email Updates</p>
+							<p className="text-lg pt-2 text-center">
+								Got questions that need faster answers? Email us at any time and we’ll reply to make sure you have everything you need.
+							</p>
+							<img src="/SpeechBubbles.svg" alt="" className="mt-6 w-" />
+						</div>
+						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-2xl">
+							<p className="font-bold text-xl text-center">Scheduled Calls</p>
+							<p className="text-lg pt-2 text-center">
+								We’ll set ongoing time aside to keep you in the loop and get feedback from you on which things to prioritize and plan for.
+							</p>
+							<img src="/Speedometer.svg" alt="" className="mt-6 w-" />
+						</div>
+					</div>
+
+					<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
+						<p className="font-medium pb-8 text-center leading-[0px] px-4">
+							See live examples of our reporting and communication in your marketing plan
+							<span class="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
+						</p>
+						{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 absolute right-0 translate-y-[-90%] translate-x-[-250%] md:static" /> */}
+					</Link>
+					{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 mt-2" /> */}
+				</div>
+				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center"></div>
+				<div className="better_perform g-page_structure">
+					<div className="main-content  m-auto">
+						<h1 className="text-center md:px-16 md:pt-8 md:text-3xl xl:text-5xl font-bold">Your Marketing Will Perform Better With Us</h1>
+						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
+							Your custom marketing plan from us will beat your current one. Here`s why...
+						</p>
+					</div>
+					<div className="flex flex-col md:flex-row gap-8 md:gap-4 lg:gap-0 justify-around items-center pt-8">
+						<p className="text-center text-xl xl:px-36">
+							You’ll get insider knowledge around what <b>new marketing strategies and tactics</b> perform best across 250+ other companies.
+						</p>
+						<Image src="/game-plan.svg" alt="" width={300} height={100} className="w-[200px] lg:w-[300px]" />
+					</div>
+					<div className="flex md:flex-row-reverse flex-col md:flex-row gap-8 md:gap-4 lg:gap-0 justify-around items-center pt-8">
+						<p className="text-center text-xl xl:px-36">
+							You’ll get insider knowledge around what <b>new marketing strategies and tactics</b> perform best across 250+ other companies.
+						</p>
+						<Image src="/brain.svg" alt="" width={300} height={100} className="w-[200px] lg:w-[300px]" />
+					</div>
+				</div>
+				<div className=" w-full  bg-repeat pt-12">
+					<h1 className="text-center mt-6 font-bold text-5xl ">Better Marketing Performance <br /> Is Ready For You - Are You?</h1>
+					<div className="flex justify-center mt-10">
+						<button className="bg-[#ff5056] py-3 px-5 text-white lg:text-lg 2xl:text-2xl rounded font-semibold">Get Your Free Marketing Plan</button>
+					</div>
+					
+				</div>
 			</main>
 		</>
 	);

@@ -19,6 +19,12 @@ body{
   
   }
 }
+@media only screen and (max-width: 1536px)  and (min-width: 480px) {
+  .g-page_structure{
+    padding: 0 100px;
+  
+  }
+}
 .image{
   /* position: absolute; */
   /* height: 75px; */
@@ -27,4 +33,9 @@ body{
   /* background-size: 1600px 80px; */
   /* z-index: 20; */
   /* background-position-x: center;  */
+}
+
+/* chakra skeleton component used in form loading */
+.chakra-skeleton{
+  animation-duration: 0.9s !important;
 }
