@@ -11,6 +11,10 @@ body{
   padding: 0 20%;
 
 }
+/* navbar */
+.serveice_list:hover{
+   color: #ff5056;
+}
 
 
 @media only screen and (max-width: 480px) {
@@ -38,4 +42,85 @@ body{
 /* chakra skeleton component used in form loading */
 .chakra-skeleton{
   animation-duration: 0.9s !important;
+}
+
+
+.serveice_popup{
+  transform: scale(0.5);
+  animation: popup  1s forwards ;
+}
+@keyframes popup {
+  to {
+     transform: scale(1);
+  }
+}
+
+
+/* serveice section */
+.cta{
+  opacity: 0;
+  background:  #FAFAFA;
+ animation: animate-cta 1s forwards cubic-bezier(0.85,0,0.15,1);
+}
+
+@keyframes animate-cta {
+  to {
+     opacity: 1;
+  }
+}
+
+.text_wrapper{
+  transform: translateX(calc(-100% - 2.8rem));
+  animation: text-slide  1s forwards ;
+}
+@keyframes text-slide {
+  to {
+     transform: translateX(0%);
+  }
+}
+
+.error_warning{
+  fill: red;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transform: translateY(calc(-100% - 70px));
+  animation: error-slide 1s 0.2s forwards cubic-bezier(0.85,0,0.15,1);  
+}
+
+.error_warning :hover {
+  fill: rgb(255, 78, 78)
+}
+
+@keyframes error-slide {
+
+  60% {
+     transform: translateY(20%);
+  }
+  80% {
+     transform: translateY(-20%);
+  }
+  100% {
+     transform: translateY(0%);
+  }
+}
+
+
+
+@font-face {
+  src: url('../public/font/file/CircularStd-Black.otf');
+  font-family: 'CircularStd';
+}
+@font-face {
+  src: url('../public/font/Graphik-Font-Family/GraphikRegular.otf');
+  font-family: 'GraphikRegular';
+}
+
+
+.logomain{
+  font-family: CircularStd;
+}
+.fontTest{
+  font-family: GraphikRegular ;
+  font-size: 22px;
+  line-height: 37px;
 }

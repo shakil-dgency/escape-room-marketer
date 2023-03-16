@@ -1,4 +1,4 @@
- "use client"
+"use client";
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
@@ -7,6 +7,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import Image from "next/image";
+import DedicatedTeam from "@/components/DedicatedTeam";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -40,10 +41,10 @@ export default function Home() {
 						/>
 					</div>
 					<div className="text-container  m-auto">
-						<h1 className=" text-center md:px-16 pt-4 md:pt-10 text-2xl md:text-3xl xl:text-5xl font-extrabold ">
+						<h1 className="logomain text-center md:px-16 pt-4 md:pt-10 text-2xl md:text-3xl xl:text-5xl font-extrabold ">
 							The Performance Marketing Agency That Moves Fast & Breaks Things
 						</h1>
-						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto pt-4">
+						<p className="fontTest  text-center md:px-36 m-auto pt-4">
 							Like sales records, plateaus, and your competitors hearts. The only things we don`t break? Our promises and the bank.
 						</p>
 						<div className="flex justify-center mt-6">
@@ -51,7 +52,7 @@ export default function Home() {
 								Get Your Free Marketing Plan
 							</button>
 						</div>
-						<p className="md:text-sm 2xl:text-xl font-medium text-center md:w-[30%] m-auto pt-4 pb-6 md:py-6">
+						<p className="fontTest  font-medium text-center md:w-[30%] m-auto pt-4 pb-6 md:py-6">
 							Get 17+ new marketing ideas that are better than what you have
 						</p>
 					</div>
@@ -150,7 +151,7 @@ export default function Home() {
 					<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
 						<p className="font-medium text-center leading-[0px]">
 							Check out some of the 617+ client wins we`ve published
-							<span class="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
+							<span className="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
 						</p>
 						{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 absolute right-0 translate-y-[-90%] translate-x-[-250%] md:static" /> */}
 					</Link>
@@ -289,18 +290,12 @@ export default function Home() {
 					</Link>
 				</div>
 				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-6 bg-[#FAFAFA] "></div>
-				<div className="dedicated_marketing_team g-page_structure bg-[#FAFAFA] ">
-					<div className="main-content  m-auto">
-						<h1 className="text-center md:px-16 md:pt-14 pt-4 text-xl md:text-3xl xl:text-5xl font-bold">
-							Meet Your Dedicated Marketing Team Before You Start Working With Us
-						</h1>
-						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-6">
-							Grill us on our approach and make sure you`ve got the right people working with you before you pay us a penny.
-						</p>
-					</div>
-					<div className="flex justify-center my-10">
-						<Image src="/TeamInABox.webp" width={400} height={400} className="" />
-					</div>
+				<div className="dedicated_marketing_team bg-[#fafafa]">
+					<DedicatedTeam
+						bodyColor="bg-[#fafafa]"
+						title="Meet Your Dedicated Marketing Team Before You Start Working With Us"
+						pera="Grill us on our approach and make sure you've got the right people working with you before you pay us a penny."
+					/>
 					<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
 						<p className="font-medium pb-8 text-center leading-[0px] px-4 ">
 							See what we`d fix, how we`d fix it, and what it`d cost
@@ -390,11 +385,12 @@ export default function Home() {
 					</div>
 				</div>
 				<div className=" w-full  bg-repeat pt-12">
-					<h1 className="text-center mt-6 font-bold text-5xl ">Better Marketing Performance <br /> Is Ready For You - Are You?</h1>
+					<h1 className="text-center mt-6 font-bold text-5xl ">
+						Better Marketing Performance <br /> Is Ready For You - Are You?
+					</h1>
 					<div className="flex justify-center mt-10">
 						<button className="bg-[#ff5056] py-3 px-5 text-white lg:text-lg 2xl:text-2xl rounded font-semibold">Get Your Free Marketing Plan</button>
 					</div>
-					
 				</div>
 			</main>
 		</>
