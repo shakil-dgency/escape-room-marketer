@@ -62,7 +62,7 @@ function Navbar() {
 								<Link href={"/serveice/facebookAdsAgency"} className="serveice_list">Facebook Ads Agency</Link> <br />
 								<Link href={"/serveice/googleAdsAgency"} className="serveice_list ">Google Ads Agency</Link> <br />
 								<Link href={'/serveice/semAgency'} className="serveice_list">SEM Agency</Link> <br />
-								<Link href={'/'} className="serveice_list">PPC Management</Link>
+								<Link href={'/serveice/ppcManagement'} className="serveice_list">PPC Management</Link>
 							</ul>
 							<ul className="flex-1">
 								<h3 className=" text-[16px] font-semibold ">SEO</h3>
