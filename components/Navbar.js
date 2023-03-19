@@ -66,9 +66,9 @@ function Navbar() {
 							</ul>
 							<ul className="flex-1">
 								<h3 className=" text-[16px] font-semibold ">SEO</h3>
-								<li className="serveice_list pt-2">Content Marketing Agency</li>
-								<li className="">SEO Agency</li>
-								<li className="">Link Building Services</li>
+								<li><Link href={"/serveice/contentMarketingAgency"} className="serveice_list pt-2">Content Marketing Agency</Link></li>
+								<li><Link href={"/serveice/seoAgency"} className="serveice_list">SEO Agency</Link></li>
+								<li><Link href={"/"} className="serveice_list">Link Building Services</Link></li>
 							</ul>
 							<ul className="flex-1">
 								<h3 className=" text-[16px] font-semibold ">CONVERSION</h3>

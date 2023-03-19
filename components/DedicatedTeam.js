@@ -14,7 +14,7 @@ function DedicatedTeam({bodyColor, title ,pera}) {
 						{pera}
 					</p>
 				</div>
-				<div className="flex justify-center my-10 ">
+				<div className="flex justify-center py-10 ">
 					<Image src="/TeamInABox.webp" alt="" width={400} height={400} className="" />
 				</div>
 			</div>

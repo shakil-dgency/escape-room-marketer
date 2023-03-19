@@ -1,0 +1,24 @@
+{
+	"head_message": {
+		"heading": "SEO Is A Long Game And We're Here To Play It",
+		"text_line": "Why SEO? It increases organic traffic, drives more leads, gets you to the top of the Google SERP, and helps you create content that people love."
+	},
+
+	"card_content": [
+			{
+				"heading": "The Absolute Best SEO Experts",
+				"pera": "With over 300 case studies & 750+ 5 star reviews, we’ll take your PPC advertising & ad campaigns to the next level. Get new digital marketing wins with us.",
+				"image": "ppcAgency/ppc-agency-illustration-01.svg"
+			},
+			{
+				"heading": "Marketing Strategy Wins",
+				"pera": "Be more confident with your Google Ads (aka AdWords), social media, and eCommerce ad campaigns when you work with the best team that has the best tools.",
+				"image": "ppcAgency/Keyword-Research-Ad-Copy-Tools.svg"
+			},
+			{
+				"heading": "A Multitude Of SEO Services",
+				"pera": "Take your PPC campaigns higher beyond paid search. Achieve your SaaS, lead gen, or eCommerce goals through ad campaigns on the leading social media platforms.",
+				"image": "ppcAgency/Social-Media-eCommerce-Growth.svg"
+			}
+		]
+}
