@@ -1,17 +1,19 @@
-import DedicatedTeam from '@/components/DedicatedTeam';
-import KeyServeice from '@/components/KeyServeice';
-import ConversionMarketing from '@/components/serveice/ConversionMarketing';
-import FaqSection from '@/components/serveice/FaqSection';
-import Hero from '@/components/serveice/Hero';
-import ListOfServeice from '@/components/serveice/ListOfServeice';
-import MarketingCompanies from '@/components/serveice/MarketingCompanies';
-import MarketingPlanCta from '@/components/serveice/MarketingPlanCta';
-import OthersSite from '@/components/serveice/OthersSite';
-import OurWork from '@/components/serveice/OurWork';
-import Payperclick from '@/components/serveice/Payperclick';
-import React, { useState } from 'react'
+import Hero from "@/components/service/hero";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Payperclick from "@/components/service/Payperclick";
+import MarketingCompanies from "@/components/service/MarketingCompanies";
+import KeyServeice from "@/components/KeyServeice";
+import { useRouter } from "next/router";
+import MarketingPlanCta from "@/components/service/MarketingPlanCta";
+import OthersSite from "@/components/service/OthersSite";
+import ConversionMarketing from "@/components/service/ConversionMarketing";
+import DedicatedTeam from "@/components/DedicatedTeam";
+import FaqSection from "@/components/service/FaqSection";
+import OurWork from "@/components/service/OurWork";
+import ListOfServeice from "@/components/service/ListOfServeice";
 
-function PpcManagement(props) {
+function PpcAgency(props) {
 	const [companies, setCompanies] = useState(props.companiesData);
 	const [keyserveice, setKeyserveice] = useState(props.keyServeice);
 	const [faqSection, setFaqSection] = useState(props.faqData);
@@ -28,11 +30,10 @@ function PpcManagement(props) {
 	return (
 		<div>
 			<Hero
-				firstPic="ppcManagement/illo-MoneyTree1.svg"
-				secondPic="ppcManagement/illo-MoneyTree1.svg"
-				title="Our PPC Management Is The Tree That Money Grows On"
-				pera="Yes, your parents lied to you. We also have
-                better performing PPC campaigns & PPC ads."
+				firstPic="HappyPockets-L-updated.svg"
+				secondPic="HappyPockets-R-updated.svg"
+				title="We’re The PPC Agency That Puts More Dollars In Your Pocket"
+				pera="Increase your conversion rates to lower your cost per conversion and get a higher conversion volume. All leading to more revenue as well."
 			/>
 			<OurWork ourWorkData={ourWork}/>
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa]"></div>
@@ -77,20 +78,20 @@ export async function getServerSideProps(context) {
 	let data = await fetch("http://localhost:3000/api/companies?slug=ppcAgency");
 	let companiesData = await data.json();
 
-	let keyserveicedata = await fetch("http://localhost:3000/api/keyserveice?slug=ppcManagement");
+	let keyserveicedata = await fetch("http://localhost:3000/api/keyserveice?slug=ppcAgency");
 	let keyServeice = await keyserveicedata.json();
 
-	let faqSectiondata = await fetch("http://localhost:3000/api/faqsection?slug=ppcManagement");
+	let faqSectiondata = await fetch("http://localhost:3000/api/faqsection?slug=ppcAgency");
 	let faqData = await faqSectiondata.json();
 
-	let ourWorkData = await fetch('http://localhost:3000/api/ourwork?slug=ppcManagement')
+	let ourWorkData = await fetch('http://localhost:3000/api/ourwork?slug=ppcAgency')
     let ourWork = await ourWorkData.json()
 
-	let listOfServeice = await fetch("http://localhost:3000/api/listofserveice?slug=ppcManagement");
+	let listOfServeice = await fetch("http://localhost:3000/api/listofserveice?slug=ppcAgency");
 	let listOfServeiceData = await listOfServeice.json();
 	return {
 		props: { companiesData, keyServeice, faqData,ourWork,listOfServeiceData }, // will be passed to the page component as props
 	};
 }
 
-export default PpcManagement
+export default PpcAgency;

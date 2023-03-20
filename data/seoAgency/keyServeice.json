@@ -1,0 +1,38 @@
+{
+	"head_message": {
+		"heading": "One-Size-Fits-All Is For Baseball Caps & Parachute Pants, That Ain’t Us",
+		"text_line": "We know every business is different, so we offer multiple ways to work together."
+	},
+
+	"card_content": {
+		"first_card": 	{
+			"heading": "Ongoing SEO Management",
+			"pera": "We’ll handle all your content marketing and report the performance directly to you.",
+			"image": "/wateringCan.svg"
+		},
+
+		"others_card": [
+			{
+				"heading": "One-Time SEO Audit",
+				"pera": "We’ll give you a prioritized list of new experiments that you run.",
+				"image": "/MagGlass.svg"
+			},
+			{
+				"heading": "Ongoing SEO Consulting",
+				"pera": "Avoid expensive mistakes and wasted time. Let us build it for you.",
+				"image": "/Hardhat.svg"
+			},
+			{
+				"heading": "One-Time SEO Setup",
+				"pera": "We’ll give you the ongoing strategies and tactics for you to implement to increase metrics.",
+				"image": "/SpeechBubbles.svg"
+			},
+			{
+				"heading": "Just SEO Performance",
+				"pera": "Revenue share agreement with more upside for us, less risk for you.",
+				"image": "/Speedometer.svg"
+			}
+		]
+
+	}
+}

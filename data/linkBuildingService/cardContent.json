@@ -1,63 +1,54 @@
 {
     "head_message": {
-		"heading": "The Content We Throw Away Is Better Than What Most People Publish",
-		"text_line": "Deep, compelling, data-driven content that drives more value for readers and higher conversion rates for you."
+		"heading": "Better Content = Better Links, & We’ll Help You With Both",
+		"text_line": "We’ll custom create link-worthy content that you can use for SEO and your other marketing channels too."
 	},
     "cards":[
         
         {
             "id":1,
             "title":"Blog Posts",
-            "image":"illo-BlogPosts.svg"
-           
+            "image":"illo-BlogPosts.svg" 
         },
         {
             "id":2,
             "title":"Infographics",
-            "image":"illo-Infographics.svg"
-            
+            "image":"illo-Infographics.svg"  
         },
         {
             "id":3,
              "title":"Checklists",
             "image":"illo-Checklists.svg"
-            
         },
         {
             "id":4,
              "title":"eBooks",
             "image":"illo-eBooks.svg"
-           
         },
         {
             "id":5,
              "title":"Whitepapers",
             "image":"illo-WhitePapers.svg"
-        
         },
         {
             "id":6,
              "title":"Case Studies",
-            "image":"illo-CaseStudies.svg"
-           
+            "image":"illo-CaseStudies.svg"   
         },
         {
             "id":7,
              "title":"Reviews",
             "image":"illo-Reviews.svg"
-           
         },
         {
             "id":8,
              "title":"How-to Guides",
-            "image":"illo-HowToGuides.svg"
-           
+            "image":"illo-HowToGuides.svg"  
         },
         {
             "id":9,
              "title":"Guest Posts",
             "image":"illo-GuestPosts.svg"
-         
         }
     ]
 

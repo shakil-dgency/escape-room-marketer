@@ -9,15 +9,25 @@ function Navbar() {
 	const [toggle, setToggle] = useState(false)
 	const serveiceRef = useRef()
     const handlePopup = (e)=>{
-		 console.log(document.getElementsByClassName('serveice_list'));
+		let _id 
+		//  console.log(document.getElementsByClassName('serveice_list'));
 		 let serveiceClick = document.getElementsByClassName('serveice_list')
 		 for (var i = 0 ; i < serveiceClick.length; i++) {
-
-			 serveiceClick[i].addEventListener('click', function(){
-				console.log("click");
+			
+			 serveiceClick[i].addEventListener('click', function(E){
 				serveiceRef.current.classList.add('hidden');
-				e.target.children[0].classList.remove('rotate-180')
+				e.target.children[0].classList.remove('rotate-180');
+				if(_id){
+					serveiceClick[_id].classList.remove('text-red-500')
+				}
+				_id = E.target.id
+				this.classList.add('text-red-500')
 			});
+			// if(i==_id){
+			// 	serveiceClick[i].classList.remove('text-red-500')
+			// }
+			
+			
 		 }
 
 		if(serveiceRef.current.classList.contains('hidden')){
@@ -55,30 +65,30 @@ function Navbar() {
 						</Link>
 						<HiMenu className="text-2xl md:hidden" />
 
-						<div ref={serveiceRef} className="serveice_popup hidden  shadow md:px-6 md:py-4 rounded absolute -left-8 -bottom-48 z-30 bg-white ">
+						<div ref={serveiceRef} className="serveice_popup hidden gap-5  shadow md:px-6 md:py-4 rounded absolute -left-8 -bottom-48 z-30 bg-white ">
 							<ul className="flex-1">
-								<h3 className=" text-[16px] font-semibold ">PAID ADVERTISING</h3>
-								<Link href={"/serveice/ppcAgency"}><li className="serveice_list pt-2">PPC Agency</li></Link>
-								<Link href={"/serveice/facebookAdsAgency"} className="serveice_list">Facebook Ads Agency</Link> <br />
-								<Link href={"/serveice/googleAdsAgency"} className="serveice_list ">Google Ads Agency</Link> <br />
-								<Link href={'/serveice/semAgency'} className="serveice_list">SEM Agency</Link> <br />
-								<Link href={'/serveice/ppcManagement'} className="serveice_list">PPC Management</Link>
+								<h3 className=" text-[16px] font-semibold pb-2">PAID ADVERTISING</h3>
+								<li><Link href={"/service/ppcAgency"} id="0" className="serveice_list whitespace-nowrap">PPC Agency</Link></li>
+								<li><Link href={"/service/facebookAdsAgency"} id="1" className="serveice_list whitespace-nowrap ">Facebook Ads Agency</Link></li>
+								<li><Link href={"/service/googleAdsAgency"} id="2" className="serveice_list whitespace-nowrap">Google Ads Agency</Link> </li>
+								<li><Link href={'/service/semAgency'} id="3" className="serveice_list">SEM Agency</Link> </li>
+								<li><Link href={'/service/ppcManagement'} id="4" className="serveice_list">PPC Management</Link></li>
 							</ul>
 							<ul className="flex-1">
-								<h3 className=" text-[16px] font-semibold ">SEO</h3>
-								<li><Link href={"/serveice/contentMarketingAgency"} className="serveice_list pt-2">Content Marketing Agency</Link></li>
-								<li><Link href={"/serveice/seoAgency"} className="serveice_list">SEO Agency</Link></li>
-								<li><Link href={"/"} className="serveice_list">Link Building Services</Link></li>
+								<h3 className=" text-[16px] font-semibold pb-2 ">SEO</h3>
+								<li><Link href={"/service/contentMarketingAgency"} id="5" className="serveice_list  whitespace-nowrap">Content Marketing Agency</Link></li>
+								<li><Link href={"/service/seoAgency"} id="6" className="serveice_list">SEO Agency</Link></li>
+								<li><Link href={"/service/linkBuildingService"} id="7" className="serveice_list">Link Building Services</Link></li>
 							</ul>
 							<ul className="flex-1">
 								<h3 className=" text-[16px] font-semibold ">CONVERSION</h3>
-								<li className="pt-2">Conversion Rate Optimization</li>
-								<li className="">Landing Page Agency</li>
-								<li className="">Landing Page Design</li>
+								<Link href={"/service/conversionRateOptimization"} id="8" className="serveice_list pt-2 whitespace-nowrap">Conversion Rate Optimization</Link>
+								<li id="9" className="serveice_list">Landing Page Agency</li>
+								<li id="10" className="serveice_list">Landing Page Design</li>
 							</ul>
 							<ul className="flex-1">
 								<h3 className=" text-[16px] font-semibold ">EMAIL MARKETING</h3>
-								<li className="pt-2">Email Marketing Agency</li>
+								<li id="11" className="serveice_list pt-2">Email Marketing Agency</li>
 								
 							</ul>
 						</div>

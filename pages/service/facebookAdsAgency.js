@@ -1,16 +1,16 @@
 import Head from "next/head";
-import Hero from "@/components/serveice/Hero";
-import ListOfServeice from "@/components/serveice/ListOfServeice";
-import MarketingCompanies from "@/components/serveice/MarketingCompanies";
-import OurWork from "@/components/serveice/OurWork";
-import Payperclick from "@/components/serveice/Payperclick";
+import Hero from "@/components/service/Hero";
+import ListOfServeice from "@/components/service/ListOfServeice";
+import MarketingCompanies from "@/components/service/MarketingCompanies";
+import OurWork from "@/components/service/OurWork";
+import Payperclick from "@/components/service/Payperclick";
 import KeyServeice from "@/components/KeyServeice";
 import React, { useState } from "react";
-import MarketingPlanCta from "@/components/serveice/MarketingPlanCta";
-import OthersSite from "@/components/serveice/OthersSite";
-import ConversionMarketing from "@/components/serveice/ConversionMarketing";
+import MarketingPlanCta from "@/components/service/MarketingPlanCta";
+import OthersSite from "@/components/service/OthersSite";
+import ConversionMarketing from "@/components/service/ConversionMarketing";
 import DedicatedTeam from "@/components/DedicatedTeam";
-import FaqSection from "@/components/serveice/FaqSection";
+import FaqSection from "@/components/service/FaqSection";
 
 function FacebookAdsAgency(props) {
 	const [ourWork, setourWork] = useState(props.ourWork);
