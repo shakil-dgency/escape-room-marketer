@@ -81,10 +81,10 @@ function Navbar() {
 								<li><Link href={"/service/linkBuildingService"} id="7" className="serveice_list">Link Building Services</Link></li>
 							</ul>
 							<ul className="flex-1">
-								<h3 className=" text-[16px] font-semibold ">CONVERSION</h3>
-								<Link href={"/service/conversionRateOptimization"} id="8" className="serveice_list pt-2 whitespace-nowrap">Conversion Rate Optimization</Link>
-								<li id="9" className="serveice_list">Landing Page Agency</li>
-								<li id="10" className="serveice_list">Landing Page Design</li>
+								<h3 className=" text-[16px] font-semibold  pb-2">CONVERSION</h3>
+								<li><Link href={"/service/conversionRateOptimization"} id="8" className="serveice_list whitespace-nowrap">Conversion Rate Optimization</Link></li>
+								<li><Link href={'/service/landingPageAgency'} id="9" className="serveice_list whitespace-nowrap">Landing Page Agency</Link></li>
+								<li><Link href={'/service/landingPageDesign'} id="10" className="serveice_list">Landing Page Design</Link></li>
 							</ul>
 							<ul className="flex-1">
 								<h3 className=" text-[16px] font-semibold ">EMAIL MARKETING</h3>

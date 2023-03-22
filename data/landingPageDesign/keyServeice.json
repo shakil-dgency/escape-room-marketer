@@ -1,0 +1,38 @@
+{
+	"head_message": {
+		"heading": "We Have Multiple Landing Page Solutions To Meet Your Goals",
+		"text_line": "We can do everything for you (like a helicopter parent), provide valuable advice(like a rich uncle), or something in between (like something in between)."
+	},
+
+	"card_content": {
+		"first_card": 	{
+			"heading": "Landing Page Management",
+			"pera": "We’ll handle all your content marketing and report the performance directly to you.",
+			"image": "/wateringCan.svg"
+		},
+
+		"others_card": [
+			{
+				"heading": "One-Time Landing Page Audit",
+				"pera": "We’ll give you a prioritized list of new experiments that you run.",
+				"image": "/MagGlass.svg"
+			},
+			{
+				"heading": "Landing Page Consulting",
+				"pera": "Avoid expensive mistakes and wasted time. Let us build it for you.",
+				"image": "/Hardhat.svg"
+			},
+			{
+				"heading": "One-Time Landing Page Build",
+				"pera": "We’ll give you the ongoing strategies and tactics for you to implement to increase metrics.",
+				"image": "/SpeechBubbles.svg"
+			},
+			{
+				"heading": "Pure Landing Page Performance",
+				"pera": "Revenue share agreement with more upside for us, less risk for you.",
+				"image": "/Speedometer.svg"
+			}
+		]
+
+	}
+}
