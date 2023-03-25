@@ -29,7 +29,7 @@ function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 					<div className="">
 						<img
 							src={`/serveice/${thirdPic}`}
-							className="px-10  absolute right-[50%] translate-x-[50%] bottom-[0] md:-bottom-[10%] translate-y-[-40%] "
+							className="px-10  absolute right-[50%] translate-x-[50%] bottom-[0] md:-bottom-[13%] translate-y-[-40%] "
 							alt=""
 						/>
 					</div>

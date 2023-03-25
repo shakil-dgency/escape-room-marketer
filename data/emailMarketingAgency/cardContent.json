@@ -1,0 +1,55 @@
+{
+    "head_message": {
+		"heading": "We’ll Improve The Performance of Any Emails You Send",
+		"text_line": "Move quicker and go further as we innovate and improve performance across different types of emails."
+	},
+    "cards":[
+        
+        {
+            "id":1,
+            "title":"Blog Posts",
+            "image":"illo-BlogPosts.svg" 
+        },
+        {
+            "id":2,
+            "title":"Infographics",
+            "image":"illo-Infographics.svg"  
+        },
+        {
+            "id":3,
+             "title":"Checklists",
+            "image":"illo-Checklists.svg"
+        },
+        {
+            "id":4,
+             "title":"eBooks",
+            "image":"illo-eBooks.svg"
+        },
+        {
+            "id":5,
+             "title":"Whitepapers",
+            "image":"illo-WhitePapers.svg"
+        },
+        {
+            "id":6,
+             "title":"Case Studies",
+            "image":"illo-CaseStudies.svg"   
+        },
+        {
+            "id":7,
+             "title":"Reviews",
+            "image":"illo-Reviews.svg"
+        },
+        {
+            "id":8,
+             "title":"How-to Guides",
+            "image":"illo-HowToGuides.svg"  
+        },
+        {
+            "id":9,
+             "title":"Guest Posts",
+            "image":"illo-GuestPosts.svg"
+        }
+    ]
+
+}
