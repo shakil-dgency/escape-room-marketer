@@ -3,10 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  overflow-x: hidden;
-  
+:root {
+  --section-bg-lightblue: #F9FCFF;
+  --section-bg-lightred: #FFF7F5;
 }
+
+body, html {
+  overflow-x: hidden;
+  }
+
 .g-page_structure{
   padding: 0 20%;
 
@@ -18,6 +23,9 @@ body{
 
 
 @media only screen and (max-width: 480px) {
+ 
+}
+@media only screen and (max-width: 480px) {
   .g-page_structure{
     padding: 0 15px;
   
@@ -26,6 +34,12 @@ body{
 @media only screen and (max-width: 1536px)  and (min-width: 480px) {
   .g-page_structure{
     padding: 0 100px;
+  
+  }
+}
+@media only screen and (max-width: 1024px)  and (min-width: 480px) {
+  .g-page_structure{
+    padding: 0 15px;
   
   }
 }
@@ -46,12 +60,14 @@ body{
 
 
 .serveice_popup{
-  transform: scale(0.5);
-  animation: popup  1s forwards ;
+  transform: translateY(-50px);
+  animation: popup  0.2s forwards ;
+  opacity: 0;
 }
 @keyframes popup {
   to {
-     transform: scale(1);
+     transform: translateY(0);
+     opacity: 1;
   }
 }
 

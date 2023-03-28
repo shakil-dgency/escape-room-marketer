@@ -23,7 +23,7 @@ export default function Home() {
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className=" mb-10">
+			<main className="">
 				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-8 bg-[#FAFAFA]"></div>
 				<div className="hero_cover g-page_structure h-[600px] md:h-[550px] lg:h-[670px] w-full bg-[#FAFAFA]  md:pt-12 relative">
 					<div>
@@ -384,14 +384,15 @@ export default function Home() {
 						<Image src="/brain.svg" alt="" width={300} height={100} className="w-[200px] lg:w-[300px]" />
 					</div>
 				</div>
-				<div className=" w-full  bg-repeat pt-12">
+				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[var(--section-bg-lightblue)]"></div>
+				{/* <div className=" w-full  bg-repeat pt-12">
 					<h1 className="text-center mt-6 font-bold text-5xl ">
 						Better Marketing Performance <br /> Is Ready For You - Are You?
 					</h1>
 					<div className="flex justify-center mt-10">
 						<button className="bg-[#ff5056] py-3 px-5 text-white lg:text-lg 2xl:text-2xl rounded font-semibold">Get Your Free Marketing Plan</button>
 					</div>
-				</div>
+				</div> */}
 			</main>
 		</>
 	);

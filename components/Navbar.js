@@ -2,14 +2,22 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { BiChevronRight } from "react-icons/bi";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
 function Navbar() {
-	const [toggle, setToggle] = useState(false);
+	const [open, setOpen] = useState(false);
+	const [sidebarOpen, setSidebarOpen] = useState(false);
 	const serveiceRef = useRef();
+	const sidebarMainref = useRef();
+	const sidebarServiceref = useRef();
+	const hamburgRef = useRef();
+
+	
+
 	const handlePopup = (e) => {
 		let _id;
 		//  console.log(document.getElementsByClassName('serveice_list'));
@@ -17,27 +25,82 @@ function Navbar() {
 		for (var i = 0; i < serveiceClick.length; i++) {
 			serveiceClick[i].addEventListener("click", function (E) {
 				serveiceRef.current.classList.add("hidden");
-				e.target.children[0].classList.remove("rotate-180");
+				if (e.target.children[0].classList.contains("arrow_rotate")) {
+					e.target.children[0].classList.remove("rotate-180");
+				}
 				if (_id) {
 					serveiceClick[_id].classList.remove("text-red-500");
 				}
-				_id = E.target.id;
+				_id = this.id;
 				this.classList.add("text-red-500");
 			});
-			// if(i==_id){
-			// 	serveiceClick[i].classList.remove('text-red-500')
-			// }
 		}
 
 		if (serveiceRef.current.classList.contains("hidden")) {
 			serveiceRef.current.classList.remove("hidden");
-			serveiceRef.current.classList.add("flex");
-			e.target.children[0].classList.add("rotate-180");
+			serveiceRef.current.classList.add("block");
+			if (e.target.children[0].classList.contains("arrow_rotate")) {
+				e.target.children[0].classList.add("rotate-180");
+			}
 		} else {
 			serveiceRef.current.classList.add("hidden");
-			e.target.children[0].classList.remove("rotate-180");
+			if (e.target.children[0].classList.contains("arrow_rotate")) {
+				e.target.children[0].classList.remove("rotate-180");
+			}
 		}
 		// serveiceRef.current.classList.add('flex');
+	};
+
+	const handleHamburg = () => {
+
+		setSidebarOpen(true)
+		
+	};
+
+	console.log(sidebarOpen);
+
+
+	const closeSidebar = () => {
+		// sidebarMainref.current.classList.add("hidden");
+		setSidebarOpen(false)
+	};
+
+	useEffect(()=>{
+		
+		document.addEventListener('click',(e)=>{
+			if(sidebarMainref.current){
+
+				if(!sidebarMainref.current.contains(e.target) && !hamburgRef.current.contains(e.target) ){
+					// console.log(e.target.id);
+					// sidebarMainref.current.classList.add("hidden");
+					setSidebarOpen(false)
+				}
+			}
+		})
+	})
+
+  
+
+	const handleSidebarService = (e) => {
+		 setOpen(!open)
+		 
+		 let _id;
+		 let serveiceClick = document.getElementsByClassName("serveice_list");
+		 for (var i = 0; i < serveiceClick.length; i++) {
+			 serveiceClick[i].addEventListener("click", function (E) {
+				// sidebarMainref.current.classList.add("hidden");
+				setSidebarOpen(false)
+				 if (e.target.children[0].classList.contains("arrow_rotate")) {
+					 e.target.children[0].classList.remove("rotate-180");
+				 }
+				 if (_id) {
+					 serveiceClick[_id].classList.remove("text-red-500");
+				 }
+				 _id = this.id;
+				 this.classList.add("text-red-500");
+			 });
+		 }
+
 	};
 
 	return (
@@ -48,10 +111,10 @@ function Navbar() {
 						Escaperoom Marketer
 					</Link>
 					<div className="nav_elements flex gap-4 md:gap-10 items-center ">
-						<ul className="hidden md:flex gap-5 font-[600] transform transition-transform translate-x-full absolute top-0 right-0 md:transform-none md:static ">
+						<ul className="hidden lg:flex gap-5 font-[600] transform transition-transform translate-x-full absolute top-0 right-0 md:transform-none md:static ">
 							<li>PRICING</li>
 							<li onClick={handlePopup} className="group cursor-pointer flex items-center gap-1">
-								SERVICES <MdKeyboardArrowDown className="text-xl transition-transform duration-300" />{" "}
+								SERVICES <MdKeyboardArrowDown className="arrow_rotate text-xl transition-transform duration-300" />
 							</li>
 							<li>RESULTS</li>
 							<li>TEAM</li>
@@ -64,9 +127,11 @@ function Navbar() {
 						>
 							FREE MARKETING PLAN
 						</Link>
-						<HiMenu className="text-2xl md:hidden" />
+						<div ref={hamburgRef} className="lg:hidden">
+							<HiMenu  id="hamburg" onClick={handleHamburg} className="text-2xl " />
+						</div>
 					</div>
-					<div ref={serveiceRef} className="serveice_popup  shadow md:px-6 md:py-4 rounded  absolute left-0 top-24 right-0 z-30 bg-white ">
+					<div ref={serveiceRef} className="serveice_popup hidden   shadow md:px-6 md:py-4 rounded  absolute left-0 top-24 right-0  z-30 bg-white ">
 						<p className="pb-2 text-[#ff5056] font-semibold">ALL OF OUR SERVICES</p>
 						<div className=" grid grid-cols-3 grid-rows-8 gap-5 border-t-[1px] pt-2">
 							<ul className="flex flex-col gap-4 row-start-1 row-end-7">
@@ -75,10 +140,12 @@ function Navbar() {
 									<Link href={"/service/ppcAgency"} id="0" className="serveice_list group">
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">PPC Agency <BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													PPC Agency <BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -88,10 +155,13 @@ function Navbar() {
 									<Link href={"/service/facebookAdsAgency"} id="1" className="serveice_list group ">
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">Facebook Ads Agency<BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													Facebook Ads Agency
+													<BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -99,13 +169,14 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/googleAdsAgency"} id="2" className="serveice_list group">
-										
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">Google Ads Agency <BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													Google Ads Agency <BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -113,13 +184,15 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/semAgency"} id="3" className="serveice_list group">
-									
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">	SEM Agency <BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													{" "}
+													SEM Agency <BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -127,13 +200,14 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/ppcManagement"} id="4" className="serveice_list group">
-										
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">PPC Management <BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													PPC Management <BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -144,13 +218,14 @@ function Navbar() {
 								<h3 className=" text-[16px] font-semibold pb-2 ">SEO</h3>
 								<li>
 									<Link href={"/service/contentMarketingAgency"} id="5" className="serveice_list group">
-										
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">Content Marketing Agency <BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													Content Marketing Agency <BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -158,13 +233,14 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/seoAgency"} id="6" className="serveice_list group">
-										
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">SEO Agency <BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													SEO Agency <BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -172,13 +248,14 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/linkBuildingService"} id="7" className="serveice_list group">
-										
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">Link Building Services <BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													Link Building Services <BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -189,13 +266,15 @@ function Navbar() {
 								<h3 className=" text-[16px] font-semibold  pb-2">CONVERSION</h3>
 								<li>
 									<Link href={"/service/conversionRateOptimization"} id="8" className="serveice_list group">
-										
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] text-base font-semibold flex items-center whitespace-nowrap">Conversion Rate Optimization<BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] text-base font-semibold flex items-center whitespace-nowrap">
+													Conversion Rate Optimization
+													<BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -203,13 +282,15 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/landingPageAgency"} id="9" className="serveice_list group">
-										
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">Landing Page Agency<BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													Landing Page Agency
+													<BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -217,13 +298,15 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/landingPageDesign"} id="10" className="serveice_list group">
-										
 										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+												<Image src={""} alt="" height={60} width={60} className="" />
 											</div>
 											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">Landing Page Design<BiChevronRight className="pt-[2px] text-xl" /> </p>
+												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+													Landing Page Design
+													<BiChevronRight className="pt-[2px] text-xl" />{" "}
+												</p>
 												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
 											</div>
 										</div>
@@ -233,20 +316,120 @@ function Navbar() {
 							<ul className="col-start-2 row-start-4">
 								<h3 className=" text-[16px] font-semibold  pb-2">EMAIL MARKETING</h3>
 								<Link href={"/service/emailMarketingAgency"} id="11" className="serveice_list group">
-									
 									<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
+										<div>
 											<Image src={""} alt="" height={60} width={60} className="" />
-											</div>
-											<div className="">
-												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">Email Marketing Agency<BiChevronRight className="pt-[2px] text-xl" /> </p>
-												<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
-											</div>
 										</div>
+										<div className="">
+											<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+												Email Marketing Agency
+												<BiChevronRight className="pt-[2px] text-xl" />{" "}
+											</p>
+											<p className="text-[14px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
+										</div>
+									</div>
 								</Link>
 							</ul>
 						</div>
 					</div>
+				</div>
+
+				<div ref={sidebarMainref} id="sidebar" className= {`pb-14 lg:hidden bg-white h-[auto] w-[300px] md:w-[50%] absolute  top-0 duration-[0.5s]  z-20 pt-24 pl-6 md:pl-14 ${sidebarOpen? 'right-0' : '-right-[300px]'}`}>
+					<div
+						onClick={closeSidebar}
+						className="rounded-[100%] text-4xl flex justify-center items-center  border-2 border-black w-12 h-12 absolute top-6 right-4"
+					>
+						<RxCross2 className=" stroke-[0.5]" />
+					</div>
+					<ul className="font-[600] flex flex-col gap-3  ">
+						<li className="text-[18px] pt-3">PRICING</li>
+						<li onClick={handleSidebarService} className="group cursor-pointer flex items-center gap-2 text-[18px] pt-3 text-red-500">
+							SERVICES <MdKeyboardArrowDown className={`arrow_rotate text-2xl transition-transform duration-300 ${open? 'rotate-180':''}`} />
+						</li>
+						<div className="border-b-[3px] border-red-500 w-[80px] -mt-2"></div>
+						<div ref={sidebarServiceref} className={` pl-2 md:pl-6 ${open? 'block' :'hidden'}`} >
+							<ul className="flex-1">
+								<h3 className=" text-[16px] font-bold pt-2 pb-1 ">PAID ADVERTISING</h3>
+								<div className="pl-3 flex flex-col gap-1 text-[15px]">
+									<li>
+										<Link href={"/service/ppcAgency"} id="012" className="serveice_list whitespace-nowrap">
+											PPC Agency
+										</Link>
+									</li>
+									<li>
+										<Link href={"/service/facebookAdsAgency"} id="013" className="serveice_list whitespace-nowrap ">
+											Facebook Ads Agency
+										</Link>
+									</li>
+									<li>
+										<Link href={"/service/googleAdsAgency"} id="014" className="serveice_list whitespace-nowrap">
+											Google Ads Agency
+										</Link>{" "}
+									</li>
+									<li>
+										<Link href={"/service/semAgency"} id="015" className="serveice_list">
+											SEM Agency
+										</Link>{" "}
+									</li>
+									<li>
+										<Link href={"/service/ppcManagement"} id="016" className="serveice_list">
+											PPC Management
+										</Link>
+									</li>
+								</div>
+							</ul>
+							<ul className="flex-1">
+								<h3 className=" text-[16px] font-bold pb-1 pt-4 ">SEO</h3>
+								<div className="pl-3 flex flex-col gap-1 text-[15px]">
+									<li>
+										<Link href={"/service/contentMarketingAgency"} id="017" className="serveice_list  whitespace-nowrap">
+											Content Marketing Agency
+										</Link>
+									</li>
+									<li>
+										<Link href={"/service/seoAgency"} id="018" className="serveice_list">
+											SEO Agency
+										</Link>
+									</li>
+									<li>
+										<Link href={"/service/linkBuildingService"} id="019" className="serveice_list">
+											Link Building Services
+										</Link>
+									</li>
+								</div>
+							</ul>
+							<ul className="flex-1">
+								<h3 className=" text-[16px] font-bold pb-1 pt-4">CONVERSION</h3>
+								<div className="pl-3 flex flex-col gap-1 text-[15px]">
+									<li>
+										<Link href={"/service/conversionRateOptimization"} id="020" className="serveice_list whitespace-nowrap">
+											Conversion Rate Optimization
+										</Link>
+									</li>
+									<li>
+										<Link href={"/service/landingPageAgency"} id="021" className="serveice_list whitespace-nowrap">
+											Landing Page Agency
+										</Link>
+									</li>
+									<li>
+										<Link href={"/service/landingPageDesign"} id="022" className="serveice_list">
+											Landing Page Design
+										</Link>
+									</li>
+								</div>
+							</ul>
+							<ul className="flex-1">
+								<h3 className=" text-[16px] font-bold pb-1 pt-4">EMAIL MARKETING</h3>
+								<li id="023" className="serveice_list pl-3 pb-4 text-[15px]">
+									Email Marketing Agency
+								</li>
+							</ul>
+						</div>
+						<li className="text-[18px] pt-3">RESULTS</li>
+						<li className="text-[18px] pt-3">TEAM</li>
+						<li className="text-[18px] pt-3">BLOG</li>
+						<li id="elementID" className="text-[18px] pt-3">RESOURCES</li>
+					</ul>
 				</div>
 			</div>
 		</div>
