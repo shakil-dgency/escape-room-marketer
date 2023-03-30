@@ -28,14 +28,16 @@ body,html {
 		padding: 0 15px;
 	}
 }
-@media only screen and (max-width: 1536px) and (min-width: 480px) {
-	.g-page_structure {
-		padding: 0 100px;
-	}
-}
-@media only screen and (max-width: 1024px) and (min-width: 480px) {
+
+@media only screen and (max-width: 1115px) and (min-width: 480px) {
 	.g-page_structure {
 		padding: 0 15px;
+	}
+}
+
+@media only screen and (max-width: 1610px) and (min-width: 1115px) {
+	.g-page_structure {
+		padding: 0 100px;
 	}
 }
 .image {
@@ -83,17 +85,16 @@ body,html {
 
 
 
- #sidebar::after {
+.sidebar_shadow::after {
   content: "";
-
   height: 100%;
   width: 100%;
   background: rgb(255, 255, 255);
   position: absolute;
   top: 0;
-  left: -17%;
+  left: -70%;
   z-index: -10;
-  opacity: 0.5;
+  opacity: 0.7;
 } 
 
 /* serveice section */

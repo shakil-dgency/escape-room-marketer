@@ -24,7 +24,7 @@ function Navbar() {
 		let serveiceClick = document.getElementsByClassName("serveice_list");
 		for (var i = 0; i < serveiceClick.length; i++) {
 			serveiceClick[i].addEventListener("click", function (E) {
-				setServiceMenubar(false)
+				setServiceMenubar(false);
 
 				if (_id) {
 					serveiceClick[_id].classList.remove("text-red-500");
@@ -35,17 +35,16 @@ function Navbar() {
 		}
 
 		setServiceMenubar(!serviceMenubar);
-
 	};
 
 	const handleHamburg = () => {
 		setSidebarOpen(true);
-			document.body.classList.add("overflow-hidden")	
+		document.body.classList.add("overflow-hidden");
 	};
 
 	const closeSidebar = () => {
 		setSidebarOpen(false);
-		document.body.classList.remove("overflow-hidden")
+		document.body.classList.remove("overflow-hidden");
 	};
 
 	useEffect(() => {
@@ -56,26 +55,27 @@ function Navbar() {
 				}
 			}
 
-			if (!serveiceRef.current.contains(e.target) && !serviceBtnRef.current.contains(e.target)) {
-				setServiceMenubar(false);
+			if (serveiceRef.current) {
+				if (!serveiceRef.current.contains(e.target) && !serviceBtnRef.current.contains(e.target)) {
+					setServiceMenubar(false);
+				}
 			}
 		});
 
-		var lastScrollTop = 0 ;
+		var lastScrollTop = 0;
 		const navbar = document.getElementById("navbar");
-		window.addEventListener('scroll', function(){
+		window.addEventListener("scroll", function () {
 			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            console.log(window.pageYOffset, document.documentElement.scrollTop);
-			if(scrollTop > lastScrollTop){
-				navbar.style.top="-100px";
-			}else if(lastScrollTop>scrollTop+20){
+			console.log(window.pageYOffset, document.documentElement.scrollTop);
+			if (scrollTop > lastScrollTop) {
+				navbar.style.top = "-100px";
+			} else if (lastScrollTop > scrollTop + 20) {
 				navbar.style.top = "0";
 			}
 			lastScrollTop = scrollTop;
-			console.log('last',lastScrollTop);
-		})
+			console.log("last", lastScrollTop);
+		});
 	});
-
 
 	const handleSidebarService = (e) => {
 		setOpen(!open);
@@ -85,7 +85,7 @@ function Navbar() {
 		for (var i = 0; i < serveiceClick.length; i++) {
 			serveiceClick[i].addEventListener("click", function (E) {
 				setSidebarOpen(false);
-
+				document.body.classList.remove("overflow-hidden");
 				if (_id) {
 					serveiceClick[_id].classList.remove("text-red-500");
 				}
@@ -98,15 +98,16 @@ function Navbar() {
 	return (
 		<div id="navbar" className="bg-white fixed top-0 w-full h-[70px] md:h-[100px] z-30 duration-500">
 			<div className="nav_container g-page_structure ">
-				<div className="flex gap-1 md:gap-0 md:justify-between items-center py-2 md:py-5 relative ">
-					<Link href={"/"} className="logomain flex-1 text-lg md:text-3xl  text-[#6adaf7] hover:text-[#93e0f5] cursor-pointer">
-						Escaperoom Marketer
+				<div className="flex gap-1 md:gap-0 md:justify-between items-center py-5 relative ">
+					<Link href={"/"} className="logomain flex-1 cursor-pointer">
+					<Image src="/logo.png" alt="logo" height={100} width={170} className="w-[120px] sm:w-[150px]" />
 					</Link>
 					<div className="nav_elements flex gap-4 md:gap-10 items-center ">
 						<ul className="hidden lg:flex gap-5 font-[600] transform transition-transform translate-x-full absolute top-0 right-0 md:transform-none md:static ">
 							<li>PRICING</li>
 							<li ref={serviceBtnRef} onClick={handlePopup} className="group cursor-pointer flex items-center gap-1">
-								SERVICES <MdKeyboardArrowDown className={`arrow_rotate text-xl transition-transform duration-300 ${serviceMenubar?'rotate-180':''}`} />
+								SERVICES{" "}
+								<MdKeyboardArrowDown className={`arrow_rotate text-xl transition-transform duration-300 ${serviceMenubar ? "rotate-180" : ""}`} />
 							</li>
 							<li>RESULTS</li>
 							<li>TEAM</li>
@@ -115,7 +116,7 @@ function Navbar() {
 						</ul>
 						<Link
 							href={"/freemarketing"}
-							className="flex-[2] border-2 border-red-500 px-2 py-1 md:px-6 md:py-3 text-red-500 font-semibold text-sm md:text-xl"
+							className="flex-[2] border-2 border-red-500 px-1 py-1 md:px-6  md:py-3 lg:px-3 lg:py-2 xl:px-6 xl:py-3 text-red-500 font-semibold text-[12px] md:text-xl lg:text-base xl:text-xl"
 						>
 							FREE MARKETING PLAN
 						</Link>
@@ -135,9 +136,9 @@ function Navbar() {
 								<h3 className=" text-[16px] font-semibold pb-2">PAID ADVERTISING</h3>
 								<li>
 									<Link href={"/service/ppcAgency"} id="0" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/ppc_agency.png" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -150,9 +151,9 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/facebookAdsAgency"} id="1" className="serveice_list group ">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/facebook_ads_agency.png" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -166,9 +167,9 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/googleAdsAgency"} id="2" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/google_ads_agency.png" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -181,9 +182,9 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/semAgency"} id="3" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/sem_management.png" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -197,9 +198,9 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/ppcManagement"} id="4" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/ppc_management.png" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -215,9 +216,9 @@ function Navbar() {
 								<h3 className=" text-[16px] font-semibold pb-2 ">SEO</h3>
 								<li>
 									<Link href={"/service/contentMarketingAgency"} id="5" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/content_marketing_agency.svg" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -230,9 +231,9 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/seoAgency"} id="6" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/seo_agency.svg" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -245,9 +246,9 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/linkBuildingService"} id="7" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/link_building_service.svg" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -263,9 +264,9 @@ function Navbar() {
 								<h3 className=" text-[16px] font-semibold  pb-2">CONVERSION</h3>
 								<li>
 									<Link href={"/service/conversionRateOptimization"} id="8" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/conversion_rate.svg" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] text-base font-semibold flex items-center whitespace-nowrap">
@@ -279,9 +280,9 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/landingPageAgency"} id="9" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/landing_page_agency.svg" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -295,9 +296,9 @@ function Navbar() {
 								</li>
 								<li>
 									<Link href={"/service/landingPageDesign"} id="10" className="serveice_list group">
-										<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-											<div>
-												<Image src={""} alt="" height={60} width={60} className="" />
+										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+											<div className="">
+												<Image src="/navbar/landing_page_design.svg" alt="" height={60} width={80} className="" />
 											</div>
 											<div className="">
 												<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -313,9 +314,9 @@ function Navbar() {
 							<ul className="col-start-2 row-start-4">
 								<h3 className=" text-[16px] font-semibold  pb-2">EMAIL MARKETING</h3>
 								<Link href={"/service/emailMarketingAgency"} id="11" className="serveice_list group">
-									<div className="flex gap-3 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
-										<div>
-											<Image src={""} alt="" height={60} width={60} className="" />
+									<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+										<div className="">
+											<Image src="/navbar/email_marketing.svg" alt="" height={60} width={80} className="" />
 										</div>
 										<div className="">
 											<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
@@ -334,7 +335,7 @@ function Navbar() {
 				<div
 					ref={sidebarMainref}
 					id="sidebar"
-					className={` lg:hidden bg-white  w-[85%] md:w-[50%] absolute  top-0 right-0   z-10 ${sidebarOpen ? "block sidebar_menu_open" : "hidden"}
+					className={`sidebar_shadow sm:drop-shadow lg:hidden bg-white  w-full sm:w-[60%]  absolute  top-0 right-0   z-10 ${sidebarOpen ? "block sidebar_menu_open" : "hidden"}
 					`}
 				>
 					<div className={`overflow-scroll h-screen pb-14 pt-24 pl-6 md:pl-14  `}>
@@ -350,10 +351,10 @@ function Navbar() {
 								SERVICES <MdKeyboardArrowDown className={`arrow_rotate text-2xl transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
 							</li>
 							<div className="border-b-[3px] border-red-500 w-[80px] -mt-2"></div>
-							<div ref={sidebarServiceref} className={` pl-2 md:pl-6 ${open ? "block" : "hidden"}`}>
+							<div ref={sidebarServiceref} className={`pl-14 ${open ? "block" : "hidden"}`}>
 								<ul className="flex-1">
-									<h3 className=" text-[16px] font-bold pt-2 pb-1 ">PAID ADVERTISING</h3>
-									<div className="pl-3 flex flex-col gap-1 text-[15px]">
+									<h3 className=" text-[18px] font-bold pt-2 pb-1 ">PAID ADVERTISING</h3>
+									<div className="pl-3 flex flex-col gap-1 text-[18px]">
 										<li>
 											<Link href={"/service/ppcAgency"} id="012" className="serveice_list whitespace-nowrap">
 												PPC Agency
@@ -382,8 +383,8 @@ function Navbar() {
 									</div>
 								</ul>
 								<ul className="flex-1">
-									<h3 className=" text-[16px] font-bold pb-1 pt-4 ">SEO</h3>
-									<div className="pl-3 flex flex-col gap-1 text-[15px]">
+									<h3 className=" text-[18px] font-bold pb-1 pt-4 ">SEO</h3>
+									<div className="pl-3 flex flex-col gap-1 text-[18px]">
 										<li>
 											<Link href={"/service/contentMarketingAgency"} id="017" className="serveice_list  whitespace-nowrap">
 												Content Marketing Agency
@@ -402,8 +403,8 @@ function Navbar() {
 									</div>
 								</ul>
 								<ul className="flex-1">
-									<h3 className=" text-[16px] font-bold pb-1 pt-4">CONVERSION</h3>
-									<div className="pl-3 flex flex-col gap-1 text-[15px]">
+									<h3 className=" text-[18px] font-bold pb-1 pt-4">CONVERSION</h3>
+									<div className="pl-3 flex flex-col gap-1 text-[18px]">
 										<li>
 											<Link href={"/service/conversionRateOptimization"} id="020" className="serveice_list whitespace-nowrap">
 												Conversion Rate Optimization
@@ -422,9 +423,11 @@ function Navbar() {
 									</div>
 								</ul>
 								<ul className="flex-1">
-									<h3 className=" text-[16px] font-bold pb-1 pt-4">EMAIL MARKETING</h3>
-									<li id="023" className="serveice_list pl-3 pb-4 text-[15px]">
-										Email Marketing Agency
+									<h3 className=" text-[18px] font-bold pb-1 pt-4">EMAIL MARKETING</h3>
+									<li>
+										<Link href={"/service/emailMarketingAgency"} id="023" className="serveice_list pl-3 pb-4 text-[18px]">
+											Email Marketing Agency
+										</Link>
 									</li>
 								</ul>
 							</div>

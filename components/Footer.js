@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { AiFillTwitterCircle,AiFillDribbbleCircle } from "react-icons/ai";
+import { AiFillTwitterCircle, AiFillDribbbleCircle } from "react-icons/ai";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
 import { SiYoutubemusic } from "react-icons/si";
 import { FaInstagramSquare } from "react-icons/fa";
-
 
 function Footer() {
 	return (
@@ -18,7 +17,7 @@ function Footer() {
 			</div>
 			<div className="flex justify-center flex-wrap gap-10 py-14 border-b-2">
 				<div className="location flex flex-col items-center">
-					<Image src="/navbar/uk.png" alt="" height={90} width={90} />
+					<Image src="/footer/uk.png" alt="" height={90} width={90} />
 					<div className="text-center">
 						<h1 className="text-xl md:text-lg xl:text-xl font-semibold">United States</h1>
 						<p>Metairie, 3900 N Causeway</p>
@@ -26,7 +25,7 @@ function Footer() {
 					</div>
 				</div>
 				<div className="location flex flex-col items-center">
-					<Image src="/navbar/bd.png" alt="" height={90} width={90} />
+					<Image src="/footer/bd.png" alt="" height={90} width={90} />
 					<div className="text-center">
 						<h1 className="text-xl md:text-lg xl:text-xl font-semibold">BANGLADESH</h1>
 						<p>House 335,Mohakhali DOHS</p>
@@ -34,7 +33,7 @@ function Footer() {
 					</div>
 				</div>
 				<div className="location flex flex-col items-center">
-					<Image src="/navbar/usa.png" alt="" height={90} width={90} />
+					<Image src="/footer/usa.png" alt="" height={90} width={90} />
 					<div className="text-center">
 						<h1 className="text-xl md:text-lg xl:text-xl font-semibold">CALIFORNIA</h1>
 						<p>Metairie, 3900 N Causeway</p>
@@ -91,24 +90,29 @@ function Footer() {
 					</ul>
 				</div>
 			</div>
-			<div className="flex justify-between items-center">
-				<div className="flex gap-10 py-8">
-					<Image src="/navbar/google-partner.png" alt="logo" height={50} width={100} />
-					<Image src="/navbar/MSA-Partner.png" alt="logo" height={50} width={100} />
-					<Image src="/navbar/Facebook-Partner.png" alt="logo" height={50} width={100} />
+			<div className="flex flex-wrap gap-3 justify-center md:justify-between items-center border-b-[2px] py-3 md:py-8">
+				<div className="flex gap-3 md:gap-10">
+					<Image src="/footer/google-partner.png" alt="logo" height={50} width={100} />
+					<Image src="/footer/MSA-Partner.png" alt="logo" height={50} width={100} />
+					<Image src="/footer/Facebook-Partner.png" alt="logo" height={50} width={100} />
 				</div>
-				{/* <div className="social_media">
-					<h1 className="font-semibold text-lg  text-center">CURRENTLY ACCEPTING FOLLOWERS</h1>
+				<div className="social_media">
+					<h1 className="font-semibold text-base md:text-lg  text-center pb-2">CURRENTLY ACCEPTING FOLLOWERS</h1>
 					<div className="flex justify-center gap-3">
-						<AiFillTwitterCircle className=" fill-[#FF8080] text-4xl  hover:fill-[#fd4646]" />
-						<BsFacebook className="text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
-						<BsLinkedin className="rounded-full text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
-						<SiYoutubemusic className="rounded-full text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
-						<AiFillDribbbleCircle className="rounded-full text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
-						<FaInstagramSquare className="rounded-[100%] text-4xl fill-[#FF8080] hover:fill-[#fd4646] " />
-					
+						<AiFillTwitterCircle className=" fill-[#FF8080] text-3xl md:text-4xl  hover:fill-[#fd4646]" />
+						<BsFacebook className="text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
+						<BsLinkedin className="rounded-full text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
+						<SiYoutubemusic className="rounded-full text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
+						<AiFillDribbbleCircle className="rounded-full text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
+						<FaInstagramSquare className="rounded-[100%] text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646] " />
 					</div>
-				</div> */}
+				</div>
+			</div>
+			<div className="flex flex-wrap gap-3 justify-center md:justify-between py-4">
+				<p>© ESCAPE ROOM MARKETER - 2023</p>
+				<div>
+					<span className="hover:text-red-500 cursor-pointer">Terms of Service </span> | <span className="hover:text-red-500 cursor-pointer"> Privacy Policy</span>
+				</div>
 			</div>
 		</div>
 	);

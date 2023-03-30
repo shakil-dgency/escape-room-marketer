@@ -14,6 +14,7 @@ module.exports = {
       logoFont: ['Genos', 'sans-serif']
     },
    
+   
   },
   plugins: [],
 }
