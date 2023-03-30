@@ -23,7 +23,7 @@ export default function Home() {
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="">
+			<main className="section_body pt-[4rem] md:pt-[6rem] ">
 				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-8 bg-[#FAFAFA]"></div>
 				<div className="hero_cover g-page_structure h-[600px] md:h-[550px] lg:h-[670px] w-full bg-[#FAFAFA]  md:pt-12 relative">
 					<div>

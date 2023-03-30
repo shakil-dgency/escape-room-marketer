@@ -4,5 +4,5 @@ import Navbar from '@/components/Navbar'
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
-  return <ChakraProvider><Navbar /><Component {...pageProps} /><Footer /></ChakraProvider>
+  return <ChakraProvider><Navbar /><Component className="main_component" {...pageProps} /><Footer /></ChakraProvider>
 }

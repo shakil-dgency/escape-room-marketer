@@ -1,142 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Genos:wght@600&family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@500;600;700&family=Permanent+Marker&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Genos:wght@600&family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@500;600;700&family=Permanent+Marker&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --section-bg-lightblue: #F9FCFF;
-  --section-bg-lightred: #FFF7F5;
+	--section-bg-lightblue: #f9fcff;
+	--section-bg-lightred: #fff7f5;
 }
 
-body, html {
-  overflow-x: hidden;
-  }
+body,html {
+	/* overflow-x: hidden; */
+}
 
-.g-page_structure{
-  padding: 0 20%;
 
+.g-page_structure {
+	padding: 0 20%;
 }
 /* navbar */
 /* .serveice_list:hover{
    color: #ff5056;
 } */
 
-
 @media only screen and (max-width: 480px) {
- 
 }
 @media only screen and (max-width: 480px) {
-  .g-page_structure{
-    padding: 0 15px;
-  
-  }
+	.g-page_structure {
+		padding: 0 15px;
+	}
 }
-@media only screen and (max-width: 1536px)  and (min-width: 480px) {
-  .g-page_structure{
-    padding: 0 100px;
-  
-  }
+@media only screen and (max-width: 1536px) and (min-width: 480px) {
+	.g-page_structure {
+		padding: 0 100px;
+	}
 }
-@media only screen and (max-width: 1024px)  and (min-width: 480px) {
-  .g-page_structure{
-    padding: 0 15px;
-  
-  }
+@media only screen and (max-width: 1024px) and (min-width: 480px) {
+	.g-page_structure {
+		padding: 0 15px;
+	}
 }
-.image{
-  /* position: absolute; */
-  /* height: 75px; */
-  /* background-repeat: repeat-x; */
-  /* background-repeat: repeat-x; */
-  /* background-size: 1600px 80px; */
-  /* z-index: 20; */
-  /* background-position-x: center;  */
+.image {
+	/* position: absolute; */
+	/* height: 75px; */
+	/* background-repeat: repeat-x; */
+	/* background-repeat: repeat-x; */
+	/* background-size: 1600px 80px; */
+	/* z-index: 20; */
+	/* background-position-x: center;  */
 }
 
 /* chakra skeleton component used in form loading */
-.chakra-skeleton{
-  animation-duration: 0.9s !important;
+.chakra-skeleton {
+	animation-duration: 0.9s !important;
 }
 
-
-.serveice_popup{
-  transform: translateY(-50px);
-  animation: popup  0.2s forwards ;
-  opacity: 0;
+.serveice_popup {
+	transform: translateY(-50px);
+	animation: popup 0.2s forwards;
+	opacity: 0;
 }
 @keyframes popup {
-  to {
-     transform: translateY(0);
-     opacity: 1;
-  }
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 
-/* serveice section */
-.cta{
+.sidebar_menu_open{
+	/* transform: translateX(-10px); */
   opacity: 0;
-  background:  #FAFAFA;
- animation: animate-cta 1s forwards cubic-bezier(0.85,0,0.15,1);
+	animation: slide 0.2s forwards;
+ 
+}
+@keyframes slide {
+	to {
+		/* transform: translateX(0);
+     */
+     opacity: 1;
+	}
+}
+
+
+
+
+ #sidebar::after {
+  content: "";
+
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  left: -17%;
+  z-index: -10;
+  opacity: 0.5;
+} 
+
+/* serveice section */
+.cta {
+	opacity: 0;
+	background: #fafafa;
+	animation: animate-cta 1s forwards cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 @keyframes animate-cta {
-  to {
-     opacity: 1;
-  }
+	to {
+		opacity: 1;
+	}
 }
 
-.text_wrapper{
-  transform: translateX(calc(-100% - 2.8rem));
-  animation: text-slide  1s forwards ;
+.text_wrapper {
+	transform: translateX(calc(-100% - 2.8rem));
+	animation: text-slide 1s forwards;
 }
 @keyframes text-slide {
-  to {
-     transform: translateX(0%);
-  }
+	to {
+		transform: translateX(0%);
+	}
 }
 
-.error_warning{
-  fill: red;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transform: translateY(calc(-100% - 70px));
-  animation: error-slide 1s 0.2s forwards cubic-bezier(0.85,0,0.15,1);  
+.error_warning {
+	fill: red;
+	font-size: 1.5rem;
+	cursor: pointer;
+	transform: translateY(calc(-100% - 70px));
+	animation: error-slide 1s 0.2s forwards cubic-bezier(0.85, 0, 0.15, 1);
 }
 
 .error_warning :hover {
-  fill: rgb(255, 78, 78)
+	fill: rgb(255, 78, 78);
 }
 
 @keyframes error-slide {
-
-  60% {
-     transform: translateY(20%);
-  }
-  80% {
-     transform: translateY(-20%);
-  }
-  100% {
-     transform: translateY(0%);
-  }
+	60% {
+		transform: translateY(20%);
+	}
+	80% {
+		transform: translateY(-20%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
 }
-
-
 
 @font-face {
-  src: url('../public/font/file/CircularStd-Black.otf');
-  font-family: 'CircularStd';
+	src: url("../public/font/file/CircularStd-Black.otf");
+	font-family: "CircularStd";
 }
 @font-face {
-  src: url('../public/font/Graphik-Font-Family/GraphikRegular.otf');
-  font-family: 'GraphikRegular';
+	src: url("../public/font/Graphik-Font-Family/GraphikRegular.otf");
+	font-family: "GraphikRegular";
 }
 
-
-.logomain{
-  font-family: CircularStd;
+.logomain {
+	font-family: CircularStd;
 }
-.fontTest{
-  font-family: GraphikRegular ;
-  font-size: 22px;
-  line-height: 37px;
+.fontTest {
+	font-family: GraphikRegular;
+	font-size: 22px;
+	line-height: 37px;
 }

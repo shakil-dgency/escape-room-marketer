@@ -4,7 +4,7 @@ import React from "react";
 
 function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 	return (
-		<div>
+		<div className="pt-[6rem] ">
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-8 bg-[#FAFAFA]"></div>
 			<div className={thirdPic?`hero_cover g-page_structure h-[500px] md:h-[650px] lg:h-[750px] w-full bg-[#FAFAFA]  md:pt-12 relative` :`hero_cover g-page_structure h-[600px] md:h-[550px] lg:h-[670px] w-full bg-[#FAFAFA]  md:pt-12 relative`}>
 				{firstPic && (
