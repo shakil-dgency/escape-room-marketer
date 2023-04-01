@@ -72,9 +72,9 @@ function PpcAgency(props) {
 				title="Meet Your Dedicated Team Before We Start Making You More Money"
 				pera="Be confident in the people behind your marketing.Test their experience, their approach, and their humor."
 			/>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-			<FaqSection bodyColor="bg-[#fafafa]" faqSectionData={faqSection} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180"></div>
+			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#F9FCFF] "></div>
+			<FaqSection bodyColor="bg-[#F9FCFF]" faqSectionData={faqSection} />
+			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#F9FCFF] rotate-180"></div>
 		</div>
 	);
 }

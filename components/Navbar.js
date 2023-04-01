@@ -66,14 +66,13 @@ function Navbar() {
 		const navbar = document.getElementById("navbar");
 		window.addEventListener("scroll", function () {
 			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-			console.log(window.pageYOffset, document.documentElement.scrollTop);
 			if (scrollTop > lastScrollTop) {
 				navbar.style.top = "-100px";
 			} else if (lastScrollTop > scrollTop + 20) {
 				navbar.style.top = "0";
 			}
 			lastScrollTop = scrollTop;
-			console.log("last", lastScrollTop);
+			
 		});
 	});
 
@@ -100,7 +99,7 @@ function Navbar() {
 			<div className="nav_container g-page_structure ">
 				<div className="flex gap-1 md:gap-0 md:justify-between items-center py-5 relative ">
 					<Link href={"/"} className="logomain flex-1 cursor-pointer">
-					<Image src="/logo.png" alt="logo" height={100} width={170} className="w-[120px] sm:w-[150px]" />
+					<Image src="/logo.png" alt="logo" height={100} width={170} className="w-[120px] sm:w-[150px] lg:w-[170px]" />
 					</Link>
 					<div className="nav_elements flex gap-4 md:gap-10 items-center ">
 						<ul className="hidden lg:flex gap-5 font-[600] transform transition-transform translate-x-full absolute top-0 right-0 md:transform-none md:static ">
