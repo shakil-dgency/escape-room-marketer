@@ -4,10 +4,9 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { RiErrorWarningFill } from "react-icons/ri";
-import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
-import styles from "@/styles/Home.module.css";
 import { sendContactForm } from "@/lib/api";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import styles from "@/styles/Freemarketing.module.css";
 
 const initValues = {
 	serveice1: "",
@@ -111,7 +110,7 @@ function Freemarketing() {
 		}
 	};
 	return (
-		<div>
+		<div className=" pt-[4rem] md:pt-[6rem] ">
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-8 bg-[#FAFAFA]"></div>
 			<div className="hero_section  bg-[#FAFAFA] lg:relative lg:h-[800px] 2xl:h-[inherit]">
 				<div className="hero_text md:px-[10%] xl:px-[20%] ">
@@ -123,7 +122,7 @@ function Freemarketing() {
 					</p>
 				</div>
 				<div className="hero_img px-[10%]">
-					<Image src="/freemarketing/proposal-form-illustration-brains.svg" width={100} height={100} className="h-[100%] w-full hidden lg:block " />
+					<Image src="/freemarketing/proposal-form-illustration-brains.svg" alt="" width={100} height={100} className="h-[100%] w-full hidden lg:block " />
 				</div>
 				<div
 					ref={myref}
@@ -278,7 +277,7 @@ function Freemarketing() {
 							</h1>
 							<form action="" className="flex gap-6 text-xl mt-8">
 								<div>
-									<label for="name">Your Name*</label> <br />
+									<label htmlFor="name">Your Name*</label> <br />
 									<input
 										type="text"
 										id="name"
@@ -288,7 +287,7 @@ function Freemarketing() {
 									/>
 								</div>
 								<div>
-									<label for="email">Your Business Email*</label>
+									<label htmlFor="email">Your Business Email*</label>
 									<br />
 									<input
 										type="email"
@@ -331,8 +330,8 @@ function Freemarketing() {
 				</div>
 				<div className="flex justify-center my-10 w-[60%] mx-auto ">
 					{/* <Image src="/TeamInABox.webp" width={400} height={400} className="" /> */}
-					<div className="ratio ratio-21x9">
-						<iframe src="https://www.youtube.com/embed/SMKPKGW083c" title="YouTube video" allowfullscreen></iframe>
+					<div className="">
+						<iframe className="w-[330px] h-[200px] md:w-[500px] md:h-[300px] lg:w-[700px] lg:h-[300px]" src="https://www.youtube.com/embed/SMKPKGW083c" title="YouTube video" allowFullScreen></iframe>
 					</div>
 				</div>
 			</div>

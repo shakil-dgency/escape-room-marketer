@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { BiChevronRight } from "react-icons/bi";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 
 function Navbar() {
@@ -62,17 +62,17 @@ function Navbar() {
 			}
 		});
 
-		var lastScrollTop = 0;
+		let lastScrollTop = 0;
 		const navbar = document.getElementById("navbar");
 		window.addEventListener("scroll", function () {
 			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 			if (scrollTop > lastScrollTop) {
 				navbar.style.top = "-100px";
+				setServiceMenubar(false);
 			} else if (lastScrollTop > scrollTop + 20) {
 				navbar.style.top = "0";
 			}
 			lastScrollTop = scrollTop;
-			
 		});
 	});
 
@@ -95,11 +95,11 @@ function Navbar() {
 	};
 
 	return (
-		<div id="navbar" className="bg-white fixed top-0 w-full h-[70px] md:h-[100px] z-30 duration-500">
+		<div id="navbar" className="bg-white fixed top-0 w-full py-5 z-30 duration-500">
 			<div className="nav_container g-page_structure ">
-				<div className="flex gap-1 md:gap-0 md:justify-between items-center py-5 relative ">
+				<div className="flex gap-1 md:gap-0 md:justify-between items-center  relative ">
 					<Link href={"/"} className="logomain flex-1 cursor-pointer">
-					<Image src="/logo.png" alt="logo" height={100} width={170} className="w-[120px] sm:w-[150px] lg:w-[170px]" />
+						<Image src="/logo.png" alt="logo" height={100} width={170} className="w-[120px] sm:w-[150px] lg:w-[170px]" />
 					</Link>
 					<div className="nav_elements flex gap-4 md:gap-10 items-center ">
 						<ul className="hidden lg:flex gap-5 font-[600] transform transition-transform translate-x-full absolute top-0 right-0 md:transform-none md:static ">
@@ -334,98 +334,133 @@ function Navbar() {
 				<div
 					ref={sidebarMainref}
 					id="sidebar"
-					className={`sidebar_shadow sm:drop-shadow lg:hidden bg-white  w-full sm:w-[60%]  absolute  top-0 right-0   z-10 ${sidebarOpen ? "block sidebar_menu_open" : "hidden"}
+					className={`sidebar_shadow sm:drop-shadow lg:hidden bg-white  w-full sm:w-[60%]  absolute  top-0 right-0   z-10 ${
+						sidebarOpen ? "block sidebar_menu_open" : "hidden"
+					}
 					`}
 				>
-					<div className={`overflow-scroll h-screen pb-14 pt-24 pl-6 md:pl-14  `}>
+					<div className={`overflow-scroll h-screen  pt-24 pb-12 pl-6 md:pl-14  relative`}>
 						<div
 							onClick={closeSidebar}
-							className="rounded-[100%] text-4xl flex justify-center items-center  border-2 border-black w-12 h-12 absolute top-6 right-4"
+							className="rounded-[100%] text-3xl flex justify-center items-center  border-2 border-black w-10 h-10 absolute top-6 right-4"
 						>
 							<RxCross2 className=" stroke-[0.5]" />
 						</div>
-						<ul className="font-[600] flex flex-col gap-3  ">
+						<ul className="font-[600] flex flex-col gap-3  mb-12">
 							<li className="text-[18px] pt-3">PRICING</li>
 							<li onClick={handleSidebarService} className="group cursor-pointer flex items-center gap-2 text-[18px] pt-3 text-red-500">
 								SERVICES <MdKeyboardArrowDown className={`arrow_rotate text-2xl transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
 							</li>
 							<div className="border-b-[3px] border-red-500 w-[80px] -mt-2"></div>
-							<div ref={sidebarServiceref} className={`pl-14 ${open ? "block" : "hidden"}`}>
+							<div ref={sidebarServiceref} className={`pb-4 ${open ? "block" : "hidden"}`}>
 								<ul className="flex-1">
-									<h3 className=" text-[18px] font-bold pt-2 pb-1 ">PAID ADVERTISING</h3>
-									<div className="pl-3 flex flex-col gap-1 text-[18px]">
+									<div className="pl-[11px] pb-3 flex gap-2 items-center">
+										<div className="">
+											<Image src="/navbar/ppc_agency.png" alt="" height={40} width={40} className="" />
+										</div>
+										<div>
+											<h3 className=" text-[18px] font-bold pt-2  ">PAID ADVERTISING</h3>
+											<p className="text-[12px] w-[250px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
+										</div>
+									</div>
+									<div className="pl-14 flex flex-col gap-1 text-[16px]">
 										<li>
-											<Link href={"/service/ppcAgency"} id="012" className="serveice_list whitespace-nowrap">
-												PPC Agency
+											<Link href={"/service/ppcAgency"} id="012" className="serveice_list whitespace-nowrap flex items-center gap-1">
+												PPC Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/facebookAdsAgency"} id="013" className="serveice_list whitespace-nowrap ">
-												Facebook Ads Agency
+											<Link href={"/service/facebookAdsAgency"} id="013" className="serveice_list whitespace-nowrap flex items-center gap-1">
+												Facebook Ads Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/googleAdsAgency"} id="014" className="serveice_list whitespace-nowrap">
-												Google Ads Agency
+											<Link href={"/service/googleAdsAgency"} id="014" className="serveice_list whitespace-nowrap flex items-center gap-1">
+												Google Ads Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>{" "}
 										</li>
 										<li>
-											<Link href={"/service/semAgency"} id="015" className="serveice_list">
-												SEM Agency
+											<Link href={"/service/semAgency"} id="015" className="serveice_list flex items-center gap-1">
+												SEM Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>{" "}
 										</li>
 										<li>
-											<Link href={"/service/ppcManagement"} id="016" className="serveice_list">
-												PPC Management
+											<Link href={"/service/ppcManagement"} id="016" className="serveice_list flex items-center gap-1">
+												PPC Management <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 									</div>
 								</ul>
 								<ul className="flex-1">
-									<h3 className=" text-[18px] font-bold pb-1 pt-4 ">SEO</h3>
-									<div className="pl-3 flex flex-col gap-1 text-[18px]">
+									<div className="pl-[11px] pb-3 pt-6 flex gap-2 items-center">
+										<div className="">
+											<Image src="/navbar/seo_agency.svg" alt="" height={40} width={40} className="" />
+										</div>
+										<div>
+											<h3 className=" text-[18px] font-bold  ">SEO</h3>
+											<p className="text-[12px] w-[250px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
+										</div>
+									</div>
+									<div className="pl-14 flex flex-col gap-1 text-[16px]">
 										<li>
-											<Link href={"/service/contentMarketingAgency"} id="017" className="serveice_list  whitespace-nowrap">
-												Content Marketing Agency
+											<Link href={"/service/contentMarketingAgency"} id="017" className="serveice_list  whitespace-nowrap flex items-center gap-1">
+												Content Marketing Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/seoAgency"} id="018" className="serveice_list">
-												SEO Agency
+											<Link href={"/service/seoAgency"} id="018" className="serveice_list flex items-center gap-1">
+												SEO Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/linkBuildingService"} id="019" className="serveice_list">
-												Link Building Services
+											<Link href={"/service/linkBuildingService"} id="019" className="serveice_list flex items-center gap-1">
+												Link Building Services <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 									</div>
 								</ul>
 								<ul className="flex-1">
-									<h3 className=" text-[18px] font-bold pb-1 pt-4">CONVERSION</h3>
-									<div className="pl-3 flex flex-col gap-1 text-[18px]">
+									<div className="pl-[11px] pb-3 pt-6 flex gap-2 items-center">
+										<div className="">
+											<Image src="/navbar/conversion_rate.svg" alt="" height={40} width={40} className="" />
+										</div>
+										<div>
+											<h3 className=" text-[18px] font-bold  ">CONVERSION</h3>
+											<p className="text-[12px] w-[250px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
+										</div>
+									</div>
+									<div className="pl-14 flex flex-col gap-1 text-[16px]">
 										<li>
-											<Link href={"/service/conversionRateOptimization"} id="020" className="serveice_list whitespace-nowrap">
-												Conversion Rate Optimization
+											<Link href={"/service/conversionRateOptimization"} id="020" className="serveice_list whitespace-nowrap flex items-center gap-1">
+												Conversion Rate Optimization <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/landingPageAgency"} id="021" className="serveice_list whitespace-nowrap">
-												Landing Page Agency
+											<Link href={"/service/landingPageAgency"} id="021" className="serveice_list whitespace-nowrap flex items-center gap-1">
+												Landing Page Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/landingPageDesign"} id="022" className="serveice_list">
-												Landing Page Design
+											<Link href={"/service/landingPageDesign"} id="022" className="serveice_list flex items-center gap-1">
+												Landing Page Design <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 									</div>
 								</ul>
-								<ul className="flex-1">
-									<h3 className=" text-[18px] font-bold pb-1 pt-4">EMAIL MARKETING</h3>
+								<ul className="flex-1 ">
+									<div className="pl-[11px] pb-3 pt-6 flex gap-2 items-center">
+										<div className="">
+											<Image src="/navbar/email_marketing.svg" alt="" height={40} width={40} className="" />
+										</div>
+										<div>
+											<h3 className=" text-[18px] font-bold  ">EMAIL MARKETING</h3>
+											<p className="text-[12px] w-[250px] text-[#515E6F]">Increase your conversion rates to lower your cost per conversion</p>
+										</div>
+									</div>
+
 									<li>
-										<Link href={"/service/emailMarketingAgency"} id="023" className="serveice_list pl-3 pb-4 text-[18px]">
-											Email Marketing Agency
+										<Link href={"/service/emailMarketingAgency"} id="023" className="serveice_list pl-14 text-[16px] flex items-center gap-1">
+											Email Marketing Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 										</Link>
 									</li>
 								</ul>
@@ -437,6 +472,11 @@ function Navbar() {
 								RESOURCES
 							</li>
 						</ul>
+						<div onClick={closeSidebar}>
+							<Link href={"/freemarketing"} className=" rounded-md border-2 border-red-500 px-6 py-2 text-red-500 font-semibold text-[14px] ">
+								FREE MARKETING PLAN
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>

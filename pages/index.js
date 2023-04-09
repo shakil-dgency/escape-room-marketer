@@ -1,3 +1,6 @@
+// this is a line break design
+// <div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-8 bg-[#FAFAFA]"></div>
+
 "use client";
 import Head from "next/head";
 import { Inter } from "next/font/google";
@@ -25,18 +28,18 @@ export default function Home() {
 			</Head>
 			<main className="section_body pt-[4rem] md:pt-[6rem] ">
 				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-8 bg-[#FAFAFA]"></div>
-				<div className="hero_cover g-page_structure h-[600px] md:h-[550px] lg:h-[670px] w-full bg-[#FAFAFA]  md:pt-12 relative">
+				<div className="hero_cover g-page_structure h-[750px] md:h-[550px] lg:h-[670px] w-full bg-[#FAFAFA]  md:pt-12 relative">
 					<div>
 						<img
 							src="/heroimg_left.avif"
-							className="absolute left-0 bottom-0 lg:h-[400px] md:h-[280px] lg:w-[400px] md:w-[300px] xl:h-[400px] xl:w-[550px] 2xl:w-[550px] 2xl:h-[400px]"
+							className="absolute left-0 bottom-0 md:h-[280px] md:w-[300px] lg:h-[400px]  lg:w-[400px]   2xl:w-[550px] 2xl:h-[400px]"
 							alt=""
 						/>
 					</div>
 					<div>
 						<img
 							src="/heroimg_right.avif"
-							className="absolute right-0 bottom-0 lg:h-[400px] md:h-[280px] lg:w-[400px] md:w-[300px] xl:h-[400px] xl:w-[550px] 2xl:w-[550px]"
+							className="absolute right-0 bottom-0 md:h-[280px] md:w-[300px] lg:h-[400px]  lg:w-[400px]  2xl:w-[550px]"
 							alt=""
 						/>
 					</div>
