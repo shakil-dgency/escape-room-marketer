@@ -27,7 +27,7 @@ function LandingPageDesign(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				thirdPic="landingPageAgency/illo-PagesAndBills-Desktop.svg"
+				thirdPic="/serveice/landingPageAgency/illo-PagesAndBills-Desktop.svg"
 				title="We’re The Landing Page Agency That Makes You More Money"
 				pera="When you’re focusing on digital marketing, don’t forget about landing pages.Landing pages with clickable call-to-actions and copy that have gone through a/b testing = unreal results."
 			/>

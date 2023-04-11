@@ -31,7 +31,7 @@ function SeoAgency(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				thirdPic="contentMarketingAgency/content-marketing-hero-desktop.svg"
+				thirdPic="/serveice/contentMarketingAgency/content-marketing-hero-desktop.svg"
 				title="The SEO Agency That Drives Visitors To Your
                 Site & Dollar Bills To Your Bank Account"
 				pera="A good SEO company brings you organic traffic. Great SEO services bring

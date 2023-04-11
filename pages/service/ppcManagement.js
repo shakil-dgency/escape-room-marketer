@@ -36,8 +36,8 @@ function PpcManagement(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				firstPic="ppcManagement/illo-MoneyTree1.svg"
-				secondPic="ppcManagement/illo-MoneyTree1.svg"
+				firstPic="/serveice/ppcManagement/illo-MoneyTree1.svg"
+				secondPic="/serveice/ppcManagement/illo-MoneyTree1.svg"
 				title="Our PPC Management Is The Tree That Money Grows On"
 				pera="Yes, your parents lied to you. We also have
                 better performing PPC campaigns & PPC ads."

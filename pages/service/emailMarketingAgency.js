@@ -30,7 +30,7 @@ function EmailMarketingAgency(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				thirdPic="emailMarketingAgency/illo-CowEnvelopes-Desktop.svg"
+				thirdPic="/serveice/emailMarketingAgency/illo-CowEnvelopes-Desktop.svg"
 				title="Turn Your Email Marketing Into
                 The Cash Cow It Should Be"
 				pera="We are a full-service email marketing agency.

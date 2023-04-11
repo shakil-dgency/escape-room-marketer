@@ -31,7 +31,7 @@ function GoogleAdsAgency(props) {
 			<Hero
 				title="We’re The PPC Agency That Puts More Dollars In Your Pocket"
 				pera="Increase your conversion rates to lower your cost per conversion and get a higher conversion volume. All leading to more revenue as well."
-				thirdPic="googleAdsAgency/diaper-pacifier-bottle-desktop.svg"
+				thirdPic="/serveice/googleAdsAgency/diaper-pacifier-bottle-desktop.svg"
 			/>
 			<OurWork ourWorkData={ourwork} />
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa]"></div>

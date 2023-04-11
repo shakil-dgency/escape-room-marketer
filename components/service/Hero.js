@@ -4,13 +4,13 @@ import React from "react";
 
 function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 	return (
-		<div className="pt-[6rem] ">
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-8 bg-[#FAFAFA]"></div>
-			<div className={thirdPic?`hero_cover g-page_structure h-[500px] md:h-[650px] lg:h-[750px] w-full bg-[#FAFAFA]  md:pt-12 relative` :`hero_cover g-page_structure h-[600px] md:h-[550px] lg:h-[670px] w-full bg-[#FAFAFA]  md:pt-12 relative`}>
+		<div className="pt-[4rem] ">
+			<div className="break_line image bg-[url('/navbar_breakline.svg')] h-[90px]  bg-[length:3200px_90px]   bg-center"></div>
+			<div className={thirdPic?`hero_cover g-page_structure h-[500px] md:h-[650px] lg:h-[750px] w-full bg-[#FFF7F5]  md:pt-12 relative` :`hero_cover g-page_structure h-[600px] md:h-[550px] lg:h-[670px] w-full bg-[#FFF7F5]  md:pt-12 relative`}>
 				{firstPic && (
 					<div>
 						<img
-							src={`/serveice/${firstPic}`}
+							src={`${firstPic}`}
 							className="absolute left-2 md:left-10 bottom-0  h-[250px] w-[250px] md:h-[280px] lg:h-[400px] lg:w-[400px] md:w-[300px] xl:h-[450px] xl:w-[500px] 2xl:w-[500px] 2xl:h-[500px]"
 							alt=""
 						/>
@@ -19,7 +19,7 @@ function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 				{secondPic && (
 					<div>
 						<img
-							src={`/serveice/${secondPic}`}
+							src={`${secondPic}`}
 							className="absolute right-2 md:right-10 bottom-0  h-[250px] w-[250px]  md:h-[280px] lg:h-[400px] lg:w-[400px] md:w-[300px] xl:h-[450px] xl:w-[500px] 2xl:w-[500px] 2xl:h-[500px]"
 							alt=""
 						/>
@@ -28,7 +28,7 @@ function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 				{thirdPic && (
 					<div className="">
 						<img
-							src={`/serveice/${thirdPic}`}
+							src={`${thirdPic}`}
 							className="px-10  absolute right-[50%] translate-x-[50%] bottom-[0] md:-bottom-[13%] translate-y-[-40%] "
 							alt=""
 						/>
@@ -42,7 +42,7 @@ function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 					</div>
 				</div>
 			</div>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-6 rotate-180"></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:3200px_90px] -mt-10  bg-center"></div>
 		</div>
 	);
 }

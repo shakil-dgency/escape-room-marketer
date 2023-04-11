@@ -29,7 +29,7 @@ function SemAgency(props) {
 			</Head>
 
 			<Hero
-				thirdPic="semAgency/warrens-desktop.svg"
+				thirdPic="/serveice/semAgency/warrens-desktop.svg"
 				title="We’re The PPC Agency That Puts More Dollars In Your Pocket"
 				pera="Increase your conversion rates to lower your cost per conversion and get a higher conversion volume. All leading to more revenue as well."
 			/>

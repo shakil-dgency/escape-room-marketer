@@ -17,6 +17,7 @@ function Navbar() {
 	const sidebarMainref = useRef();
 	const sidebarServiceref = useRef();
 	const hamburgRef = useRef();
+	// const allserviceRef = useRef();
 
 	const handlePopup = (e) => {
 		let _id;
@@ -125,11 +126,11 @@ function Navbar() {
 					</div>
 					<div
 						ref={serveiceRef}
-						className={`serveice_popup shadow md:px-6 md:py-4 rounded  absolute left-0 top-24 right-0  z-30 bg-white ${
+						className={`serveice_popup shadow md:px-6 md:py-4 rounded  absolute left-0 top-20 right-0  z-30 bg-white ${
 							serviceMenubar ? "block" : "hidden"
 						} `}
 					>
-						<p className="pb-2 text-[#ff5056] font-semibold">ALL OF OUR SERVICES</p>
+						<Link onClick={()=>setServiceMenubar(!serviceMenubar)} href={"/services"}  className="pb-2 text-[#ff5056] font-semibold">ALL OF OUR SERVICES</Link>
 						<div className=" grid grid-cols-3 grid-rows-8 gap-5 border-t-[1px] pt-2">
 							<ul className="flex flex-col gap-4 row-start-1 row-end-7">
 								<h3 className=" text-[16px] font-semibold pb-2">PAID ADVERTISING</h3>

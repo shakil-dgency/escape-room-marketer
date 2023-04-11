@@ -27,7 +27,7 @@ function ConversionRateOptimization(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				thirdPic="conversionRateOptimization/illo-PrintMoney-Desktop-new.svg"
+				thirdPic="/serveice/conversionRateOptimization/illo-PrintMoney-Desktop-new.svg"
 				title="Conversion Rate Optimization That Prints
                 Money Like The Federal Reserve"
 				pera="From landing pages to a/b testing, we're the conversion rate optimization agency

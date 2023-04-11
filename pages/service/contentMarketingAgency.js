@@ -31,7 +31,7 @@ function ContentMarketingAgency(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				thirdPic="contentMarketingAgency/content-marketing-hero-desktop.svg"
+				thirdPic="/serveice/contentMarketingAgency/content-marketing-hero-desktop.svg"
 				title="Turn Your Content Marketing Into Your #1 Money-Maker"
 				pera="If you're going to hire a content marketing agency,
                 pick the one that built their business on digital content."

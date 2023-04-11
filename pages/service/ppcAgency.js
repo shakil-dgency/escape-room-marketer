@@ -1,4 +1,4 @@
-import Hero from "@/components/service/hero";
+import Hero from "@/components/service/Hero";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Payperclick from "@/components/service/Payperclick";
@@ -38,8 +38,8 @@ function PpcAgency(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				firstPic="HappyPockets-L-updated.svg"
-				secondPic="HappyPockets-R-updated.svg"
+				firstPic="/serveice/HappyPockets-L-updated.svg"
+				secondPic="/serveice/HappyPockets-R-updated.svg"
 				title="We’re The PPC Agency That Puts More Dollars In Your Pocket"
 				pera="Increase your conversion rates to lower your cost per conversion and get a higher conversion volume. All leading to more revenue as well."
 			/>
@@ -65,6 +65,9 @@ function PpcAgency(props) {
 				cardColor="bg-white"
 				title="Improve One Channel or Rapidly Scale Performance Across All of Them at Once"
 				pera="Work with specialized teams that rapidly adapt, expand, and scale as one cohesive unit."
+				conversionRateOptimization
+				emailMarketing
+				searchEngineOptimization
 			/>
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
 			<DedicatedTeam
