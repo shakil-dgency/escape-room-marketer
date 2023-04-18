@@ -64,6 +64,9 @@ function PpcManagement(props) {
 				cardColor="bg-white"
 				title="Improve One Channel or Rapidly Scale Performance Across All of Them at Once"
 				pera="Work with specialized teams that rapidly adapt, expand, and scale as one cohesive unit."
+				conversionRateOptimization
+				emailMarketing
+				searchEngineOptimization
 			/>
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
 			<DedicatedTeam

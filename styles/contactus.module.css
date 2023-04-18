@@ -1,0 +1,17 @@
+.contactus_main{
+	position: relative;
+}
+
+.contactus_main::before{
+	content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-image: url(/contactus/contact_hero.svg); /*Put your image url*/
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+}

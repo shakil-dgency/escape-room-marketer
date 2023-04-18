@@ -51,6 +51,9 @@ function ConversionRateOptimization(props) {
 				title="As Your Conversion Rates Go Up,
 				We’ll Improve Your Other Marketing Channels Too"
 				pera="Discover the other marketing services we can continually improve for you."
+				paidAdvertising
+				emailMarketing
+				searchEngineOptimization
 			/>
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
 			<DedicatedTeam

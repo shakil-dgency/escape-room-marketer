@@ -51,6 +51,9 @@ function LandingPageAgency(props) {
 				title="Once You See Your New Dreamy Conversion Rates,
                 You’ll Wonder What Else We Can Help With"
 				pera="See how our dedicated marketing teams can improve your other marketing channels."
+				paidAdvertising
+				emailMarketing
+				searchEngineOptimization
 			/>
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
 			<DedicatedTeam

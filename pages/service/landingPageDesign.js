@@ -50,6 +50,9 @@ function LandingPageDesign(props) {
                 See What Other Marketing Channels We Can Improve"
 				pera="There’s no need to use different agencies for your marketing
                 when we have dedicated teams for all channels."
+				paidAdvertising
+				emailMarketing
+				searchEngineOptimization
 			/>
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
 			<DedicatedTeam

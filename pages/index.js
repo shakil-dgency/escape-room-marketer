@@ -169,42 +169,42 @@ export default function Home() {
 							Work with an agency that works as hard to earn your trust as they do to earn you results.
 						</p>
 					</div>
-					<div className="q-card mt-20 grid gap-x-20 gap-y-12 md:grid-cols-2">
+					<div className="q-card mt-20 grid gap-x-12 gap-y-12 md:grid-cols-2 lg:mx-24">
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/DollarBills.svg" alt="" className="mt-6 w-" />
+							<Image height={200} width={450} src="/home/DollarBills.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/Dictionaries.svg" alt="" className="mt-6 w-" />
+							<Image height={200} width={450} src="/home/Dictionaries.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/ChampagneBottles.svg" alt="" className="mt-6 w-" />
+							<Image height={200} width={260} src="/home/ChampagneBottles.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/LightBulbs.svg" alt="" className="mt-6 w-" />
+							<Image height={200} width={260} src="/home/LightBulbs.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/Folders.svg" alt="" className="mt-6 w-" />
+							<Image height={200} width={450} src="/home/Folders.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/Trophies.svg" alt="" className="mt-6 w-" />
+							<Image height={200} width={450} src="/home/Trophies.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 					</div>
 					<Link href={"/"} className="group flex items-center justify-center gap-4 md:text-2xl list-none text-red-500 mt-12 pb-8">
@@ -225,8 +225,8 @@ export default function Home() {
 							Outsource all your marketing to us or have us help your internal team get better. You choose the style of engagement.
 						</p>
 					</div>
-					<div className="q-card mb-8 mt-10 md:mt-20 grid gap-x-20 gap-y-12 md:grid-cols-2">
-						<div className="px-10 pt-10 pb-4 md:col-span-2 rounded bg-white shadow-md  grid md:grid-cols-2 items-center">
+					<div className="q-card mb-8 mt-10 md:mt-20 grid gap-x-12 gap-y-12 md:grid-cols-2 xl:mx-24">
+						<div className="px-10 py-6 md:col-span-2 rounded bg-white shadow-md  grid md:grid-cols-2 items-center justify-items-center">
 							<div className=" text-center ">
 								<p className="font-bold text-xl">Ongoing Expert Management</p>
 								<p className="text-lg mt-2">
@@ -234,31 +234,31 @@ export default function Home() {
 									<br /> and report directly to you.
 								</p>
 							</div>
-							<img src="/wateringCan.svg" alt="" className="mt-6 " />
+							<Image height={100} width={300} src="/wateringCan.svg" alt="" className="mt-6 " />
 						</div>
-						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
+						<div className="px-10 py-6  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/MagGlass.svg" alt="" className="mt-6 w-" />
+							<Image height={100} width={300} src="/MagGlass.svg" alt="" className="mt-6 mx-auto" />
 						</div>
-						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
+						<div className="px-10 py-6  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/Hardhat.svg" alt="" className="mt-6 w-" />
+							<Image height={100} width={300} src="/Hardhat.svg" alt="" className="mt-6 mx-auto" />
 						</div>
-						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
+						<div className="px-10 py-6  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/SpeechBubbles.svg" alt="" className="mt-6 w-" />
+							<Image height={100} width={300} src="/SpeechBubbles.svg" alt="" className="mt-6 mx-auto" />
 						</div>
-						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
+						<div className="px-10 py-6  rounded bg-white shadow-md">
 							<p className="font-bold text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<img src="/Speedometer.svg" alt="" className="mt-6 w-" />
+							<Image height={100} width={280} src="/Speedometer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 					</div>
 

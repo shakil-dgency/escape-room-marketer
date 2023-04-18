@@ -27,24 +27,33 @@ function FaqSection({ bodyColor, faqSectionData }) {
 					{faqSectionData.head_message && faqSectionData.head_message.text_line}
 				</p>
 				<div className="flex justify-center mt-5">
-					<Image src="/serveice/faq.svg" alt="" width={300} height={100} className="w-[170px] md:w-[300px]" />
+					<Image src="/components/faq/faq_icon.svg" alt="" width={300} height={100} className="w-[170px] md:w-[300px]" />
 				</div>
 			</div>
-			<ul className="pl-4 md:pl-20 pb-14 mt-10 list-decimal  md:list-outside md:text-xl font-bold">
+			<ul className=" md:pl-20 pb-14 mt-10  md:text-xl font-bold">
 				{faqSectionData &&
 					faqSectionData.question_answer.map((data, i) => {
 						return (
-							<li className="md:pl-8" key={data.id}>
+							<li className="" key={data.id}>
 								<div className=" border-b-[1px] py-5">
-									<div onClick={() => handleFaqOpen(i)} className="flex justify-between">
-										<h3 className="text-lg md:text-xl font-bold">{data.question}</h3>
-										<MdKeyboardArrowDown className={`arrow_rotate mt-2 text-xl transition-transform duration-300 ${i == 0 ? (firstFaqOpen ? "rotate-180" : " ") : (faqOpen === i ?'rotate-180':'')}`} />
+									<div onClick={() => handleFaqOpen(i)} className="flex justify-between cursor-pointer relative">
+										<Image src="/components/faq/lock_close.svg" alt="" width={20} height={50} className={`absolute left-0 ${i == 0 ? (firstFaqOpen ? "hidden" : "") : faqOpen === i ? "hidden" : ""}` } />
+										<Image src="/components/faq/lock_open.svg" alt="" width={20} height={50} className= {`absolute left-0`}  />
+										<h3 className="text-lg md:text-xl font-bold ml-10 text-[#374151]">{data.question}</h3>
+										<MdKeyboardArrowDown
+											className={`arrow_rotate mt-2 text-xl transition-transform duration-300 ${
+												i == 0 ? (firstFaqOpen ? "rotate-180" : " ") : faqOpen === i ? "rotate-180" : ""
+											}`}
+										/>
 									</div>
 									<p
-										className={`${
+										className={` ${
 											i == 0 ? (firstFaqOpen ? "block" : "hidden") : faqOpen == i ? "block" : "hidden "
-										} bg-[#EAF4FF] p-3 mt-2   text-[16px] md:text-[18px] font-normal pt-2 `}
+										} bg-[#F1F8FF] p-3 mt-2   text-[16px] md:text-[18px] font-normal pt-2 text-[#6B7280] `}
 									>
+										<span>
+											<Image src="/components/faq/faq_key.svg" alt="" width={30} height={50} className="inline-block mr-4" />
+										</span>
 										{data.answer}
 									</p>
 								</div>

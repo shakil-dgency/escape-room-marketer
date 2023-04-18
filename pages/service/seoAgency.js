@@ -65,6 +65,9 @@ function SeoAgency(props) {
                 We’ll Improve Your Other Marketing Channels"
 				pera="See how our specialized teams work together
                 to produce results faster for you."
+				paidAdvertising
+				emailMarketing
+				searchEngineOptimization
 			/>
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
 			<DedicatedTeam

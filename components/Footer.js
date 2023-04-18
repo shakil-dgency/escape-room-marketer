@@ -54,7 +54,7 @@ function Footer() {
 							Careers <span className="bg-[#ff5056] text-white rounded px-1 font-semibold ml-1">HIRING</span>
 						</li>
 						<li className="cursor-pointer">Partner Program</li>
-						<li className="cursor-pointer">Contact Us</li>
+						<Link href={'/contactUs'}><li className="cursor-pointer">Contact Us</li></Link>
 					</ul>
 				</div>
 				<div className="advertising pt-4">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
@@ -15,26 +16,27 @@ function KeyServeice({ bodyColor, cardColor, keyServeiceData }) {
 						{keyServeiceData.head_message && keyServeiceData.head_message.text_line}
 					</p>
 				</div>
-				<div className="q-card mx-0 md:mx-10 mb-8 mt-10 md:mt-20 grid gap-x-20 gap-y-12 md:grid-cols-1">
+				<div className="q-card mx-0 md:mx-10 mb-8 mt-10 md:mt-20 grid gap-x-20 gap-y-12 md:grid-cols-1 relative">
 					{keyServeiceData.card_content.first_card && (
-						<div className={`px-10 pt-10 pb-4 md:col-span-2 rounded ${cardColor} shadow-md  grid md:grid-cols-2 items-center`}>
+						<div className={`px-10 py-10 md:col-span-2 rounded ${cardColor} shadow-md  grid md:grid-cols-2 items-center justify-items-center`}>
 							<div className=" text-center ">
 								<p className="font-bold text-xl">{keyServeiceData.card_content.first_card.heading}</p>
 								<p className="text-lg mt-2">{keyServeiceData.card_content.first_card.pera}</p>
 							</div>
-							<img src={`${keyServeiceData.card_content.first_card.image}`} alt="" className="mt-6 " />
+							<Image src={`${keyServeiceData.card_content.first_card.image}`} alt="" height={100} width={300} className="  " />
 						</div>
 					)}
+					<Image src='/most_populer.svg' alt='' height={100} width={150} className="absolute -top-4 -left-12 -rotate-45"/>
 				</div>
 				<div className="q-card mx-0 md:mx-10 mb-8 mt-12 md:mt-10 grid gap-x-14 gap-y-12 md:grid-cols-2">
 					{othersCard.map((data) => {
 						return (
-							<div className={`px-10 pt-10 pb-4  rounded ${cardColor} shadow-md`} key={data.heading}>
+							<div className={`px-10 py-6  rounded ${cardColor} shadow-md`} key={data.heading}>
 								<div className=" text-center ">
 									<p className="font-bold text-xl">{data.heading}</p>
 									<p className="text-lg mt-2">{data.pera}</p>
 								</div>
-								<img src={`${data.image}`} alt="" className="mt-6 " />
+								<Image src={`${data.image}`} alt="" height={100} width={250} className="mt-6 mx-auto" />
 							</div>
 						);
 					})}

@@ -54,8 +54,8 @@ function EmailMarketingAgency(props) {
 					Get an inside look at how we engineer every email marketing campaign to convert.
 				</p>
                 <div className="flex">
-                    <div className="shadow py-5">
-                        <Image src="/serveice/emailMarketingAgency/TLCEmail.svg" alt="" width={500} height={100} />
+                    <div className="shadow py-5 mx-auto">
+                        <Image src="/serveice/emailMarketingAgency/TLCEmail.svg" alt="" width={500} height={100}  />
                        <p className="text-center">eCommerce email</p>
                        <h3 className="text-center">TLC Email Framework</h3>
                     </div>
