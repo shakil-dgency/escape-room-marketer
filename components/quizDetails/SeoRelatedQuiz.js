@@ -1,21 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Script from "next/script";
-import Link from "next/link";
-import {BiChevronLeft} from "react-icons/bi";
+import Quizhero from "./quizDetailsHero/Quizhero";
+
+
 
 function SeoRelatedQuiz() {
 	return (
 		<div>
-			<div className="break_line image bg-[url('/navbar_breakline.svg')] h-[90px]  bg-[length:3200px_90px]   bg-center"></div>
-			<div className="quizzes_hero g-page_structure  bg-[#FFF7F5]">
-			<Link href={'/resources/quizzes'} className="text-[#FF492C] font-bold text-base flex items-center"><BiChevronLeft className="text-2xl" /> Go Back To All Quiz </Link>
-				<h1 className="text-5xl leading-[1.2] text-center font-bold pt-8 pb-16">
-					Know Your Escape Room <br /> Website Seo Score
-				</h1>
-			</div>
-			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:3200px_90px]  bg-center"></div>
-
+		
+			< Quizhero heading='Website Seo Score' />
+			{/* <Quizhero heading='Website Seo Score'/> */}
 			<div className="bg-[#F9FCFF] flex">
 				<Image src="/resources/quiz_details/details_hero.svg" alt="" height={100} width={100} className="flex-1 opacity-50" />
 				<div className="flex-[2] text-center mt-16">

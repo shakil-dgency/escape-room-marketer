@@ -8,7 +8,7 @@ function Quizzes() {
 	return (
 		<div className="pt-[4rem]">
 			<div className="break_line image bg-[url('/navbar_breakline.svg')] h-[90px]  bg-[length:3200px_90px]   bg-center"></div>
-			<div className="quizzes_hero g-page_structure  bg-[#FFF7F5]">
+			<div className="quizzes_hero g-page_structure relative before:content-[''] before:absolute before:top-[-20px] before:right-0 before:bottom-[-40px] before:left-0 z-10 before:bg-[url('/resources/quiz_hero_background.png')] before:bg-[length:300px_300px] before:bg-center before:opacity-10 bg-[#FFF7F5]">
 				<h1 className="text-5xl text-center font-semibold pt-10">
 					Quiz For Escape Room <br /> Business Growth
 				</h1>

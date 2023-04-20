@@ -1,15 +1,12 @@
-import React from "react";
 import Image from "next/image";
-import Script from "next/script";
-import Link from "next/link";
-import {BiChevronLeft} from "react-icons/bi";
+import React from "react";
 import Quizhero from "./quizDetailsHero/Quizhero";
+import Script from "next/script";
 
-function ConversionRelatedQuiz() {
+function GoogleAdsRelatedQuiz() {
 	return (
 		<div>
-	        <Quizhero  heading='Website Conversion Score' />
-
+			<Quizhero heading="Google Ads Score" />
 			<div className="bg-[#F9FCFF] flex">
 				<Image src="/resources/quiz_details/details_hero.svg" alt="" height={100} width={100} className="flex-1 opacity-50" />
 				<div className="flex-[2] text-center mt-16">
@@ -40,4 +37,4 @@ function ConversionRelatedQuiz() {
 	);
 }
 
-export default ConversionRelatedQuiz;
+export default GoogleAdsRelatedQuiz;

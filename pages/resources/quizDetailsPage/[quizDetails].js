@@ -6,6 +6,7 @@ import Link from "next/link";
 import SeoRelatedQuiz from "@/components/quizDetails/SeoRelatedQuiz";
 import ConversionRelatedQuiz from "@/components/quizDetails/ConversionRelatedQuiz";
 import EmailMarketingRelatedQuiz from "@/components/quizDetails/EmailMarketingRelatedQuiz";
+import GoogleAdsRelatedQuiz from "@/components/quizDetails/GoogleAdsRelatedQuiz";
 
 function QuizDetails() {
 	const router = useRouter();
@@ -22,8 +23,11 @@ function QuizDetails() {
 				{dynamicpage === "quizDetailsConversion" && <ConversionRelatedQuiz />}
 
 				 {/* this section is for Email Marketing related quiz */}
-         {dynamicpage === "quizDetailsEmailMarketing" && <EmailMarketingRelatedQuiz />}
-          {/* this section is for Google Ads related quiz */}
+                {dynamicpage === "quizDetailsEmailMarketing" && <EmailMarketingRelatedQuiz />}
+
+                {/* this section is for Google Ads related quiz */}
+				{dynamicpage === "quizDetailsgoogle" && <GoogleAdsRelatedQuiz />}
+
 				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:3200px_90px]   bg-center rotate-180 "></div>
 				<div className=" bg-[#FFF7F5] pt-16 pb-20 bg-[url('/resources/quizzes/quiz-key-background.svg')] bg-center w-full absolute z-20 -mt-9">
 					<div className="g-page_structure flex flex-col items-center">
