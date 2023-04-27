@@ -79,9 +79,9 @@ function Quizzes() {
 							<p className="text-lg text-[#FF492C] font-semibold">ESCAPE ROOM WEBSITE</p>
 							<h3 className="text-3xl font-bold pb-2">Facebook Ads Quiz</h3>
 							<p className="text-lg">Stop trying to guess what metrics mean and trying to figure out why your PPC ads aren't performing as well.</p>
-							<button className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2">
+							<Link href={'/resources/quizDetailsPage/quizDetailsfacebook'} className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2">
 								Start Here Know Your Score <BsArrowRight className="text-xl mt-1" />
-							</button>
+							</Link>
 						</div>
 					</div>
 					<div className="flex gap-4  w-[850px] mx-auto  bg-[url('/resources/quizzes/quiz_background.svg')] bg-[#FFF7F5] px-6 py-6 shadow rounded">
@@ -92,9 +92,9 @@ function Quizzes() {
 							<p className="text-lg text-[#FF492C] font-semibold">ESCAPE ROOM WEBSITE</p>
 							<h3 className="text-3xl font-bold pb-2">Creative Asset Quiz</h3>
 							<p className="text-lg">Stop trying to guess what metrics mean and trying to figure out why your PPC ads aren't performing as well.</p>
-							<button className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2">
+							<Link href={'/resources/quizDetailsPage/quizDetailsCreativeAsset'} className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2">
 								Start Here Know Your Score <BsArrowRight className="text-xl mt-1" />
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>

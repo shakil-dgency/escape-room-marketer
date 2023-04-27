@@ -12,11 +12,15 @@ function Navbar() {
 	const [open, setOpen] = useState(false);
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 	const [serviceMenubar, setServiceMenubar] = useState(false);
+
+	const [resourcesOpen, setResourcesOpen] = useState(false);
 	const serveiceRef = useRef();
 	const serviceBtnRef = useRef();
 	const sidebarMainref = useRef();
 	const sidebarServiceref = useRef();
 	const hamburgRef = useRef();
+	const resourceRef = useRef();
+	const resourceBtnRef = useRef();
 	// const allserviceRef = useRef();
 
 	const handlePopup = (e) => {
@@ -49,19 +53,28 @@ function Navbar() {
 	};
 
 	useEffect(() => {
-		document.addEventListener("click", (e) => {
-			if (sidebarMainref.current) {
-				if (!sidebarMainref.current.contains(e.target) && !hamburgRef.current.contains(e.target)) {
-					setSidebarOpen(false);
+		document.addEventListener(
+			"click",
+			(e) => {
+				if (sidebarMainref.current) {
+					if (!sidebarMainref.current.contains(e.target) && !hamburgRef.current.contains(e.target)) {
+						setSidebarOpen(false);
+					}
 				}
-			}
 
-			if (serveiceRef.current) {
-				if (!serveiceRef.current.contains(e.target) && !serviceBtnRef.current.contains(e.target)) {
-					setServiceMenubar(false);
+				if (serveiceRef.current) {
+					if (!serveiceRef.current.contains(e.target) && !serviceBtnRef.current.contains(e.target)) {
+						setServiceMenubar(false);
+					}
 				}
-			}
-		});
+
+				if (resourceRef.current) {
+					if (!resourceRef.current.contains(e.target) && !resourceBtnRef.current.contains(e.target)) {
+						setResourcesOpen(false);
+					}
+				}
+			},
+		);
 
 		let lastScrollTop = 0;
 		const navbar = document.getElementById("navbar");
@@ -70,6 +83,7 @@ function Navbar() {
 			if (scrollTop > lastScrollTop) {
 				navbar.style.top = "-100px";
 				setServiceMenubar(false);
+				setResourcesOpen(false)
 			} else if (lastScrollTop > scrollTop + 20) {
 				navbar.style.top = "0";
 			}
@@ -95,6 +109,25 @@ function Navbar() {
 		}
 	};
 
+	const handleResourcePopup = () => {
+		setResourcesOpen(!resourcesOpen);
+
+		let _id;
+		let resourcesClick = document.getElementsByClassName("resources_content");
+
+		for (let i = 0; i < resourcesClick.length; i++) {
+			resourcesClick[i].addEventListener("click", function () {
+				setResourcesOpen(false);
+
+				if (_id) {
+					resourcesClick[_id].classList.remove("text-red-500");
+				}
+				_id = this.id;
+				this.classList.add("text-red-500");
+			});
+		}
+	};
+
 	return (
 		<div id="navbar" className="bg-white fixed top-0 w-full py-5 z-30 duration-500">
 			<div className="nav_container g-page_structure ">
@@ -112,7 +145,58 @@ function Navbar() {
 							<li>RESULTS</li>
 							<li>TEAM</li>
 							<li>BLOG</li>
-							<li>RESOURCES</li>
+							<div className="relative">
+								<li ref={resourceBtnRef} onClick={handleResourcePopup} className="cursor-pointer flex items-center gap-1">
+									RESOURCES <MdKeyboardArrowDown className={`text-xl transition-transform duration-300 ${resourcesOpen ? "rotate-180" : ""}`} />
+								</li>
+
+								<div
+									ref={resourceRef}
+									className={`serveice_popup w-[250px] absolute top-14 -left-12 bg-white px-3 py-10 shadow ${resourcesOpen ? "block" : "hidden"}`}
+								>
+									<ul>
+										<li id="q1" className="resources_content group mb-3">
+											<Link href={"/resources/quizzes"}>
+												<div className="shadow flex items-center gap-1  bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+													<Image src="/navbar/ppc_agency.png" alt="" height={60} width={60} className="" />
+													<div>
+														<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+															Quizzes <BiChevronRight className="pt-[2px] text-xl" />{" "}
+														</p>
+														<p className="text-[12px] text-[#515E6F]">Increase your conversion rates </p>
+													</div>
+												</div>
+											</Link>
+										</li>
+										<li id="q2" className="resources_content group mb-3">
+											<Link href={"/resources/quizzes"}>
+												<div className="shadow flex items-center gap-1  bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+													<Image src="/navbar/ppc_agency.png" alt="" height={60} width={60} className="" />
+													<div>
+														<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+															Quizzes <BiChevronRight className="pt-[2px] text-xl" />{" "}
+														</p>
+														<p className="text-[12px] text-[#515E6F]">Increase your conversion rates </p>
+													</div>
+												</div>
+											</Link>
+										</li>
+										<li id="q3" className="resources_content group mb-3">
+											<Link href={"/resources/quizzes"}>
+												<div className="shadow flex items-center gap-1  bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
+													<Image src="/navbar/ppc_agency.png" alt="" height={60} width={60} className="" />
+													<div>
+														<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
+															Quizzes <BiChevronRight className="pt-[2px] text-xl" />{" "}
+														</p>
+														<p className="text-[12px] text-[#515E6F]">Increase your conversion rates </p>
+													</div>
+												</div>
+											</Link>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</ul>
 						<Link
 							href={"/freemarketing"}
@@ -130,7 +214,9 @@ function Navbar() {
 							serviceMenubar ? "block" : "hidden"
 						} `}
 					>
-						<Link onClick={()=>setServiceMenubar(!serviceMenubar)} href={"/services"}  className="pb-2 text-[#ff5056] font-semibold">ALL OF OUR SERVICES</Link>
+						<Link onClick={() => setServiceMenubar(!serviceMenubar)} href={"/services"} className="pb-2 text-[#ff5056] font-semibold">
+							ALL OF OUR SERVICES
+						</Link>
 						<div className=" grid grid-cols-3 grid-rows-8 gap-5 border-t-[1px] pt-2">
 							<ul className="flex flex-col gap-4 row-start-1 row-end-7">
 								<h3 className=" text-[16px] font-semibold pb-2">PAID ADVERTISING</h3>

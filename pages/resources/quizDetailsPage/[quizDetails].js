@@ -7,6 +7,8 @@ import SeoRelatedQuiz from "@/components/quizDetails/SeoRelatedQuiz";
 import ConversionRelatedQuiz from "@/components/quizDetails/ConversionRelatedQuiz";
 import EmailMarketingRelatedQuiz from "@/components/quizDetails/EmailMarketingRelatedQuiz";
 import GoogleAdsRelatedQuiz from "@/components/quizDetails/GoogleAdsRelatedQuiz";
+import FacebookRelatedQuiz from "@/components/quizDetails/FacebookRelatedQuiz";
+import CreativeAssetRelatedQuiz from "@/components/quizDetails/CreativeAssetRelatedQuiz";
 
 function QuizDetails() {
 	const router = useRouter();
@@ -28,6 +30,11 @@ function QuizDetails() {
                 {/* this section is for Google Ads related quiz */}
 				{dynamicpage === "quizDetailsgoogle" && <GoogleAdsRelatedQuiz />}
 
+				{/* this section is for Facebook Ads related quiz */}
+				{dynamicpage === "quizDetailsfacebook" && <FacebookRelatedQuiz />}
+
+				{/* this section is for creative Ads related quiz */}
+				{dynamicpage === "quizDetailsCreativeAsset" && <CreativeAssetRelatedQuiz />}
 				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:3200px_90px]   bg-center rotate-180 "></div>
 				<div className=" bg-[#FFF7F5] pt-16 pb-20 bg-[url('/resources/quizzes/quiz-key-background.svg')] bg-center w-full absolute z-20 -mt-9">
 					<div className="g-page_structure flex flex-col items-center">
