@@ -7,7 +7,7 @@ function Payperclick() {
 	const { ref: myRef, inView: myElementIsVisible } = useInView();
 	return (
 		<div>
-			<div className="multiple_agency g-page_structure bg-[#fafafa]">
+			<div className="multiple_agency g-page_structure bg-[var(--section-bg-lightred)]">
 				<div className="m-auto">
 					<h1 className="text-center pt-16 md:px-16 text-xl md:text-3xl xl:text-5xl font-bold">
 						We Find More Pay-Per-Click Improvements In 5 Minutes Than Others Take Weeks To Do

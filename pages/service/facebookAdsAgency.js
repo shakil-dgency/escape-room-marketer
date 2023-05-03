@@ -29,8 +29,8 @@ function FacebookAdsAgency(props) {
 			</Head>
 
 			<Hero
-				firstPic="/serveice/facebookAdsAgency/HandMoney-left.svg"
-				secondPic="/serveice/facebookAdsAgency/HandMoney-right.svg"
+				firstPic="/serveice/facebookAdsAgency/facebook-ads-agency-hero-left-escape-room-marketer-01.svg"
+				secondPic="/serveice/facebookAdsAgency/facebook-ads-agency-hero-right-escape-room-marketer-01.svg"
 				title="Work With a Facebook Ad Agency That Talks Less & Delivers More"
 				pera="Partner with the strongest Facebook advertising services out there and dominate any social media platform."
 			/>

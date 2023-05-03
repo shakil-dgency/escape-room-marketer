@@ -14,6 +14,7 @@ function Navbar() {
 	const [serviceMenubar, setServiceMenubar] = useState(false);
 
 	const [resourcesOpen, setResourcesOpen] = useState(false);
+	const [mobileOpen, setMobileOpen] = useState(false);
 	const serveiceRef = useRef();
 	const serviceBtnRef = useRef();
 	const sidebarMainref = useRef();
@@ -53,28 +54,25 @@ function Navbar() {
 	};
 
 	useEffect(() => {
-		document.addEventListener(
-			"click",
-			(e) => {
-				if (sidebarMainref.current) {
-					if (!sidebarMainref.current.contains(e.target) && !hamburgRef.current.contains(e.target)) {
-						setSidebarOpen(false);
-					}
+		document.addEventListener("click", (e) => {
+			if (sidebarMainref.current) {
+				if (!sidebarMainref.current.contains(e.target) && !hamburgRef.current.contains(e.target)) {
+					setSidebarOpen(false);
 				}
+			}
 
-				if (serveiceRef.current) {
-					if (!serveiceRef.current.contains(e.target) && !serviceBtnRef.current.contains(e.target)) {
-						setServiceMenubar(false);
-					}
+			if (serveiceRef.current) {
+				if (!serveiceRef.current.contains(e.target) && !serviceBtnRef.current.contains(e.target)) {
+					setServiceMenubar(false);
 				}
+			}
 
-				if (resourceRef.current) {
-					if (!resourceRef.current.contains(e.target) && !resourceBtnRef.current.contains(e.target)) {
-						setResourcesOpen(false);
-					}
+			if (resourceRef.current) {
+				if (!resourceRef.current.contains(e.target) && !resourceBtnRef.current.contains(e.target)) {
+					setResourcesOpen(false);
 				}
-			},
-		);
+			}
+		});
 
 		let lastScrollTop = 0;
 		const navbar = document.getElementById("navbar");
@@ -83,7 +81,7 @@ function Navbar() {
 			if (scrollTop > lastScrollTop) {
 				navbar.style.top = "-100px";
 				setServiceMenubar(false);
-				setResourcesOpen(false)
+				setResourcesOpen(false);
 			} else if (lastScrollTop > scrollTop + 20) {
 				navbar.style.top = "0";
 			}
@@ -110,20 +108,35 @@ function Navbar() {
 	};
 
 	const handleResourcePopup = () => {
-		setResourcesOpen(!resourcesOpen);
-
+		let screen = window.screen;
+		if (screen.width < 1024) {
+			setMobileOpen(!mobileOpen);
+		} else {
+			setResourcesOpen(!resourcesOpen);
+		}
 		let _id;
 		let resourcesClick = document.getElementsByClassName("resources_content");
 
 		for (let i = 0; i < resourcesClick.length; i++) {
 			resourcesClick[i].addEventListener("click", function () {
-				setResourcesOpen(false);
+				if (screen.width < 1024) {
+					setMobileOpen(false);
 
-				if (_id) {
-					resourcesClick[_id].classList.remove("text-red-500");
+					if (_id) {
+						resourcesClick[_id].classList.remove("text-red-500");
+					}
+					_id = this.id;
+					this.classList.add("text-red-500");
+					console.log(_id);
+				} else {
+					setResourcesOpen(false);
+
+					if (_id) {
+						resourcesClick[_id].classList.remove("text-red-500");
+					}
+					_id = this.id;
+					this.classList.add("text-red-500");
 				}
-				_id = this.id;
-				this.classList.add("text-red-500");
 			});
 		}
 	};
@@ -555,9 +568,24 @@ function Navbar() {
 							<li className="text-[18px] pt-3">RESULTS</li>
 							<li className="text-[18px] pt-3">TEAM</li>
 							<li className="text-[18px] pt-3">BLOG</li>
-							<li id="elementID" className="text-[18px] pt-3">
-								RESOURCES
+							<li onClick={handleResourcePopup} id="elementID" className="text-[18px] pt-3 flex items-center gap-2 text-red-500 ">
+								RESOURCES <MdKeyboardArrowDown className={`text-2xl  transition-transform duration-300 ${mobileOpen ? "rotate-180" : ""}`} />
 							</li>
+							<div className="border-b-[3px] border-red-500 w-[100px] -mt-2"></div>
+							<div className={`pl-6  ${mobileOpen ? "block" : "hidden"}`}>
+								<ul>
+									<li id="mQ1">
+										<Link href={"/resources/quizzes"}  className="serveice_list whitespace-nowrap flex items-center gap-1 mb-3">
+											Quizzes <MdKeyboardArrowRight className="text-xl mt-[3px]" />
+										</Link>
+									</li>
+									<li id="mQ2">
+										<Link href={"/"} className="serveice_list whitespace-nowrap flex items-center gap-1 mb-3">
+											Quizzes <MdKeyboardArrowRight className="text-xl mt-[3px]" />
+										</Link>
+									</li>
+								</ul>
+							</div>
 						</ul>
 						<div onClick={closeSidebar}>
 							<Link href={"/freemarketing"} className=" rounded-md border-2 border-red-500 px-6 py-2 text-red-500 font-semibold text-[14px] ">
