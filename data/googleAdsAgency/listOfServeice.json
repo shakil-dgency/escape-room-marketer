@@ -3,6 +3,10 @@
 		"heading": "Your Google Ads Should Cover Everything On This List",
 		"text_line": "If we somehow left something out, you can let us know when we give you your free marketing plan."
 	},
+    "side_img":{
+        "left_img": "googleAdsAgency/google-ads-agency-list-left-escape-room-marketer.svg",
+        "right_img": "googleAdsAgency/google-ads-agency-list-right-escape-room-marketer.svg"
+    },
     "list_one":[
         {
             "id":1,

@@ -3,6 +3,10 @@
 		"heading": "The List of Services Every Great Facebook Ad Agency Should Offer",
 		"text_line": "If we somehow left something out, you can make fun of us in your marketing plan request."
 	},
+    "side_img":{
+        "left_img": "facebookAdsAgency/facebook-ads-agency-list-left-escape-room-marketer.svg",
+        "right_img": "facebookAdsAgency/facebook-ads-agency-list-right-escape-room-marketer.svg"
+    },
     "list_one":[
         {
             "id":1,

@@ -3,6 +3,10 @@
 		"heading": "We Cover All Aspects of Search Engine Optimization",
 		"text_line": "High performing SEO doesn’t happen by accident. We cover everything below to make sure your work shines (and converts)."
 	},
+    "side_img":{
+        "left_img": "seoAgency/seo-agency-list-left-escape-room-marketer.svg",
+        "right_img": "seoAgency/seo-agency-list-right-escape-room-marketer.svg"
+    },
     "list_one":[
         {
             "id":1,

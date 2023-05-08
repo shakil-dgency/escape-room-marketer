@@ -3,6 +3,10 @@
 		"heading": "We’ll Take All of These SEM Tasks Off Your Hands",
 		"text_line": "And if there’s something else you need, just mention it in your marketing plan request. We most likely do that too."
 	},
+    "side_img":{
+        "left_img": "semAgency/sem-agency-list-left-escape-room-marketer.svg",
+        "right_img": "semAgency/sem-agency-list-right-escape-room-marketer.svg"
+    },
     "list_one":[
         {
             "id":1,

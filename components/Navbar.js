@@ -84,6 +84,8 @@ function Navbar() {
 				setResourcesOpen(false);
 			} else if (lastScrollTop > scrollTop + 20) {
 				navbar.style.top = "0";
+			}else if(scrollTop === 0){
+				navbar.style.top = "0";
 			}
 			lastScrollTop = scrollTop;
 		});

@@ -11,6 +11,7 @@ import OurWork from "@/components/service/OurWork";
 import Payperclick from "@/components/service/Payperclick";
 import React, { useState } from "react";
 import FaqSection from "@/components/service/FaqSection";
+import FooterTopCta from "@/components/FooterTopCta";
 
 function GoogleAdsAgency(props) {
 	const [ourwork, setOurwork] = useState(props.ourWork);
@@ -34,41 +35,37 @@ function GoogleAdsAgency(props) {
 				thirdPic="/serveice/googleAdsAgency/diaper-pacifier-bottle-desktop.svg"
 			/>
 			<OurWork ourWorkData={ourwork} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa]"></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<Payperclick />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180"></div>
-			<MarketingCompanies companiesData={companies} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
 			<ListOfServeice listOfServeiceData={listOfServeice} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<KeyServeice bodyColor="bg-white" cardColor="bg-[#fafafa]" keyServeiceData={keyserveice} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-			<MarketingPlanCta bodyColor="bg-[#fafafa]" title="Your Competitors Might Get This Proposal Before You, Don't Let Them" />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<OthersSite
-				title="Want To Expand To Other PPC Channels?  We Got You "
-				pera="We can start where you're at, crush every goal you have, and then help you expand."
-			/>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<KeyServeice bodyColor="bg-[var(--section-bg-lightred)]" cardColor="bg-[#ffffff]" keyServeiceData={keyserveice} />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<MarketingPlanCta bodyColor="bg-[var(--section-bg-lightblue)]" title="Your Competitors Might Get This Proposal Before You, Don't Let Them" />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<ConversionMarketing
-				bodyColor="bg-[#fafafa]"
+				bodyColor="bg-[var(--section-bg-lightred)]"
 				cardColor="bg-white"
 				title="Want To See Massive Results Across All Your Marketing Efforts? We Do That"
 				pera="Our specialized teams know how to play well with each other, so we combine our team expertise to help you scale faster."
+				conversionRateOptimization
+				emailMarketing
+				searchEngineOptimization
 			/>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
 			<DedicatedTeam
-				bodyColor="bg-white"
+				bodyColor="bg-[var(--section-bg-lightblue)]"
 				title="Meet Your Team Before They Start Hitting Your Goals"
 				pera="Our team’s happy to prove their expertise and share their favorite
                 one-liners so you can be comfortable working together."
 			/>
-            <div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
+           <div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
             <FaqSection
-				bodyColor="bg-[#fafafa]"
+				bodyColor="bg-[var(--section-bg-lightblue)]"
 				faqSectionData={faqSection}
 			/>
-            <div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180"></div>
+           <FooterTopCta />
 		</div>
 	);
 }

@@ -11,13 +11,14 @@ import OthersSite from "@/components/service/OthersSite";
 import ConversionMarketing from "@/components/service/ConversionMarketing";
 import DedicatedTeam from "@/components/DedicatedTeam";
 import FaqSection from "@/components/service/FaqSection";
+import FooterTopCta from "@/components/FooterTopCta";
 
 function FacebookAdsAgency(props) {
 	const [ourWork, setourWork] = useState(props.ourWork);
 	const [companies, setCompanies] = useState(props.companiesData);
 	const [listOfServeice, setListOfServeice] = useState(props.listOfServeiceData);
 	const [keyserveice, setKeyserveice] = useState(props.keyServeice);
-    const [faqSection, setFaqSection] = useState(props.faqData);
+	const [faqSection, setFaqSection] = useState(props.faqData);
 	return (
 		<div>
 			<Head>
@@ -35,38 +36,35 @@ function FacebookAdsAgency(props) {
 				pera="Partner with the strongest Facebook advertising services out there and dominate any social media platform."
 			/>
 			<OurWork ourWorkData={ourWork} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa]"></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<Payperclick />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180"></div>
-			<MarketingCompanies companiesData={companies} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
 			<ListOfServeice listOfServeiceData={listOfServeice} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<KeyServeice bodyColor="bg-white" cardColor="bg-[#fafafa]" keyServeiceData={keyserveice} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-			<MarketingPlanCta bodyColor="bg-[#fafafa]" title="WARNING: This Free Marketing Plan May Give You Unfair Advantages" />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<OthersSite
-				title="Ready To Expand Your Ad Successes To Other Channels? We Can Do That Too "
-				pera="We’ll improve the performance of your current ad channels while getting ready to launch new ones for you."
-			/>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-            <ConversionMarketing 
-             bodyColor="bg-[#fafafa]"
-             cardColor="bg-white"
-             title="Try a Multi-Pronged Marketing Approach For Exponential Growth"
-             pera="We swore we’d never use the word “synergy,” so we’ll just say our
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<KeyServeice bodyColor="bg-[var(--section-bg-lightred)]" cardColor="bg-[#fafafa]" keyServeiceData={keyserveice} />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<MarketingPlanCta bodyColor="bg-[var(--section-bg-lightblue)]" title="WARNING: This Free Marketing Plan May Give You Unfair Advantages" />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<ConversionMarketing
+				bodyColor="bg-[var(--section-bg-lightred)]"
+				cardColor="bg-white"
+				title="Try a Multi-Pronged Marketing Approach For Exponential Growth"
+				pera="We swore we’d never use the word “synergy,” so we’ll just say our
              specialized teams can do amazing things when they work together."
-            />
-            <div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-            <DedicatedTeam
-				bodyColor="bg-white"
+				conversionRateOptimization
+				emailMarketing
+				searchEngineOptimization
+			/>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<DedicatedTeam
+				bodyColor="bg-[var(--section-bg-lightblue)]"
 				title="We’re Totally Down For Some Small Talk Before It Gets Real"
 				pera="Meet your dedicated team before you sign on the dotted line. We wanna make sure you like us as much as we like you."
 			/>
-            <div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-            <FaqSection bodyColor="bg-[#fafafa]" faqSectionData={faqSection}/>
-            <div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180"></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<FaqSection bodyColor="bg-[var(--section-bg-lightblue)]" faqSectionData={faqSection} />
+			
+			<FooterTopCta />
 		</div>
 	);
 }
@@ -84,7 +82,7 @@ export async function getServerSideProps(context) {
 	let keyserveicedata = await fetch("http://localhost:3000/api/keyserveice?slug=facebookAdsAgency");
 	let keyServeice = await keyserveicedata.json();
 
-    let faqSectiondata = await fetch("http://localhost:3000/api/faqsection?slug=facebookAdsAgency");
+	let faqSectiondata = await fetch("http://localhost:3000/api/faqsection?slug=facebookAdsAgency");
 	let faqData = await faqSectiondata.json();
 	return {
 		props: { ourWork, companiesData, listOfServeiceData, keyServeice, faqData }, // will be passed to the page component as props

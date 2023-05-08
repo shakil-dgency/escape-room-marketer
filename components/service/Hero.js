@@ -5,9 +5,9 @@ import React from "react";
 
 function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 	return (
-		<div className="pt-[4rem] ">
-			<div className="break_line image bg-[url('/navbar_breakline.svg')] h-[110px] bg-[length:2500px_100px] -mb-4    bg-center  "></div>
-			<div className={thirdPic?`hero_cover g-page_structure  w-full bg-[#FFF7F5]  md:pt-12 relative` :`hero_cover pb-[250px] md:pb-[300px] lg:pb-[400px] w-full bg-[#FFF7F5]  md:pt-12 relative`}>
+		<div className="pt-[1.2rem] md:pt-[4rem] ">
+			<div className="break_line image bg-[url('/navbar_breakline.svg')] h-[110px] bg-[length:2500px_100px]  -mb-4    bg-center  "></div>
+			<div className={thirdPic?`hero_cover  pb-[250px] md:pb-[300px] lg:pb-[400px]  w-full   bg-[#FFF7F5]  md:pt-12 relative` :`hero_cover pb-[250px] md:pb-[300px] lg:pb-[400px] w-full bg-[#FFF7F5]  md:pt-12 relative`}>
 				{firstPic && (
 					<div>
 						<img
@@ -43,7 +43,7 @@ function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 					</div>
 				</div>
 			</div>
-			<div className="break_line image bg-[url('/test_break.svg')] h-[90px] w-full bg-[length:2500px_90px] absolute z-10 -mt-[70px]  bg-center "></div>
+			<div className="break_line image bg-[url('/test_break.svg')] h-[90px] w-full bg-[length:2500px_90px] absolute z-10 -mt-[80px]  bg-center "></div>
 			{/* <div className="break_line image bg-[url('/page_broke.png')] h-[90px] w-full  bg-[length:2500px_90px] bg-[#c7e1fb] -mt-[70px]  bg-center"></div> */}
 			{/* <Image src="/test_break.svg" alt="" height={100} width={100} className="w-full h-[150px] absolute z-10 -mt-32" /> */}
 		</div>

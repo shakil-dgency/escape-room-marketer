@@ -3,6 +3,10 @@
 		"heading": "Here's The Giant List of PPC Ad Improvements You'll Never Have To Think About Again",
 		"text_line": "See anything missing from the list below? Let us know and we'll make sure it's added to your marketing plan."
 	},
+    "side_img":{
+        "left_img": "ppcagency/ppc-ads-list-left-escape-room-marketer.svg",
+        "right_img": "ppcagency/ppc-ads-list-right-escape-room-marketer.svg"
+    },
     "list_one":[
         {
             "id":1,

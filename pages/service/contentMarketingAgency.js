@@ -1,4 +1,5 @@
 import DedicatedTeam from "@/components/DedicatedTeam";
+import FooterTopCta from "@/components/FooterTopCta";
 import KeyServeice from "@/components/KeyServeice";
 import ConversionMarketing from "@/components/service/ConversionMarketing";
 import FaqSection from "@/components/service/FaqSection";
@@ -37,28 +38,28 @@ function ContentMarketingAgency(props) {
                 pick the one that built their business on digital content."
 			/>
 			<OurWork ourWorkData={ourWork} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa]"></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<Payperclick />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180"></div>
-			<CardContent cardContentData={cardcontent} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa]"></div>
-			<ListOfServeice listOfServeiceData={listOfServeice} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<MarketingCompanies companiesData={companies} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-			<SeoHandle
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<CardContent cardContentData={cardcontent} bodyColor="bg-[var(--section-bg-lightblue)]" cardColor = "bg-[#ffffff]" />
+		    <div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<ListOfServeice listOfServeiceData={listOfServeice} bodyColor="bg-[var(--section-bg-lightred)]" />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<MarketingCompanies companiesData={companies}  bodyColor="bg-[var(--section-bg-lightblue)]"/>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			{/* <SeoHandle
 				title="We Handle The Nerdy Part of SEO Too"
 				pera="In addition to creating great content for you, we'll fix technical Search
 				Engine Optimization issues and prevent future ones from happening."
-			/>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<KeyServeice bodyColor="bg-white" cardColor="bg-[#fafafa]" keyServeiceData={keyserveice} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-			<MarketingPlanCta bodyColor="bg-[#fafafa]" title="Better Content Marketing Starts With Your Free Marketing Plan" />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
+			/> */}
+			{/* <div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div> */}
+			<KeyServeice bodyColor="bg-[var(--section-bg-lightred)]" cardColor="bg-[#ffffff]" keyServeiceData={keyserveice} />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center"></div>
+			<MarketingPlanCta bodyColor="bg-[var(--section-bg-lightblue)]" title="Better Content Marketing Starts With Your Free Marketing Plan" />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<ConversionMarketing
-				bodyColor="bg-white"
-				cardColor="bg-[#fafafa]"
+				bodyColor="bg-[var(--section-bg-lightred)]"
+				cardColor="bg-white"
 				title="Content Marketing In a Good Spot?
 				Let’s Scale Your Other Channels"
 				pera="See how we can improve your other acquisition channels
@@ -67,14 +68,15 @@ function ContentMarketingAgency(props) {
 				emailMarketing
 				searchEngineOptimization
 			/>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
+			 <div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
 			<DedicatedTeam
-				bodyColor="bg-[#fafafa]"
+				bodyColor="bg-[var(--section-bg-lightblue)]"
 				title="Meet Your Dedicated Team Before We Start Making You More Money"
 				pera="Be confident in the people behind your marketing.Test their experience, their approach, and their humor."
 			/>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<FaqSection bodyColor="bg-white" faqSectionData={faqSection} />
+			 <div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<FaqSection bodyColor="bg-[var(--section-bg-lightblue)]" faqSectionData={faqSection} />
+			<FooterTopCta />
 		</div>
 	);
 }

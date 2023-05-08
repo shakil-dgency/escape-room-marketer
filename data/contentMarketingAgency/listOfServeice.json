@@ -3,6 +3,10 @@
 		"heading": "If It Touches Content Marketing, We'll Take Care of it For You",
 		"text_line": "From deeper research to stronger promotion, your content marketing has never been this good."
 	},
+    "side_img":{
+        "left_img": "contentMarketingAgency/content-marketing-list-left-escape-room-marketer.svg",
+        "right_img": "contentMarketingAgency/content-marketing-list-right-escape-room-marketer.svg"
+    },
     "list_one":[
         {
             "id":1,

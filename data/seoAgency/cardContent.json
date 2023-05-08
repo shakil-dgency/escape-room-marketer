@@ -4,59 +4,59 @@
 		"text_line": "We create engaging content for multiple platforms so you can reach your customers anywhere and we research to find out exactly what they want."
 	},
     "cards":[
-        
         {
             "id":1,
             "title":"Blog Posts",
-            "image":"illo-BlogPosts.svg"
+            "image":"blog-posts-escape-room-marketer.svg"
            
         },
         {
             "id":2,
             "title":"Infographics",
-            "image":"illo-Infographics.svg"
+            "image":"infographics-escape-room-marketer.svg"
             
         },
         {
             "id":3,
              "title":"Checklists",
-            "image":"illo-Checklists.svg"
+            "image":"checklists-escape-room-marketer.svg"
             
         },
         {
             "id":4,
              "title":"eBooks",
-            "image":"illo-eBooks.svg"
+            "image":"eBooks-escape-room-marketer.svg"
            
         },
         {
             "id":5,
              "title":"Whitepapers",
-            "image":"illo-WhitePapers.svg"
+            "image":"whitepapers-escape-room-marketer.svg"
         
         },
         {
             "id":6,
              "title":"Case Studies",
-            "image":"illo-CaseStudies.svg"
+            "image":"case-studies-escape-room-marketer.svg"
            
         },
         {
             "id":7,
              "title":"Reviews",
-            "image":"illo-Reviews.svg"
+            "image":"reviews-escape-room-marketer.svg"
            
         },
         {
             "id":8,
              "title":"How-to Guides",
-            "image":"illo-HowToGuides.svg"
+            "image":"how-to-guides-escape-room-marketer.svg"
            
         },
         {
             "id":9,
              "title":"Guest Posts",
-            "image":"illo-GuestPosts.svg"
+            "image":"guest-posts-escape-room-marketer.svg"
+         
         }
     ]
 
