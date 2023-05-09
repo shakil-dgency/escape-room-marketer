@@ -8,8 +8,9 @@
 	--section-bg-lightred: #fff7f5;
 }
 
-body,html {
+body{
 	/* overflow-x: hidden; */
+	/* overflow: hidden; */
 }
 
 

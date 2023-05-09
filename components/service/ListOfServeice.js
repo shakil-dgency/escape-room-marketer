@@ -13,35 +13,59 @@ function ListOfServeice({ listOfServeiceData, bodyColor }) {
 					{listOfServeiceData.head_message && listOfServeiceData.head_message.text_line}
 				</p>
 
-				<div className="block md:flex justify-between items-center py-14 ">
+				<div className="block md:flex md:justify-center md:gap-8 lg:gap-0 lg:justify-between items-center py-14 ">
 					{listOfServeiceData.side_img && (
-						<Image src={`/serveice/${listOfServeiceData.side_img.left_img}`} alt="" height={100} width={150} className="hidden md:block" />
+						<Image
+							src={`/serveice/${listOfServeiceData.side_img.left_img}`}
+							alt=""
+							height={100}
+							width={150}
+							className="hidden md:block w-[130px] h-full"
+						/>
 					)}
-					<ul className=" ml-4 md:ml-0 list-inside md:list-outside list-disc marker:text-[#6adaf7] marker:text-xl text-base md:text-lg leading-loose ">
+					<ul className=" ml-4 md:ml-0 list-inside md:list-outside list-disc marker:text-[#FF492C] marker:text-xl text-base md:text-[14px] lg:text-lg leading-loose ">
 						{listOfServeiceData &&
 							listOfServeiceData.list_one.map((data) => {
 								return (
-									<li className="leading-[2.4] group relative" key={data.id}>
+									<li className="leading-[2.4] group relative hover:text-[#FF492C]" key={data.id}>
 										{data.list}
-										<div className="hidden group-hover:block absolute -top-[95px] bg-blue-300 leading-[1.5] p-2 ">
-											<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, sint?</p>
+										<div className="hidden group-hover:block drop-shadow text-black text-[14px] absolute bottom-12 bg-[var(--section-bg-lightred)] leading-[1.5] p-4 md:w-[200%] lg:w-[230%] z-10 rounded-md before:content-[''] before:absolute before:left-[15%] before:top-[100%]  before:border-[15px] before:border-solid before:border-[var(--section-bg-lightred)] before:border-r-[#0000] before:border-b-[#0000] before:border-l-[#0000]">
+											<p>{data.tooltip}</p>
+										</div>
+										<div className="h-[1.2px]">
+											<div className={`hidden group-hover:block  border-[1px] border-[#FF492C] ${data.list.length<=22 ? 'w-[65%]' : data.list.length<=28 ? 'w-[80%]' : 'w-[100%]'}`}></div>
 										</div>
 									</li>
 								);
 							})}
 					</ul>
-					<ul className=" ml-4 md:ml-0 list-inside md:list-outside list-disc marker:text-[#6adaf7] marker:text-xl text-base md:text-lg leading-loose">
+					<ul className=" ml-4 md:ml-0 list-inside md:list-outside list-disc marker:text-[#FF492C] marker:text-xl text-base md:text-[14px] lg:text-lg leading-loose">
 						{listOfServeiceData &&
 							listOfServeiceData.list_two.map((data) => {
 								return (
-									<li className="leading-[2.4]" key={data.id}>
+									<li className="leading-[2.4]  group relative hover:text-[#FF492C]" key={data.id}>
 										{data.list}
+										{
+											<div className="hidden group-hover:block drop-shadow text-black text-[14px] absolute bottom-12 -left-[135%] right-0 bg-[var(--section-bg-lightred)] leading-[1.5] p-4 md:w-[200%] lg:w-[240%]  rounded-md before:content-[''] before:absolute before:right-[20%] before:top-[100%]  before:border-[15px] before:border-solid before:border-[var(--section-bg-lightred)] before:border-r-[#0000] before:border-b-[#0000] before:border-l-[#0000]">
+												<p>{data.tooltip}</p>
+											</div>
+											
+										}
+										<div className="h-[1.2px]">
+											<div className={`hidden group-hover:block  border-[1px] border-[#FF492C] ${data.list.length<=22 ? 'w-[65%]' : data.list.length<=28 ? 'w-[85%]' : 'w-[100%]'}`}></div>
+										</div>
 									</li>
 								);
 							})}
 					</ul>
 					{listOfServeiceData.side_img && (
-						<Image src={`/serveice/${listOfServeiceData.side_img.right_img}`} alt="" height={100} width={150} className="hidden md:block" />
+						<Image
+							src={`/serveice/${listOfServeiceData.side_img.right_img}`}
+							alt=""
+							height={100}
+							width={150}
+							className="hidden md:block w-[130px] h-full  "
+						/>
 					)}
 					<Image src="/serveice/list_serveice.svg" alt="" width={100} height={100} className="mt-10 mx-auto block md:hidden" />
 				</div>
