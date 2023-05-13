@@ -39,7 +39,7 @@ function FacebookAdsAgency(props) {
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<Payperclick />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
-			<ListOfServeice listOfServeiceData={listOfServeice} />
+			<ListOfServeice listOfServeiceData={listOfServeice} bodyColor="bg-[var(--section-bg-lightblue)]" />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<KeyServeice bodyColor="bg-[var(--section-bg-lightred)]" cardColor="bg-[#fafafa]" keyServeiceData={keyserveice} />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
@@ -63,7 +63,7 @@ function FacebookAdsAgency(props) {
 			/>
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<FaqSection bodyColor="bg-[var(--section-bg-lightblue)]" faqSectionData={faqSection} />
-			
+
 			<FooterTopCta />
 		</div>
 	);

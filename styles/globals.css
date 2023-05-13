@@ -8,11 +8,10 @@
 	--section-bg-lightred: #fff7f5;
 }
 
-body{
+body {
 	/* overflow-x: hidden; */
 	/* overflow: hidden; */
 }
-
 
 .g-page_structure {
 	padding: 0 20%;
@@ -24,23 +23,7 @@ body{
 
 @media only screen and (max-width: 480px) {
 }
-@media only screen and (max-width: 480px) {
-	.g-page_structure {
-		padding: 0 15px;
-	}
-}
 
-@media only screen and (max-width: 1115px) and (min-width: 480px) {
-	.g-page_structure {
-		padding: 0 15px;
-	}
-}
-
-@media only screen and (max-width: 1610px) and (min-width: 1115px) {
-	.g-page_structure {
-		padding: 0 100px;
-	}
-}
 .image {
 	/* position: absolute; */
 	/* height: 75px; */
@@ -68,36 +51,30 @@ body{
 	}
 }
 
-
-.sidebar_menu_open{
+.sidebar_menu_open {
 	/* transform: translateX(-10px); */
-  opacity: 0;
+	opacity: 0;
 	animation: slide 0.2s forwards;
- 
 }
 @keyframes slide {
 	to {
 		/* transform: translateX(0);
      */
-     opacity: 1;
+		opacity: 1;
 	}
 }
 
-
-
-
 .sidebar_shadow::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: rgb(255, 255, 255);
-  position: absolute;
-  top: 0;
-  left: -70%;
-  z-index: -10;
-  opacity: 0.7;
-} 
-
+	content: "";
+	height: 100%;
+	width: 100%;
+	background: rgb(255, 255, 255);
+	position: absolute;
+	top: 0;
+	left: -70%;
+	z-index: -10;
+	opacity: 0.7;
+}
 
 /* serveice section */
 .cta {
@@ -146,21 +123,13 @@ body{
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @font-face {
 	src: url("../public/font/file/CircularStd-Black.otf");
 	font-family: "CircularStd";
+}
+@font-face {
+	src: url("../public/font/file/CircularStd-Light.otf");
+	font-family: "CircularStdLight";
 }
 @font-face {
 	src: url("../public/font/Graphik-Font-Family/GraphikRegular.otf");
@@ -174,4 +143,70 @@ body{
 	font-family: GraphikRegular;
 	font-size: 22px;
 	line-height: 37px;
+}
+
+.hero_heading {
+	font-family: CircularStd;
+	font-size: 60px;
+	line-height: 81px;
+}
+
+.g__section-heading {
+	font-family: CircularStd;
+	font-size: 50px;
+	line-height: 67px;
+}
+
+@media only screen and (max-width: 480px) {
+	.g-page_structure {
+		padding: 0 15px;
+	}
+
+	.hero_heading {
+		font-family: CircularStd;
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.g__section-heading {
+		font-family: CircularStd;
+		font-size: 24px;
+		line-height: 27px;
+	}
+	.quiz-card {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 1115px) and (min-width: 480px) {
+	.g-page_structure {
+		padding: 0 15px;
+	}
+	.hero_heading {
+		font-family: CircularStd;
+		font-size: 40px;
+		line-height: 44px;
+	}
+	.g__section-heading {
+		font-family: CircularStd;
+		font-size: 36px;
+		line-height: 40px;
+	}
+}
+
+@media only screen and (max-width: 1610px) and (min-width: 1115px) {
+	.g-page_structure {
+		padding: 0 100px;
+	}
+
+	.hero_heading {
+		font-family: CircularStd;
+		font-size: 50px;
+		line-height: 60px;
+	}
+
+	.g__section-heading {
+		font-family: CircularStd;
+		font-size: 42px;
+		line-height: 57px;
+	}
 }

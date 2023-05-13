@@ -20,10 +20,10 @@ function FaqSection({ bodyColor, faqSectionData }) {
 	return (
 		<div className={`g-page_structure ${bodyColor}`}>
 			<div className="m-auto pt-10 md:pt-20">
-				<h1 className="text-center  text-[20px] md:text-3xl xl:text-[39px] md:leading-[47px]  mx-auto font-extrabold lg:w-[75%] xl:w-[70%] 2xl:w-[75%]">
+				<h1 className="g__section-heading text-center  mx-auto font-extrabold lg:w-[75%] xl:w-[70%] 2xl:w-[75%]">
 					{faqSectionData.head_message && faqSectionData.head_message.heading}
 				</h1>
-				<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-48 m-auto py-4">
+				<p className="font-graphik md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-48 m-auto py-4">
 					{faqSectionData.head_message && faqSectionData.head_message.text_line}
 				</p>
 				<div className="flex justify-center mt-5">
@@ -37,9 +37,15 @@ function FaqSection({ bodyColor, faqSectionData }) {
 							<li className="" key={data.id}>
 								<div className=" border-b-[1px] py-5">
 									<div onClick={() => handleFaqOpen(i)} className="flex justify-between cursor-pointer relative">
-										<Image src="/components/faq/lock_close.svg" alt="" width={20} height={50} className={`absolute left-0 ${i == 0 ? (firstFaqOpen ? "hidden" : "") : faqOpen === i ? "hidden" : ""}` } />
-										<Image src="/components/faq/lock_open.svg" alt="" width={20} height={50} className= {`absolute left-0`}  />
-										<h3 className="text-lg md:text-xl font-bold ml-10 text-[#374151]">{data.question}</h3>
+										<Image
+											src="/components/faq/lock_close.svg"
+											alt=""
+											width={20}
+											height={50}
+											className={`absolute left-0 ${i == 0 ? (firstFaqOpen ? "hidden" : "") : faqOpen === i ? "hidden" : ""}`}
+										/>
+										<Image src="/components/faq/lock_open.svg" alt="" width={20} height={50} className={`absolute left-0`} />
+										<h3 className="font-circular text-lg md:text-xl font-bold ml-10 text-[#374151]">{data.question}</h3>
 										<MdKeyboardArrowDown
 											className={`arrow_rotate mt-2 text-xl transition-transform duration-300 ${
 												i == 0 ? (firstFaqOpen ? "rotate-180" : " ") : faqOpen === i ? "rotate-180" : ""
@@ -47,7 +53,7 @@ function FaqSection({ bodyColor, faqSectionData }) {
 										/>
 									</div>
 									<p
-										className={` ${
+										className={`font-graphik ${
 											i == 0 ? (firstFaqOpen ? "block" : "hidden") : faqOpen == i ? "block" : "hidden "
 										} bg-[#F1F8FF] p-3 mt-2   text-[16px] md:text-[18px] font-normal pt-2 text-[#6B7280] `}
 									>

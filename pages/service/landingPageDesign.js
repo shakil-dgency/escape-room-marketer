@@ -1,4 +1,5 @@
 import DedicatedTeam from "@/components/DedicatedTeam";
+import FooterTopCta from "@/components/FooterTopCta";
 import KeyServeice from "@/components/KeyServeice";
 import ConversionMarketing from "@/components/service/ConversionMarketing";
 import FaqSection from "@/components/service/FaqSection";
@@ -32,20 +33,18 @@ function LandingPageDesign(props) {
 				pera="When you’re focusing on digital marketing, don’t forget about landing pages.Landing pages with clickable call-to-actions and copy that have gone through a/b testing = unreal results."
 			/>
 			<OurWork ourWorkData={ourWork} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa]"></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<Payperclick />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180"></div>
-			<MarketingCompanies companiesData={companies} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-			<ListOfServeice listOfServeiceData={listOfServeice} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<KeyServeice bodyColor="bg-white" cardColor="bg-[#fafafa]" keyServeiceData={keyserveice} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-			<MarketingPlanCta bodyColor="bg-[#fafafa]" title="Your Landing Page Design Will Never Be Mediocre Again" />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<ListOfServeice listOfServeiceData={listOfServeice}  bodyColor="bg-[var(--section-bg-lightblue)]" />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<KeyServeice  bodyColor="bg-[var(--section-bg-lightred)]" cardColor="bg-[#ffffff]" keyServeiceData={keyserveice} />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<MarketingPlanCta  bodyColor="bg-[var(--section-bg-lightblue)]" title="Your Landing Page Design Will Never Be Mediocre Again" />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<ConversionMarketing
-				bodyColor="bg-white"
-				cardColor="bg-[#fafafa]"
+				 bodyColor="bg-[var(--section-bg-lightred)]"
+				cardColor="bg-[#ffffff]"
 				title="Higher Conversion Rates Are Just The Beginning,
                 See What Other Marketing Channels We Can Improve"
 				pera="There’s no need to use different agencies for your marketing
@@ -54,16 +53,17 @@ function LandingPageDesign(props) {
 				emailMarketing
 				searchEngineOptimization
 			/>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
 			<DedicatedTeam
-				bodyColor="bg-[#fafafa]"
+				 bodyColor="bg-[var(--section-bg-lightblue)]"
 				title="Meet Your Dedicated Team Before
                 We Start Working Together"
 				pera="Grill your new team on their approach, experience, and humor.
                 Just be ready for missed punch lines."
 			/>
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<FaqSection bodyColor="bg-white" faqSectionData={faqSection} />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<FaqSection  bodyColor="bg-[var(--section-bg-lightblue)]" faqSectionData={faqSection} />
+			<FooterTopCta />
 		</div>
 	);
 }

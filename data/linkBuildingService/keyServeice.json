@@ -5,34 +5,33 @@
 	},
 
 	"card_content": {
-		"first_card": 	{
+		"first_card": {
 			"heading": "Ongoing Link Building",
 			"pera": "We’ll handle all your content marketing and report the performance directly to you.",
-			"image": "/wateringCan.svg"
+			"image": "/Ongoing Expert Management-escape-room-marketer.svg"
 		},
 
 		"others_card": [
 			{
 				"heading": "One-Time Link Audit",
 				"pera": "We’ll give you a prioritized list of new experiments that you run.",
-				"image": "/MagGlass.svg"
+				"image": "/Deep One-Time Audit-escape-room-marketer.svg"
 			},
 			{
 				"heading": "Ongoing Link Consulting",
 				"pera": "Avoid expensive mistakes and wasted time. Let us build it for you.",
-				"image": "/Hardhat.svg"
+				"image": "/Strong One-Time Setup-escape-room-marketer.svg"
 			},
 			{
 				"heading": "One-Time Link Setup",
 				"pera": "We’ll give you the ongoing strategies and tactics for you to implement to increase metrics.",
-				"image": "/SpeechBubbles.svg"
+				"image": "/Ongoing Consulting-escape-room-marketer.svg"
 			},
 			{
 				"heading": "Pure Link Performance",
 				"pera": "Revenue share agreement with more upside for us, less risk for you.",
-				"image": "/Speedometer.svg"
+				"image": "/Pure Performanceescape-room-marketer.svg"
 			}
 		]
-
 	}
 }

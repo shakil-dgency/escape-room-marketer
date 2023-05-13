@@ -8,7 +8,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 function Footer() {
 	return (
-		<div className="g-page_structure  bg-[var(--section-bg-lightblue)]">
+		<div className="g-page_structure font-graphik  bg-[var(--section-bg-lightblue)]">
 			{/* <h1 className="pt-14 text-3xl md:text-3xl font-logoFont text-[#6adaf7] hover:text-[#93e0f5] cursor-pointer text-center">
 				Escaperoom Marketer
 			</h1> */}
@@ -17,25 +17,25 @@ function Footer() {
 			</div>
 			<div className="flex justify-center flex-wrap gap-10 py-14 border-b-2">
 				<div className="location flex flex-col items-center">
-					<Image src="/footer/uk.png" alt="" height={90} width={90} />
+					<Image src="/footer/location-uk-escape-room-marketer-01.svg" alt="" height={90} width={90} />
 					<div className="text-center">
-						<h1 className="text-xl md:text-lg xl:text-xl font-semibold">United States</h1>
+						<h1 className="text-xl md:text-lg xl:text-xl font-semibold py-1">United States</h1>
 						<p>Metairie, 3900 N Causeway</p>
 						<p> +8801722510266</p>
 					</div>
 				</div>
 				<div className="location flex flex-col items-center">
-					<Image src="/footer/bd.png" alt="" height={90} width={90} />
+					<Image src="/footer/location-bangladesh-escape-room-marketer-01.svg" alt="" height={90} width={90} />
 					<div className="text-center">
-						<h1 className="text-xl md:text-lg xl:text-xl font-semibold">BANGLADESH</h1>
+						<h1 className="text-xl md:text-lg xl:text-xl font-semibold py-1">BANGLADESH</h1>
 						<p>House 335,Mohakhali DOHS</p>
 						<p> +8801722510266</p>
 					</div>
 				</div>
 				<div className="location flex flex-col items-center">
-					<Image src="/footer/usa.png" alt="" height={90} width={90} />
+					<Image src="/footer/location-usa-escape-room-marketer-01.svg" alt="" height={90} width={90} />
 					<div className="text-center">
-						<h1 className="text-xl md:text-lg xl:text-xl font-semibold">CALIFORNIA</h1>
+						<h1 className="text-xl md:text-lg xl:text-xl font-semibold py-1">CALIFORNIA</h1>
 						<p>Metairie, 3900 N Causeway</p>
 						<p> +8801722510266</p>
 					</div>
@@ -54,7 +54,9 @@ function Footer() {
 							Careers <span className="bg-[#ff5056] text-white rounded px-1 font-semibold ml-1">HIRING</span>
 						</li>
 						<li className="cursor-pointer">Partner Program</li>
-						<Link href={'/contactUs'}><li className="cursor-pointer">Contact Us</li></Link>
+						<Link href={"/contactUs"}>
+							<li className="cursor-pointer">Contact Us</li>
+						</Link>
 					</ul>
 				</div>
 				<div className="advertising pt-4">
@@ -92,26 +94,51 @@ function Footer() {
 			</div>
 			<div className="flex flex-wrap gap-3 justify-center md:justify-between items-center border-b-[2px] py-3 md:py-8">
 				<div className="flex gap-3 md:gap-10">
-					<Image src="/footer/google-partner.png" alt="logo" height={50} width={100} />
-					<Image src="/footer/MSA-Partner.png" alt="logo" height={50} width={100} />
-					<Image src="/footer/Facebook-Partner.png" alt="logo" height={50} width={100} />
+					<Image
+						src="/footer/google-partner-badge-escape-room-marketer.png"
+						alt="logo"
+						height={50}
+						width={100}
+						className="grayscale hover:grayscale-0 "
+					/>
+					<Image
+						src="/footer/Microsoft-Partner-badge-escape-room-marketer.png"
+						alt="logo"
+						height={50}
+						width={100}
+						className="grayscale hover:grayscale-0 "
+					/>
+					<Image
+						src="/footer/Facebook-Partner-badge-escape-room-marketer.png"
+						alt="logo"
+						height={50}
+						width={100}
+						className="grayscale hover:grayscale-0 "
+					/>
 				</div>
 				<div className="social_media">
 					<h1 className="font-semibold text-base md:text-lg  text-center pb-2">CURRENTLY ACCEPTING FOLLOWERS</h1>
 					<div className="flex justify-center gap-3">
-						<AiFillTwitterCircle className=" fill-[#FF8080] text-3xl md:text-4xl  hover:fill-[#fd4646]" />
+						{/* <AiFillTwitterCircle className=" fill-[#FF8080] text-3xl md:text-4xl  hover:fill-[#fd4646]" />
 						<BsFacebook className="text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
 						<BsLinkedin className="rounded-full text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
 						<SiYoutubemusic className="rounded-full text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
 						<AiFillDribbbleCircle className="rounded-full text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646]" />
-						<FaInstagramSquare className="rounded-[100%] text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646] " />
+						<FaInstagramSquare className="rounded-[100%] text-3xl md:text-4xl fill-[#FF8080] hover:fill-[#fd4646] " /> */}
+						<Image src="/footer/social-icon-facebook-escape-room-marketer-01.svg" alt="" height={40} width={40} className="hover:fill-[#FF8081]" />
+						<Image src="/footer/social-icon-linkedin-escape-room-marketer-01.svg" alt="" height={40} width={40} className="hover:fill-[#FF8081]" />
+						<Image src="/footer/social-icon-instagram-escape-room-marketer-01.svg" alt="" height={40} width={40} className="hover:fill-[#FF8081]" />
+						<Image src="/footer/social-icon-dribble-escape-room-marketer-01.svg" alt="" height={40} width={40} className="hover:fill-[#FF8081]" />
+						<Image src="/footer/social-icon-twiter-escape-room-marketer-01.svg" alt="" height={40} width={40} className="hover:fill-[#FF8081]" />
+						<Image src="/footer/social-icon-youtube-escape-room-marketer-01.svg" alt="" height={40} width={40} className="hover:fill-[#FF8081]" />
 					</div>
 				</div>
 			</div>
 			<div className="flex flex-wrap gap-3 justify-center md:justify-between py-4">
 				<p>© ESCAPE ROOM MARKETER - 2023</p>
 				<div>
-					<span className="hover:text-red-500 cursor-pointer">Terms of Service </span> | <span className="hover:text-red-500 cursor-pointer"> Privacy Policy</span>
+					<span className="hover:text-red-500 cursor-pointer">Terms of Service </span> |{" "}
+					<span className="hover:text-red-500 cursor-pointer"> Privacy Policy</span>
 				</div>
 			</div>
 		</div>

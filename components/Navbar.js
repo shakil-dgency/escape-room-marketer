@@ -84,7 +84,7 @@ function Navbar() {
 				setResourcesOpen(false);
 			} else if (lastScrollTop > scrollTop + 20) {
 				navbar.style.top = "0";
-			}else if(scrollTop === 0){
+			} else if (scrollTop === 0) {
 				navbar.style.top = "0";
 			}
 			lastScrollTop = scrollTop;
@@ -145,7 +145,7 @@ function Navbar() {
 
 	return (
 		<div id="navbar" className="bg-white fixed top-0 w-full py-5 z-30 duration-500">
-			<div className="nav_container g-page_structure ">
+			<div className="nav_container g-page_structure font-circularLight ">
 				<div className="flex gap-1 md:gap-0 md:justify-between items-center  relative ">
 					<Link href={"/"} className="logomain flex-1 cursor-pointer">
 						<Image src="/logo.png" alt="logo" height={100} width={170} className="w-[120px] sm:w-[150px] lg:w-[170px]" />
@@ -215,7 +215,7 @@ function Navbar() {
 						</ul>
 						<Link
 							href={"/freemarketing"}
-							className="flex-[2] border-2 border-red-500 px-1 py-1 md:px-6  md:py-3 lg:px-3 lg:py-2 xl:px-6 xl:py-3 text-red-500 font-semibold text-[12px] md:text-xl lg:text-base xl:text-xl"
+							className="flex-[2] rounded-xl border-2 border-red-500 px-2 py-1 md:px-6  md:py-3 lg:px-3 lg:py-2 xl:px-6 xl:py-3 text-red-500 font-semibold text-[12px] md:text-[18px]"
 						>
 							FREE MARKETING PLAN
 						</Link>
@@ -577,7 +577,7 @@ function Navbar() {
 							<div className={`pl-6  ${mobileOpen ? "block" : "hidden"}`}>
 								<ul>
 									<li id="mQ1">
-										<Link href={"/resources/quizzes"}  className="serveice_list whitespace-nowrap flex items-center gap-1 mb-3">
+										<Link href={"/resources/quizzes"} className="serveice_list whitespace-nowrap flex items-center gap-1 mb-3">
 											Quizzes <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 										</Link>
 									</li>

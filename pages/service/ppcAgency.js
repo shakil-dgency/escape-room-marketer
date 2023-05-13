@@ -50,17 +50,20 @@ function PpcAgency(props) {
 			{/* <div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180"></div>
 			<MarketingCompanies companiesData={companies} /> */}
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
-			<ListOfServeice listOfServeiceData={listOfServeice} bodyColor="bg-[var(--section-bg-lightblue)]"/>
+			<ListOfServeice listOfServeiceData={listOfServeice} bodyColor="bg-[var(--section-bg-lightblue)]" />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
-			<KeyServeice bodyColor="bg-[var(--section-bg-lightred)]" cardColor="bg-[#fafafa]" keyServeiceData={keyserveice} />
+			<KeyServeice bodyColor="bg-[var(--section-bg-lightred)]" cardColor="bg-[#ffffff]" keyServeiceData={keyserveice} />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
-			<MarketingPlanCta bodyColor="bg-[var(--section-bg-lightblue)]" title="Your Custom Marketing Plan Shows The Exact Steps We’ll Take To Hit Your Goals" />
+			<MarketingPlanCta
+				bodyColor="bg-[var(--section-bg-lightblue)]"
+				title="Your Custom Marketing Plan Shows The Exact Steps We’ll Take To Hit Your Goals"
+			/>
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			{/* <OthersSite
 				title="Want To Expand To Other PPC Channels?  We Got You "
 				pera="We can start where you're at, crush every goal you have, and then help you expand."
 			/> */}
-			
+
 			<ConversionMarketing
 				bodyColor="bg-[var(--section-bg-lightred)]"
 				cardColor="bg-white"
@@ -70,13 +73,13 @@ function PpcAgency(props) {
 				emailMarketing
 				searchEngineOptimization
 			/>
-				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
 			<DedicatedTeam
 				bodyColor="bg-[var(--section-bg-lightblue)]"
 				title="Meet Your Dedicated Team Before We Start Making You More Money"
 				pera="Be confident in the people behind your marketing.Test their experience, their approach, and their humor."
 			/>
-				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<FaqSection bodyColor="bg-[var(--section-bg-lightblue)]" faqSectionData={faqSection} />
 			<FooterTopCta />
 		</div>

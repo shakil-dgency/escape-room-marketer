@@ -3,6 +3,10 @@
 		"heading": "Any of These Link Building Tasks Make You Sweat? Let Us Handle Them",
 		"text_line": "Building links is great. But you won’t be able to do it effectively without a cohesive SEO strategy and project management."
 	},
+    "side_img":{
+        "left_img": "linkBuildingService/link-building-services-list-left-escape-room-marketer.svg",
+        "right_img": "linkBuildingService/link-building-services-list-right-escape-room-marketer.svg"
+    },
     "list_one":[
         {
             "id":1,

@@ -3,6 +3,10 @@
 		"heading": "Does Your Landing Page Design Do All These Things?",
 		"text_line": "See anything we missed? Let us know when you get your free marketing plan."
 	},
+    "side_img":{
+        "left_img": "landingPageAgency/landing-page-agency-list-left-escape-room-marketer.svg",
+        "right_img": "landingPageAgency/landing-page-agency-list-right-escape-room-marketer.svg"
+    },
     "list_one":[
         {
             "id":1,

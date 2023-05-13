@@ -9,10 +9,10 @@ function Payperclick() {
 		<div>
 			<div className="multiple_agency g-page_structure bg-[var(--section-bg-lightred)]">
 				<div className="m-auto">
-					<h1 className="text-center pt-16 md:px-16 text-xl md:text-3xl xl:text-5xl font-bold">
+					<h1 className="g__section-heading text-center pt-16 md:px-16  font-bold">
 						We Find More Pay-Per-Click Improvements In 5 Minutes Than Others Take Weeks To Do
 					</h1>
-					<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
+					<p className="font-graphik md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
 						Get a prioritized list of ad improvements from the data of our 250+ active client roster.
 					</p>
 				</div>
@@ -73,7 +73,6 @@ function Payperclick() {
 					</button>
 				</div>
 			</div>
-           
 		</div>
 	);
 }

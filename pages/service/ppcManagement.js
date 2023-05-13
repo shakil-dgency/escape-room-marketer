@@ -47,11 +47,14 @@ function PpcManagement(props) {
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<Payperclick />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
-			<ListOfServeice listOfServeiceData={listOfServeice} />
+			<ListOfServeice listOfServeiceData={listOfServeice} bodyColor="bg-[var(--section-bg-lightblue)]" />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center  rotate-180"></div>
 			<KeyServeice bodyColor="bg-[var(--section-bg-lightred)]" cardColor="bg-[#ffffff]" keyServeiceData={keyserveice} />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
-			<MarketingPlanCta bodyColor="bg-[var(--section-bg-lightblue)]" title="Your Custom Marketing Plan Shows The Exact Steps We’ll Take To Hit Your Goals" />
+			<MarketingPlanCta
+				bodyColor="bg-[var(--section-bg-lightblue)]"
+				title="Your Custom Marketing Plan Shows The Exact Steps We’ll Take To Hit Your Goals"
+			/>
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<ConversionMarketing
 				bodyColor="bg-[var(--section-bg-lightred)]"

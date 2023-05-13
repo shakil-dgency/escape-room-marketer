@@ -18,7 +18,7 @@ function GoogleAdsAgency(props) {
 	const [companies, setCompanies] = useState(props.companiesData);
 	const [listOfServeice, setListOfServeice] = useState(props.listOfServeiceData);
 	const [keyserveice, setKeyserveice] = useState(props.keyServeice);
-    const [faqSection, setFaqSection] = useState(props.faqData);
+	const [faqSection, setFaqSection] = useState(props.faqData);
 	return (
 		<div>
 			<Head>
@@ -60,12 +60,9 @@ function GoogleAdsAgency(props) {
 				pera="Our team’s happy to prove their expertise and share their favorite
                 one-liners so you can be comfortable working together."
 			/>
-           <div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
-            <FaqSection
-				bodyColor="bg-[var(--section-bg-lightblue)]"
-				faqSectionData={faqSection}
-			/>
-           <FooterTopCta />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<FaqSection bodyColor="bg-[var(--section-bg-lightblue)]" faqSectionData={faqSection} />
+			<FooterTopCta />
 		</div>
 	);
 }
@@ -86,7 +83,7 @@ export async function getServerSideProps(context) {
 	let listOfServeice = await fetch("http://localhost:3000/api/listofserveice?slug=googleAdsAgency");
 	let listOfServeiceData = await listOfServeice.json();
 	return {
-		props: { ourWork, companiesData, listOfServeiceData, keyServeice,faqData }, // will be passed to the page component as props
+		props: { ourWork, companiesData, listOfServeiceData, keyServeice, faqData }, // will be passed to the page component as props
 	};
 }
 

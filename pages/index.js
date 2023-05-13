@@ -11,6 +11,9 @@ import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import Image from "next/image";
 import DedicatedTeam from "@/components/DedicatedTeam";
+import MarketingPlanCta from "@/components/service/MarketingPlanCta";
+import FooterTopCta from "@/components/FooterTopCta";
+import Hero from "@/components/service/Hero";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -26,10 +29,10 @@ export default function Home() {
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<main className="section_body pt-[4rem] md:pt-[6rem] ">
-				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-8 bg-[#FAFAFA]"></div>
-				<div className="hero_cover g-page_structure h-[750px] md:h-[550px] lg:h-[670px] w-full bg-[#FAFAFA]  md:pt-12 relative">
-					<div>
+			<main className="section_body pt-[1.2rem] md:pt-[4rem]   ">
+				<div className="break_line image bg-[url('/navbar_breakline.svg')] h-[110px] bg-[length:2500px_100px]  -mb-4    bg-center  "></div>
+				<div className="hero_cover pb-[250px] md:pb-0 w-full bg-[var(--section-bg-lightred)]  md:pt-6 relative">
+					{/* <div>
 						<img
 							src="/heroimg_left.avif"
 							className="absolute left-0 bottom-0 md:h-[280px] md:w-[300px] lg:h-[400px]  lg:w-[400px]   2xl:w-[550px] 2xl:h-[400px]"
@@ -42,31 +45,55 @@ export default function Home() {
 							className="absolute right-0 bottom-0 md:h-[280px] md:w-[300px] lg:h-[400px]  lg:w-[400px]  2xl:w-[550px]"
 							alt=""
 						/>
-					</div>
+					</div> */}
 					<div className="text-container  m-auto">
-						<h1 className="logomain text-center md:px-16 pt-4 md:pt-10 text-2xl md:text-3xl xl:text-5xl font-extrabold ">
-							The Performance Marketing Agency That Moves Fast & Breaks Things
+						<h1 className="g__section-heading text-center md:px-16 pt-4 md:pt-10 font-extrabold ">
+							The Performance Marketing Agency <br /> That Moves Fast & Breaks Things
 						</h1>
-						<p className="fontTest  text-center md:px-36 m-auto pt-4">
-							Like sales records, plateaus, and your competitors hearts. The only things we don`t break? Our promises and the bank.
+						<p className="font-graphik md:text-lg xl:text-xl 2xl:text-2xl  text-center  m-auto pt-4">
+							Like sales records, plateaus, and your competitors hearts. The only things we <br /> don`t break? Our promises and the bank.
 						</p>
-						<div className="flex justify-center mt-6">
-							<button className="bg-[#ff5056] py-3 px-5 text-white lg:text-lg 2xl:text-2xl rounded font-semibold">
-								Get Your Free Marketing Plan
-							</button>
+					</div>
+					<div className="flex justify-center md:justify-between">
+						<Image
+							src="/heroimg_left.avif"
+							alt=""
+							height={100}
+							width={200}
+							className="h-[250px] w-[172px] md:h-[280px] md:w-[300px]   xl:h-[430px] xl:w-[391px] absolute md:static -bottom-6 left-0 "
+						/>
+						<div className="">
+							<div className="flex justify-center mt-6">
+								<button className="font-circular bg-[#ff5056] py-3 px-5 text-white lg:text-lg 2xl:text-2xl rounded font-semibold">
+									Get Your Free Marketing Plan
+								</button>
+							</div>
+							<p className="font-graphik text-lg text-center m-auto pt-4 pb-6 md:py-6">
+								Get 17+ new marketing ideas <br /> that are better than what you have
+							</p>
 						</div>
-						<p className="fontTest  font-medium text-center md:w-[30%] m-auto pt-4 pb-6 md:py-6">
-							Get 17+ new marketing ideas that are better than what you have
-						</p>
+						<Image
+							src="/heroimg_right.avif"
+							alt=""
+							height={100}
+							width={200}
+							className="h-[250px] w-[172px] md:h-[280px] md:w-[300px]   xl:h-[430px] xl:w-[391px] absolute md:static -bottom-6 right-0 "
+						/>
 					</div>
 				</div>
-				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-6 rotate-180"></div>
-				<div className="multiple_agency g-page_structure">
-					<div className="m-auto">
-						<h1 className="text-center md:px-16 text-xl md:text-3xl xl:text-5xl font-bold">
+				<div className="break_line image bg-[url('/test_break.svg')] h-[90px] w-full bg-[length:2500px_90px] absolute z-10 -mt-[60px]  bg-center "></div>
+				{/* <Hero
+					firstPic="/heroimg_left.avif"
+					secondPic="/heroimg_right.avif"
+					title="The Performance Marketing Agency That Moves Fast & Breaks Things"
+					pera="Like sales records, plateaus, and your competitors hearts. The only things we don`t break? Our promises and the bank."
+				/> */}
+				<div className="multiple_agency g-page_structure bg-[var(--section-bg-lightblue)]">
+					<div className="m-auto pt-14">
+						<h1 className="g__section-heading text-center md:px-16 font-bold">
 							One Agency + Multiple Marketing Channels = More Money In Your Pocket
 						</h1>
-						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
+						<p className="font-graphik md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
 							We know you’re in the industry of Professional Services, have around 11-50 employees, and who your competitors are.
 						</p>
 					</div>
@@ -122,89 +149,90 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="flex justify-center">
-						<button className="bg-[#ff5056] mt-8 py-3 px-5 text-white lg:text-lg 2xl:text-2xl rounded font-semibold">
+						<button className="font-circular bg-[#ff5056] my-16 py-2 px-5 text-white lg:text-lg 2xl:text-xl rounded font-semibold">
 							Get Your Free Marketing Plan
 						</button>
 					</div>
 				</div>
-				<div className="successfull-stories px-[15px] md:w-[60%] m-auto">
-					<h1 className=" mt-20 md:mt-32 text-center text-xl md:text-3xl xl:text-5xl font-bold">
-						We Have More Success Stories Than Other Agencies Have Clients
-					</h1>
-					<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:w-[70%] m-auto py-4">
-						We help scrappy startups to massive brands, from straightforward products to ultra-complex services.
-					</p>
-					<div className=" grid grid-cols-2 px-4 pb-10 md:px-0 md:grid-cols-5 mt-16 gap-x-4 gap-y-6 md:gap-x-12 md:gap-y-8">
-						<img src="/export-logo-Airbnb.png" alt="" />
-						<img src="/export-logo-Justworks.png" alt="" />
-						<img src="/export-logo-Stanford.png" alt="" />
-						<img src="/export-logo-Upwork.png" alt="" />
-						<img src="/export-logo-Wunderkind.png" alt="" />
-						<img src="/export-logo-Upwork.png" alt="" />
-						<img src="/export-logo-Airbnb.png" alt="" />
-						<img src="/export-logo-Justworks.png" alt="" />
-						<img src="/export-logo-Wunderkind.png" alt="" />
-						<img src="/export-logo-Upwork.png" alt="" />
-						<img src="/export-logo-Stanford.png" alt="" />
-						<img src="/export-logo-Wunderkind.png" alt="" />
-						<img src="/export-logo-Justworks.png" alt="" />
-						<img src="/export-logo-Stanford.png" alt="" />
-						<img src="/export-logo-Airbnb.png" alt="" />
-					</div>
-					<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
-						<p className="font-medium text-center leading-[0px]">
-							Check out some of the 617+ client wins we`ve published
-							<span className="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
+				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+				<div className="g-page_structure bg-[var(--section-bg-lightred)]">
+					<div className="successfull-stories m-auto ">
+						<h1 className="g__section-heading pt-20 text-center font-bold">We Have More Success Stories Than Other Agencies Have Clients</h1>
+						<p className="font-graphik md:text-lg xl:text-xl 2xl:text-2xl text-center md:w-[70%] m-auto py-4">
+							We help scrappy startups to massive brands, from straightforward products to ultra-complex services.
 						</p>
-						{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 absolute right-0 translate-y-[-90%] translate-x-[-250%] md:static" /> */}
-					</Link>
+						<div className=" grid grid-cols-2 px-4 pb-10 md:px-0 md:grid-cols-5 mt-16 gap-x-4 gap-y-6 md:gap-x-12 md:gap-y-8">
+							<img src="/export-logo-Airbnb.png" alt="" />
+							<img src="/export-logo-Justworks.png" alt="" />
+							<img src="/export-logo-Stanford.png" alt="" />
+							<img src="/export-logo-Upwork.png" alt="" />
+							<img src="/export-logo-Wunderkind.png" alt="" />
+							<img src="/export-logo-Upwork.png" alt="" />
+							<img src="/export-logo-Airbnb.png" alt="" />
+							<img src="/export-logo-Justworks.png" alt="" />
+							<img src="/export-logo-Wunderkind.png" alt="" />
+							<img src="/export-logo-Upwork.png" alt="" />
+							<img src="/export-logo-Stanford.png" alt="" />
+							<img src="/export-logo-Wunderkind.png" alt="" />
+							<img src="/export-logo-Justworks.png" alt="" />
+							<img src="/export-logo-Stanford.png" alt="" />
+							<img src="/export-logo-Airbnb.png" alt="" />
+						</div>
+						<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
+							<p className="font-medium text-center leading-[0px]">
+								Check out some of the 617+ client wins we`ve published
+								<span className="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
+							</p>
+							{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 absolute right-0 translate-y-[-90%] translate-x-[-250%] md:static" /> */}
+						</Link>
+					</div>
 				</div>
-				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center mt-6 md:mt-12 bg-[#FAFAFA]"></div>
-				<div className="last-marketing g-page_structure bg-[#FAFAFA]">
+				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center"></div>
+				<div className="last-marketing g-page_structure bg-[var(--section-bg-lightblue)]">
 					<div className="main-content  m-auto">
-						<h1 className="text-center md:px-16 md:pt-14 pt-4 text-xl md:text-3xl xl:text-5xl font-bold">
+						<h1 className="g__section-heading text-center md:px-16 md:pt-14 pt-4  font-bold">
 							We’ll Be The Last Marketing Agency You Ever Work With
 						</h1>
-						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
+						<p className="font-graphik md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
 							Work with an agency that works as hard to earn your trust as they do to earn you results.
 						</p>
 					</div>
-					<div className="q-card mt-20 grid gap-x-12 gap-y-12 md:grid-cols-2 lg:mx-24">
+					<div className=" q-card mt-20 grid gap-x-12 gap-y-12 md:grid-cols-2 lg:mx-24">
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
+							<p className="font-graphik text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<Image height={200} width={450} src="/home/DollarBills.svg" alt="" className="mt-6 mx-auto" />
+							<Image height={200} width={450} src="/home/Marketing-agency-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
+							<p className="font-graphik text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<Image height={200} width={450} src="/home/Dictionaries.svg" alt="" className="mt-6 mx-auto" />
+							<Image height={200} width={450} src="/home/theory-rules-growth-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
+							<p className="font-graphik text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<Image height={200} width={260} src="/home/ChampagneBottles.svg" alt="" className="mt-6 mx-auto" />
+							<Image height={200} width={260} src="/home/best-practices-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
+							<p className="font-graphik text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<Image height={200} width={260} src="/home/LightBulbs.svg" alt="" className="mt-6 mx-auto" />
+							<Image height={200} width={260} src="/home/solutions-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
+							<p className="font-graphik text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<Image height={200} width={450} src="/home/Folders.svg" alt="" className="mt-6 mx-auto" />
+							<Image height={200} width={450} src="/home/case-study-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
+							<p className="font-graphik text-xl text-center">
 								They make you big promises. <br /> We make you big bucks.
 							</p>
-							<Image height={200} width={450} src="/home/Trophies.svg" alt="" className="mt-6 mx-auto" />
+							<Image height={200} width={450} src="/home/wins-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 					</div>
 					<Link href={"/"} className="group flex items-center justify-center gap-4 md:text-2xl list-none text-red-500 mt-12 pb-8">
@@ -215,50 +243,79 @@ export default function Home() {
 						{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 mt-2" /> */}
 					</Link>
 				</div>
-				<div className="break_line image bg-[url('/page_brokefafafa2.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#FAFAFA]   rotate-180"></div>
-				<div className="work-together g-page_structure bg-[#FAFAFA] relative">
+				{/* <div className="break_line image bg-[url('/page_brokefafafa2.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#FAFAFA]   rotate-180"></div> */}
+				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+				<div className="work-together g-page_structure bg-[var(--section-bg-lightred)] relative">
 					<div className="main-content  m-auto">
-						<h1 className="text-center md:px-16 md:pt-14 md:text-3xl xl:text-5xl font-bold">
+						<h1 className="g__section-heading text-center md:px-16 md:pt-14 font-bold">
 							Choose How We Work Together: From One-Time Audits to Done-For-You-Everything
 						</h1>
-						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
+						<p className="font-graphik md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
 							Outsource all your marketing to us or have us help your internal team get better. You choose the style of engagement.
 						</p>
 					</div>
 					<div className="q-card mb-8 mt-10 md:mt-20 grid gap-x-12 gap-y-12 md:grid-cols-2 xl:mx-24">
 						<div className="px-10 py-6 md:col-span-2 rounded bg-white shadow-md  grid md:grid-cols-2 items-center justify-items-center">
 							<div className=" text-center ">
-								<p className="font-bold text-xl">Ongoing Expert Management</p>
-								<p className="text-lg mt-2">
+								<p className=" font-circular font-bold text-xl">Ongoing Expert Management</p>
+								<p className=" font-graphik text-lg mt-2">
 									We’ll do everything, take care of everything,
 									<br /> and report directly to you.
 								</p>
 							</div>
-							<Image height={100} width={300} src="/wateringCan.svg" alt="" className="mt-6 " />
+							<Image height={100} width={300} src="/Ongoing Expert Management-escape-room-marketer.svg" alt="" className="mt-6 " />
 						</div>
 						<div className="px-10 py-6  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
-								They make you big promises. <br /> We make you big bucks.
-							</p>
-							<Image height={100} width={300} src="/MagGlass.svg" alt="" className="mt-6 mx-auto" />
+							<div className=" text-center ">
+								<p className=" font-circular font-bold text-xl">Ongoing Expert Management</p>
+								<p className=" font-graphik text-lg mt-2">We’ll do everything, take care of everything, and report directly to you.</p>
+							</div>
+							<Image
+								height={100}
+								width={300}
+								src="/Deep One-Time Audit-escape-room-marketer.svg"
+								alt=""
+								className="mt-6 mx-auto w-[200px] h-[200px] object-contain"
+							/>
 						</div>
 						<div className="px-10 py-6  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
-								They make you big promises. <br /> We make you big bucks.
-							</p>
-							<Image height={100} width={300} src="/Hardhat.svg" alt="" className="mt-6 mx-auto" />
+							<div className=" text-center ">
+								<p className=" font-circular font-bold text-xl">Ongoing Expert Management</p>
+								<p className=" font-graphik text-lg mt-2">We’ll do everything, take care of everything, and report directly to you.</p>
+							</div>
+							<Image
+								height={100}
+								width={300}
+								src="/Strong One-Time Setup-escape-room-marketer.svg"
+								alt=""
+								className="mt-6 mx-auto w-[200px] h-[200px] object-contain"
+							/>
 						</div>
 						<div className="px-10 py-6  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
-								They make you big promises. <br /> We make you big bucks.
-							</p>
-							<Image height={100} width={300} src="/SpeechBubbles.svg" alt="" className="mt-6 mx-auto" />
+							<div className=" text-center ">
+								<p className=" font-circular font-bold text-xl">Ongoing Expert Management</p>
+								<p className=" font-graphik text-lg mt-2">We’ll do everything, take care of everything, and report directly to you.</p>
+							</div>
+							<Image
+								height={100}
+								width={300}
+								src="/Ongoing Consulting-escape-room-marketer.svg"
+								alt=""
+								className="mt-6 mx-auto w-[200px] h-[200px] object-contain"
+							/>
 						</div>
 						<div className="px-10 py-6  rounded bg-white shadow-md">
-							<p className="font-bold text-xl text-center">
-								They make you big promises. <br /> We make you big bucks.
-							</p>
-							<Image height={100} width={280} src="/Speedometer.svg" alt="" className="mt-6 mx-auto" />
+							<div className=" text-center ">
+								<p className=" font-circular font-bold text-xl">Ongoing Expert Management</p>
+								<p className=" font-graphik text-lg mt-2">We’ll do everything, take care of everything, and report directly to you.</p>
+							</div>
+							<Image
+								height={100}
+								width={280}
+								src="/Pure Performanceescape-room-marketer.svg"
+								alt=""
+								className="mt-6 mx-auto w-[200px] h-[200px] object-contain"
+							/>
 						</div>
 					</div>
 
@@ -271,31 +328,15 @@ export default function Home() {
 					</Link>
 					{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 mt-2" /> */}
 				</div>
-				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center   rotate-180 bg-[#FAFAFA]"></div>
-				<div className="custom_marketing_plan g-page_structure">
-					<div className="main-content  m-auto">
-						<h1 className="text-center md:px-16 md:pt-14 pt-4 text-xl md:text-3xl xl:text-5xl font-bold">
-							Your Custom Marketing Plan Shows The Exact Steps We’ll Take To Hit Your Goals
-						</h1>
-						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-6">
-							Get years of data-driven experimentation, through hundreds of millions of marketing spend, across thousands of companies, absolutely
-							free.
-						</p>
-					</div>
-					<div className="flex justify-center my-10">
-						<Image src="/proposal-manila-folder.svg" width={400} height={400} />
-					</div>
-					<Link href={"/"} className="group  text-lg md:text-2xl list-none text-red-500">
-						<p className="font-medium pb-8 text-center leading-[0px] px-4 mb-10">
-							See what we`d fix, how we`d fix it, and what it`d cost
-							<span class="material-symbols-outlined translate-y-2 pl-2 text-3xl">arrow_right_alt</span>
-						</p>
-					</Link>
-				</div>
-				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-6 bg-[#FAFAFA] "></div>
-				<div className="dedicated_marketing_team bg-[#fafafa]">
+				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+				<MarketingPlanCta
+					bodyColor="bg-[var(--section-bg-lightblue)]"
+					title="Your Custom Marketing Plan Shows The Exact Steps We’ll Take To Hit Your Goals"
+				/>
+				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+				<div className="dedicated_marketing_team bg-[var(--section-bg-lightred)]">
 					<DedicatedTeam
-						bodyColor="bg-[#fafafa]"
+						bodyColor="bg-[var(--section-bg-lightred)]"
 						title="Meet Your Dedicated Marketing Team Before You Start Working With Us"
 						pera="Grill us on our approach and make sure you've got the right people working with you before you pay us a penny."
 					/>
@@ -306,8 +347,8 @@ export default function Home() {
 						</p>
 					</Link>
 				</div>
-				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center  rotate-180 bg-[#FAFAFA] "></div>
-				<div className="big_goals g-page_structure relative">
+				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+				<div className="big_goals g-page_structure relative bg-[var(--section-bg-lightblue)]">
 					<div className="main-content  m-auto">
 						<h1 className="text-center md:px-16 md:pt-8 md:text-3xl xl:text-5xl font-bold">
 							Like Your Big Goals, Your Team Will Be Surprisingly Easy To Reach
@@ -317,7 +358,7 @@ export default function Home() {
 						</p>
 					</div>
 					<div className="q-card mb-8 mt-10 md:mt-20 grid gap-x-20 gap-y-12 md:grid-cols-2">
-						<div className="px-10 pt-10 pb-4 md:col-span-2 rounded bg-white shadow-2xl  grid md:grid-cols-2 items-center">
+						<div className="px-10 py-10 md:col-span-2 rounded bg-white shadow-2xl  grid md:grid-cols-2 items-center justify-items-center ">
 							<div className=" text-center ">
 								<p className="font-bold text-xl">BoostFlow</p>
 								<p className="text-lg mt-2">
@@ -325,35 +366,35 @@ export default function Home() {
 									experiments in a process we call BoostFlow™ that you get access to.
 								</p>
 							</div>
-							<img src="/Boostflow.svg" alt="" className="mt-6 " />
+							<img src="/boost-flow-escape-room-marketer.svg" alt="" className="" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-2xl">
 							<p className="font-bold text-xl text-center">Reporting Dashboards</p>
 							<p className="text-lg pt-2 text-center">
 								See all your important metrics for all your acquisition channels at a glance, while being able to change the date ranges as well.
 							</p>
-							<img src="/MagGlass.svg" alt="" className="mt-6 w-" />
+							<img src="/reporting-dashboard-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-2xl">
 							<p className="font-bold text-xl text-center">Quarterly Business Reviews</p>
 							<p className="text-lg pt-2 text-center">
 								Get detailed analysis of winning and losing experiments in relation to your goals. We’ll also share future strategies and tactics.
 							</p>
-							<img src="/Hardhat.svg" alt="" className="mt-6 w-" />
+							<img src="/business-review-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-2xl">
 							<p className="font-bold text-xl text-center">Email Updates</p>
 							<p className="text-lg pt-2 text-center">
 								Got questions that need faster answers? Email us at any time and we’ll reply to make sure you have everything you need.
 							</p>
-							<img src="/SpeechBubbles.svg" alt="" className="mt-6 w-" />
+							<img src="/email-update-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 						<div className="px-10 pt-10 pb-4  rounded bg-white shadow-2xl">
 							<p className="font-bold text-xl text-center">Scheduled Calls</p>
 							<p className="text-lg pt-2 text-center">
 								We’ll set ongoing time aside to keep you in the loop and get feedback from you on which things to prioritize and plan for.
 							</p>
-							<img src="/Speedometer.svg" alt="" className="mt-6 w-" />
+							<img src="/schedule-call-escape-room-marketer.svg" alt="" className="mt-6 mx-auto" />
 						</div>
 					</div>
 
@@ -366,8 +407,8 @@ export default function Home() {
 					</Link>
 					{/* <HiArrowNarrowRight className="text-3xl font-bold group-hover:translate-x-1 mt-2" /> */}
 				</div>
-				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center"></div>
-				<div className="better_perform g-page_structure">
+				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+				<div className="better_perform g-page_structure bg-[var(--section-bg-lightred)]">
 					<div className="main-content  m-auto">
 						<h1 className="text-center md:px-16 md:pt-8 md:text-3xl xl:text-5xl font-bold">Your Marketing Will Perform Better With Us</h1>
 						<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:px-36 m-auto py-4">
@@ -387,7 +428,8 @@ export default function Home() {
 						<Image src="/brain.svg" alt="" width={300} height={100} className="w-[200px] lg:w-[300px]" />
 					</div>
 				</div>
-				<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[var(--section-bg-lightblue)]"></div>
+				<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+
 				{/* <div className=" w-full  bg-repeat pt-12">
 					<h1 className="text-center mt-6 font-bold text-5xl ">
 						Better Marketing Performance <br /> Is Ready For You - Are You?
