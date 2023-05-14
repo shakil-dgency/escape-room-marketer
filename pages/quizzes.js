@@ -28,7 +28,7 @@ function Quizzes() {
 							<h3 className="text-3xl font-bold pb-2">SEO Quiz</h3>
 							<p className="text-lg">Stop trying to guess what metrics mean and trying to figure out why your PPC ads aren't performing as well.</p>
 							<Link
-								href={"/resources/quizDetailsPage/quizDetailsSeo"}
+								href={"/quizDetailsPage/quizDetailsSeo"}
 								className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2"
 							>
 								Start Here Know Your Score <BsArrowRight className="text-xl mt-1" />
@@ -44,7 +44,7 @@ function Quizzes() {
 							<h3 className="text-3xl font-bold pb-2">Conversion Quiz</h3>
 							<p className="text-lg">Stop trying to guess what metrics mean and trying to figure out why your PPC ads aren't performing as well.</p>
 							<Link
-								href={"/resources/quizDetailsPage/quizDetailsConversion"}
+								href={"/quizDetailsPage/quizDetailsConversion"}
 								className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2"
 							>
 								Start Here Know Your Score <BsArrowRight className="text-xl mt-1" />
@@ -60,7 +60,7 @@ function Quizzes() {
 							<h3 className="text-3xl font-bold pb-2">Email Marketing Quiz</h3>
 							<p className="text-lg">Stop trying to guess what metrics mean and trying to figure out why your PPC ads aren't performing as well.</p>
 							<Link
-								href={"/resources/quizDetailsPage/quizDetailsEmailMarketing"}
+								href={"/quizDetailsPage/quizDetailsEmailMarketing"}
 								className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2"
 							>
 								Start Here Know Your Score <BsArrowRight className="text-xl mt-1" />
@@ -76,7 +76,7 @@ function Quizzes() {
 							<h3 className="text-3xl font-bold pb-2">Google Ads Quiz</h3>
 							<p className="text-lg">Stop trying to guess what metrics mean and trying to figure out why your PPC ads aren't performing as well.</p>
 							<Link
-								href={"/resources/quizDetailsPage/quizDetailsgoogle"}
+								href={"/quizDetailsPage/quizDetailsgoogle"}
 								className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2"
 							>
 								Start Here Know Your Score <BsArrowRight className="text-xl mt-1" />
@@ -92,7 +92,7 @@ function Quizzes() {
 							<h3 className="text-3xl font-bold pb-2">Facebook Ads Quiz</h3>
 							<p className="text-lg">Stop trying to guess what metrics mean and trying to figure out why your PPC ads aren't performing as well.</p>
 							<Link
-								href={"/resources/quizDetailsPage/quizDetailsfacebook"}
+								href={"/quizDetailsPage/quizDetailsfacebook"}
 								className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2"
 							>
 								Start Here Know Your Score <BsArrowRight className="text-xl mt-1" />
@@ -108,7 +108,7 @@ function Quizzes() {
 							<h3 className="text-3xl font-bold pb-2">Creative Asset Quiz</h3>
 							<p className="text-lg">Stop trying to guess what metrics mean and trying to figure out why your PPC ads aren't performing as well.</p>
 							<Link
-								href={"/resources/quizDetailsPage/quizDetailsCreativeAsset"}
+								href={"/quizDetailsPage/quizDetailsCreativeAsset"}
 								className="bg-[#FF492C]  w-full py-2 text-white rounded mt-3 flex items-center justify-center gap-2"
 							>
 								Start Here Know Your Score <BsArrowRight className="text-xl mt-1" />

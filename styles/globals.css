@@ -210,3 +210,15 @@ body {
 		line-height: 57px;
 	}
 }
+
+@media only screen and (min-width: 2220px) {
+	.hero_heading {
+		font-family: CircularStd;
+		font-size: 80px;
+		line-height: 90px;
+		margin: 0 3%;
+	}
+	.testimonial-card {
+		margin: 0 10%;
+	}
+}

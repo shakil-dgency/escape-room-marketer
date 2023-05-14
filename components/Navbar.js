@@ -157,12 +157,14 @@ function Navbar() {
 								SERVICES{" "}
 								<MdKeyboardArrowDown className={`arrow_rotate text-xl transition-transform duration-300 ${serviceMenubar ? "rotate-180" : ""}`} />
 							</li>
-							<li>RESULTS</li>
+							<li>
+								<Link href={"/quizzes"}>QUIZZES</Link>
+							</li>
 							<li>TEAM</li>
 							<li>BLOG</li>
 							<div className="relative">
 								<li ref={resourceBtnRef} onClick={handleResourcePopup} className="cursor-pointer flex items-center gap-1">
-									RESOURCES <MdKeyboardArrowDown className={`text-xl transition-transform duration-300 ${resourcesOpen ? "rotate-180" : ""}`} />
+									RESULTS <MdKeyboardArrowDown className={`text-xl transition-transform duration-300 ${resourcesOpen ? "rotate-180" : ""}`} />
 								</li>
 
 								<div
@@ -171,12 +173,12 @@ function Navbar() {
 								>
 									<ul>
 										<li id="q1" className="resources_content group mb-3">
-											<Link href={"/resources/quizzes"}>
+											<Link href={"/results/testimonial"}>
 												<div className="shadow flex items-center gap-1  bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 													<Image src="/navbar/ppc_agency.png" alt="" height={60} width={60} className="" />
 													<div>
 														<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
-															Quizzes <BiChevronRight className="pt-[2px] text-xl" />{" "}
+															Testimonial <BiChevronRight className="pt-[2px] text-xl" />{" "}
 														</p>
 														<p className="text-[12px] text-[#515E6F]">Increase your conversion rates </p>
 													</div>
