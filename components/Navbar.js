@@ -160,7 +160,9 @@ function Navbar() {
 							<li>
 								<Link href={"/quizzes"}>QUIZZES</Link>
 							</li>
-							<li>TEAM</li>
+							<li>
+								<Link href={"/team"}>TEAM</Link>
+							</li>
 							<li>BLOG</li>
 							<div className="relative">
 								<li ref={resourceBtnRef} onClick={handleResourcePopup} className="cursor-pointer flex items-center gap-1">
