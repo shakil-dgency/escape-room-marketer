@@ -1,18 +1,19 @@
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 function Testimonial() {
 	const [colleps, setColleps] = useState(false);
-	const handleString = (text, handleTextSpan) => {
-		let x = text.substr(0, 200).concat(". ");
+	// const handleString = (text, handleTextSpan) => {
+	// 	let x = text.substr(0, 200).concat(". ");
 
-		handleTextSpan = (text) => {
-			return text.substr(0, text.length);
-		};
+	// 	handleTextSpan = (text) => {
+	// 		return text.substr(0, text.length);
+	// 	};
 
-		return x;
-	};
+	// 	return x;
+	// };
 
 	return (
 		<div className="pt-[4.5rem] md:pt-[6rem] ">
