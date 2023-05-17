@@ -1,5 +1,7 @@
 "use client";
+import CaseStudy from "@/components/CaseStudy";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -247,24 +249,8 @@ function Team() {
 				</div>
 			</div>
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
-			<div className="g-page_structure  bg-[var(--section-bg-lightblue)]">
-				<h1 className="g__section-heading pt-14   text-center mx-auto font-extrabold lg:w-[75%] xl:w-[70%] 2xl:w-[80%]">
-					You Could Choose a Marketing Team With Zero Years of Experience. But Why Would You?
-				</h1>
-				<p className="font-graphik text-center text-[16px] mx-auto md:text-xl 2xl:text-[22px] pt-4 md:w-[70%] ">
-					Everything that costs a buck to get a click. Our management services include all paid advertising platforms, from Google ads to LinkedIn ads
-					to Bing ads, and everything in between.
-				</p>
-
-				<div className="">
-					<div className="grid grid-cols-2 justify-items-center">
-						<div className=" h-[300px]  bg-[url('/team/marketing_team.svg')] bg-center w-[300px] ">
-							<p>gdjfv</p>
-						</div>
-						<div className=" bg-[url('/team/marketing_team.svg')]  h-[300px] bg-center w-[300px]"></div>
-					</div>
-				</div>
-			</div>
+			<CaseStudy />
+			<div className="break_line image bg-[url('/test_break.svg')] h-[90px] w-full bg-[length:2500px_90px] absolute z-10 -mt-8  bg-center "></div>
 		</div>
 	);
 }
