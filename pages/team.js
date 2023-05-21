@@ -150,7 +150,7 @@ function Team() {
 								/>
 								<div className=" text-center md:text-start md:pl-10 pt-[150px] md:pt-0 ">
 									<Image src="/team/experience3.svg" alt="" height={100} width={70} className="hidden md:block absolute right-0" />
-									<h4 className="text-red-500 text-xl lg:text-[30px] pb-1">Benjamin Harrison</h4>
+									<h4 className="font-semibold text-red-500 text-xl lg:text-[30px] pb-1">Benjamin Harrison</h4>
 									<p className="text-xl pb-1">CEO</p>
 									<p className="text-gray-400">"Alexis, play..."</p>
 									<div className="flex justify-center md:justify-start gap-3 pt-1 pb-3">
@@ -203,7 +203,7 @@ function Team() {
 								/>
 								<div className=" text-center md:text-start md:pl-10 pt-[150px] md:pt-0 ">
 									<Image src="/team/experience5.svg" alt="" height={100} width={70} className="hidden md:block absolute right-0" />
-									<h4 className="text-red-500 text-xl lg:text-[30px] pb-1">Benjamin Harrison</h4>
+									<h4 className="font-semibold text-red-500 text-xl lg:text-[30px] pb-1">Benjamin Harrison</h4>
 									<p className="text-xl pb-1">CEO</p>
 									<p className="text-gray-400">"Alexis, play..."</p>
 									<div className="flex justify-center md:justify-start gap-3 pt-1 pb-3">

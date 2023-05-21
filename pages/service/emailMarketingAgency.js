@@ -1,4 +1,5 @@
 import DedicatedTeam from "@/components/DedicatedTeam";
+import FooterTopCta from "@/components/FooterTopCta";
 import KeyServeice from "@/components/KeyServeice";
 import ConversionMarketing from "@/components/service/ConversionMarketing";
 import FaqSection from "@/components/service/FaqSection";
@@ -37,32 +38,94 @@ function EmailMarketingAgency(props) {
                 If you're sending it, we know how to optimize it."
 			/>
 			<OurWork ourWorkData={ourWork} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa]"></div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<Payperclick />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180"></div>
-			<CardContent cardContentData={cardcontent} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa]"></div>
-			<ListOfServeice listOfServeiceData={listOfServeice} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] rotate-180 "></div>
-			<MarketingCompanies companiesData={companies} />
-			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center bg-[#fafafa] "></div>
-			<div className="two_flexitem g-page_structure">
-				<h1 className=" pt-10 md:pt-20 text-[20px] md:text-4xl 2xl:text-[39px]  text-center mx-auto font-extrabold lg:w-[75%] xl:w-[70%] 2xl:w-[80%]">
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<CardContent cardContentData={cardcontent} bodyColor="bg-[var(--section-bg-lightblue)]" cardColor="bg-[#ffffff]" />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<ListOfServeice listOfServeiceData={listOfServeice} bodyColor="bg-[var(--section-bg-lightred)]" />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+
+			<div className="two_flexitem g-page_structure bg-[var(--section-bg-lightblue)]">
+				<h1 className="g__section-heading pt-14   text-center mx-auto font-extrabold lg:w-[75%] xl:w-[70%] 2xl:w-[80%]">
 					More Opens, Higher CTRs, Happier Replies, & More Email Marketing ROI For You
 				</h1>
-				<p className="md:text-lg xl:text-xl 2xl:text-2xl text-center md:w-[60%] m-auto py-4">
+				<p className="font-graphik md:text-lg xl:text-xl 2xl:text-2xl text-center md:w-[60%] m-auto py-4">
 					Get an inside look at how we engineer every email marketing campaign to convert.
 				</p>
-                <div className="flex">
-                    <div className="shadow py-5 mx-auto">
-                        <Image src="/serveice/emailMarketingAgency/TLCEmail.svg" alt="" width={500} height={100}  />
-                       <p className="text-center">eCommerce email</p>
-                       <h3 className="text-center">TLC Email Framework</h3>
-                    </div>
-                    <div className="shadow"></div>
-                   
-                </div>
+				<div className="flex justify-center gap-14 mt-20 pb-10 flex-wrap md:flex-nowrap">
+					<div className="shadow py-8 px-2  bg-white rounded">
+						<h3 className="text-center text-xl font-semibold mb-2">TLC Email Framework</h3>
+						<p className="text-center text-lg mb-6 ">
+							eCommerce step-by-step advice with <br className="email-card-br-tag" /> data-driven prioritization.
+						</p>
+						<div className="px-16">
+							<Image src="/serveice/emailMarketingAgency/tlc-email-framework-escape-room-marketer.svg" alt="" width={300} height={100} />
+						</div>
+					</div>
+					<div className="shadow py-8 px-2  bg-white rounded">
+						<h3 className="text-center text-xl font-semibold mb-2">TLC Email Framework</h3>
+						<p className="text-center text-lg mb-6">
+							eCommerce step-by-step advice with <br className="email-card-br-tag" /> data-driven prioritization.
+						</p>
+						<div className="px-16">
+							<Image src="/serveice/emailMarketingAgency/b2b-email-escape-room-marketer.svg" alt="" width={300} height={100} />
+						</div>
+					</div>
+				</div>
 			</div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<div className="two_flexitem g-page_structure bg-[var(--section-bg-lightred)]">
+				<h1 className="g__section-heading pt-14   text-center mx-auto font-extrabold lg:w-[75%] xl:w-[70%] 2xl:w-[80%]">
+					We Take Deliverability, Spam, & Domain Health as Seriously as You Do
+				</h1>
+				<p className="font-graphik md:text-lg xl:text-xl 2xl:text-2xl text-center md:w-[60%] m-auto py-4">
+					Outsource all your marketing to us or have us help your internal team get better. You choose the style of engagement.
+				</p>
+				<div className="flex justify-center gap-14 mt-20 pb-12 flex-wrap md:flex-nowrap">
+					<div className="shadow py-10 px-2  bg-white rounded">
+						<h3 className="text-center text-xl font-semibold mb-2">TLC Email Framework</h3>
+						<p className="text-center text-lg mb-8 ">
+							eCommerce step-by-step advice with <br className="email-card-br-tag" /> data-driven prioritization.
+						</p>
+						<div className="px-16">
+							<Image src="/serveice/emailMarketingAgency/take-care-of-everything-escape-room-marketer.svg" alt="" width={400} height={100} />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center"></div>
+			<KeyServeice bodyColor="bg-[var(--section-bg-lightblue)]" cardColor="bg-[#ffffff]" keyServeiceData={keyserveice} />
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<MarketingPlanCta
+				bodyColor="bg-[var(--section-bg-lightred)]"
+				title="Your Journey Towards Better PPC Marketing Starts With Your Free Marketing Plan"
+			/>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+			<ConversionMarketing
+				bodyColor="bg-[var(--section-bg-lightblue)]"
+				cardColor="bg-[#ffffff]"
+				title="Improve One Channel or Rapidly Scale
+				Performance Across All of Them at Once"
+				pera="Work with specialized teams that rapidly adapt, expand,
+				and scale as one cohesive unit."
+				paidAdvertising
+				emailMarketing
+				searchEngineOptimization
+			/>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<DedicatedTeam
+				bodyColor="bg-[var(--section-bg-lightred)]"
+				title="Meet Your Dedicated SEO Team
+                Before We Start Working Together"
+				pera="As much as we promise they don’t bite, some
+                people just need to see for themselves."
+			/>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
+
+			<div className="break_line image bg-[url('/test_break.svg')] h-[90px] w-full bg-[length:2500px_90px] absolute z-10 -mt-[0px]  bg-center "></div>
+			<FaqSection bodyColor="bg-[var(--section-bg-lightblue)]" faqSectionData={faqSection} />
+			<FooterTopCta />
 		</div>
 	);
 }
@@ -74,11 +137,11 @@ export async function getServerSideProps(context) {
 	let data = await fetch("http://localhost:3000/api/companies?slug=ppcAgency");
 	let companiesData = await data.json();
 
-	// let keyserveicedata = await fetch("http://localhost:3000/api/keyserveice?slug=landingPageDesign");
-	// let keyServeice = await keyserveicedata.json();
+	let keyserveicedata = await fetch("http://localhost:3000/api/keyserveice?slug=emailMarketingAgency");
+	let keyServeice = await keyserveicedata.json();
 
-	// let faqSectiondata = await fetch("http://localhost:3000/api/faqsection?slug=landingPageDesign");
-	// let faqData = await faqSectiondata.json();
+	let faqSectiondata = await fetch("http://localhost:3000/api/faqsection?slug=emailMarketingAgency");
+	let faqData = await faqSectiondata.json();
 
 	let ourWorkData = await fetch("http://localhost:3000/api/ourwork?slug=emailMarketingAgency");
 	let ourWork = await ourWorkData.json();
@@ -86,7 +149,7 @@ export async function getServerSideProps(context) {
 	let listOfServeice = await fetch("http://localhost:3000/api/listofserveice?slug=emailMarketingAgency");
 	let listOfServeiceData = await listOfServeice.json();
 	return {
-		props: { ourWork, cardContentData, listOfServeiceData, companiesData }, // will be passed to the page component as props
+		props: { ourWork, cardContentData, listOfServeiceData, companiesData, keyServeice, faqData }, // will be passed to the page component as props
 	};
 }
 

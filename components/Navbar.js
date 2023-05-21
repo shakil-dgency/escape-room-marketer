@@ -148,7 +148,7 @@ function Navbar() {
 			<div className="nav_container g-page_structure font-circularLight ">
 				<div className="flex gap-1 md:gap-0 md:justify-between items-center  relative ">
 					<Link href={"/"} className="logomain flex-1 cursor-pointer">
-						<Image src="/logo.png" alt="logo" height={100} width={170} className="w-[120px] sm:w-[150px] lg:w-[170px]" />
+						<Image src="/logo.svg" alt="logo" height={100} width={170} className="w-[120px] sm:w-[150px] lg:w-[170px]" />
 					</Link>
 					<div className="nav_elements flex gap-4 md:gap-10 items-center ">
 						<ul className="hidden lg:flex gap-5 font-[600] transform transition-transform translate-x-full absolute top-0 right-0 md:transform-none md:static ">
@@ -188,12 +188,12 @@ function Navbar() {
 											</Link>
 										</li>
 										<li id="q2" className="resources_content group mb-3">
-											<Link href={"/resources/quizzes"}>
+											<Link href={"/"}>
 												<div className="shadow flex items-center gap-1  bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 													<Image src="/navbar/ppc_agency.png" alt="" height={60} width={60} className="" />
 													<div>
 														<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
-															Quizzes <BiChevronRight className="pt-[2px] text-xl" />{" "}
+															????? <BiChevronRight className="pt-[2px] text-xl" />{" "}
 														</p>
 														<p className="text-[12px] text-[#515E6F]">Increase your conversion rates </p>
 													</div>
@@ -201,12 +201,12 @@ function Navbar() {
 											</Link>
 										</li>
 										<li id="q3" className="resources_content group mb-3">
-											<Link href={"/resources/quizzes"}>
+											<Link href={"/"}>
 												<div className="shadow flex items-center gap-1  bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 													<Image src="/navbar/ppc_agency.png" alt="" height={60} width={60} className="" />
 													<div>
 														<p className="group-hover:text-[#ff5056] font-semibold flex items-center gap-1">
-															Quizzes <BiChevronRight className="pt-[2px] text-xl" />{" "}
+															????? <BiChevronRight className="pt-[2px] text-xl" />{" "}
 														</p>
 														<p className="text-[12px] text-[#515E6F]">Increase your conversion rates </p>
 													</div>
@@ -240,7 +240,7 @@ function Navbar() {
 							<ul className="flex flex-col gap-4 row-start-1 row-end-7">
 								<h3 className=" text-[16px] font-semibold pb-2">PAID ADVERTISING</h3>
 								<li>
-									<Link href={"/service/ppcAgency"} id="0" className="serveice_list group">
+									<Link href={"/service/ppc-agency"} id="0" className="serveice_list group">
 										<div className="flex items-center gap-2 p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/ppc_agency.png" alt="" height={60} width={80} className="" />

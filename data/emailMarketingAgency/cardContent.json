@@ -1,55 +1,53 @@
 {
-    "head_message": {
+	"head_message": {
 		"heading": "We’ll Improve The Performance of Any Emails You Send",
 		"text_line": "Move quicker and go further as we innovate and improve performance across different types of emails."
 	},
-    "cards":[
-        
-        {
-            "id":1,
-            "title":"Blog Posts",
-            "image":"illo-BlogPosts.svg" 
-        },
-        {
-            "id":2,
-            "title":"Infographics",
-            "image":"illo-Infographics.svg"  
-        },
-        {
-            "id":3,
-             "title":"Checklists",
-            "image":"illo-Checklists.svg"
-        },
-        {
-            "id":4,
-             "title":"eBooks",
-            "image":"illo-eBooks.svg"
-        },
-        {
-            "id":5,
-             "title":"Whitepapers",
-            "image":"illo-WhitePapers.svg"
-        },
-        {
-            "id":6,
-             "title":"Case Studies",
-            "image":"illo-CaseStudies.svg"   
-        },
-        {
-            "id":7,
-             "title":"Reviews",
-            "image":"illo-Reviews.svg"
-        },
-        {
-            "id":8,
-             "title":"How-to Guides",
-            "image":"illo-HowToGuides.svg"  
-        },
-        {
-            "id":9,
-             "title":"Guest Posts",
-            "image":"illo-GuestPosts.svg"
-        }
-    ]
-
+	"cards": [
+		{
+			"id": 1,
+			"title": "Cold Outbound Emails",
+			"image": "emailMarketingAgency/cold-outbound-emails-marketer-escape-room-marketer.svg"
+		},
+		{
+			"id": 2,
+			"title": "Nurture Sequence Emails",
+			"image": "emailMarketingAgency/nurture-sequence-emails-escape-room-marketer.svg"
+		},
+		{
+			"id": 3,
+			"title": "Abandoned Cart Emails",
+			"image": "emailMarketingAgency/abandoned-cart-emails-escape-room-marketer.svg"
+		},
+		{
+			"id": 4,
+			"title": "Newsletter Emails",
+			"image": "emailMarketingAgency/newsletter-emails-escape-room-marketer.svg"
+		},
+		{
+			"id": 5,
+			"title": "Transactional Emails",
+			"image": "emailMarketingAgency/transactional-emails-escape-room-marketer.svg"
+		},
+		{
+			"id": 6,
+			"title": "Promotional Emails",
+			"image": "emailMarketingAgency/promotional-emails-escape-room-marketer.svg"
+		},
+		{
+			"id": 7,
+			"title": "Inbound Emails",
+			"image": "emailMarketingAgency/inbound-emails-escape-room-marketer.svg"
+		},
+		{
+			"id": 8,
+			"title": "Upsell/Cross-Sell Emails",
+			"image": "emailMarketingAgency/upsell-cross-sell-emails-escape-room-marketer.svg"
+		},
+		{
+			"id": 9,
+			"title": "Continuation Emails",
+			"image": "emailMarketingAgency/continuation-emails-escape-room-marketer.svg"
+		}
+	]
 }

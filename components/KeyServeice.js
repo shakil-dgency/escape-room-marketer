@@ -48,7 +48,7 @@ function KeyServeice({ bodyColor, cardColor, keyServeiceData }) {
 					})}
 				</div>
 
-				<Link href={"/"} className="group flex justify-center items-center gap-2  text-lg md:text-xl list-none text-red-500">
+				<Link href={"/"} className="group flex justify-center items-center py-10 gap-2  text-lg md:text-xl list-none text-red-500">
 					<p className="font-medium text-center leading-[0px]">
 						See all the SEO results we continue to bring
 						{/* <span class="material-symbols-outlined translate-y-2 pl-2 text-3xl ">arrow_right_alt</span> */}

@@ -157,6 +157,11 @@ body {
 	line-height: 67px;
 }
 
+.case_study-card {
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.85) 40.42%), url("/team/marketing_team.svg");
+	background-position: center;
+}
+
 @media only screen and (max-width: 480px) {
 	.g-page_structure {
 		padding: 0 15px;
@@ -174,6 +179,14 @@ body {
 	}
 	.quiz-card {
 		flex-direction: column;
+	}
+
+	.case-hero_cta {
+		width: 90%;
+	}
+
+	.email-card-br-tag {
+		display: none;
 	}
 }
 
@@ -228,10 +241,18 @@ body {
 	.team-card_text {
 		font-size: 24px;
 	}
+
+	.case-hero_cta {
+		width: 60%;
+	}
 }
 
 @media only screen and (max-width: 2220px) and (min-width: 1610px) {
 	.team-card_text {
 		font-size: 21px;
+	}
+
+	.case-hero_cta {
+		width: 60%;
 	}
 }

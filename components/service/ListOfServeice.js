@@ -50,7 +50,7 @@ function ListOfServeice({ listOfServeiceData, bodyColor }) {
 									<li className="leading-[2.4] cursor-pointer  group relative hover:text-[#FF492C]" key={data.id}>
 										{data.list}
 										{
-											<div className="hidden group-hover:block drop-shadow text-black text-[14px] absolute bottom-12 -left-[135%] right-0 bg-[var(--section-bg-lightred)] leading-[1.5] p-4 md:w-[200%] lg:w-[240%]  rounded-md before:content-[''] before:absolute before:right-[20%] before:top-[100%]  before:border-[15px] before:border-solid before:border-[var(--section-bg-lightred)] before:border-r-[#0000] before:border-b-[#0000] before:border-l-[#0000]">
+											<div className="hidden group-hover:block drop-shadow text-black text-[14px] absolute bottom-12 md:-left-[135%] right-0 bg-[var(--section-bg-lightred)] leading-[1.5] p-4 md:w-[200%] lg:w-[240%]  rounded-md before:content-[''] before:absolute before:right-[80%]   md:before:right-[20%] before:top-[100%]  before:border-[15px] before:border-solid before:border-[var(--section-bg-lightred)] before:border-r-[#0000] before:border-b-[#0000] before:border-l-[#0000]">
 												<p>{data.tooltip}</p>
 											</div>
 										}
