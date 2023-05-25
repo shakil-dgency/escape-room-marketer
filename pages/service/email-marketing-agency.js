@@ -1,6 +1,7 @@
 import DedicatedTeam from "@/components/DedicatedTeam";
 import FooterTopCta from "@/components/FooterTopCta";
 import KeyServeice from "@/components/KeyServeice";
+import ReportGraph from "@/components/ReportGraph";
 import ConversionMarketing from "@/components/service/ConversionMarketing";
 import FaqSection from "@/components/service/FaqSection";
 import Hero from "@/components/service/Hero";
@@ -31,11 +32,12 @@ function EmailMarketingAgency(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				thirdPic="/serveice/emailMarketingAgency/illo-CowEnvelopes-Desktop.svg"
 				title="Turn Your Email Marketing Into
                 The Cash Cow It Should Be"
 				pera="We are a full-service email marketing agency.
                 If you're sending it, we know how to optimize it."
+				firstPic="/serveice/emailMarketingAgency/email-marketing-agency-hero-left-escape-room-marketer-01-01.svg"
+				secondPic="/serveice/emailMarketingAgency/email-marketing-agency-hero-right-escape-room-marketer-01-01.svg"
 			/>
 			<OurWork ourWorkData={ourWork} />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
@@ -122,7 +124,11 @@ function EmailMarketingAgency(props) {
                 people just need to see for themselves."
 			/>
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
-
+			<ReportGraph
+				bodyColor="bg-[var(--section-bg-lightblue)]"
+				title="Reporting & Communication Tailored Exactly How You Want It"
+				pera="Choose from custom dashboards and scheduled meetings to quick texts or Slack. If you're into it, we're into it."
+			/>
 			<div className="break_line image bg-[url('/test_break.svg')] h-[90px] w-full bg-[length:2500px_90px] absolute z-10 -mt-[0px]  bg-center "></div>
 			<FaqSection bodyColor="bg-[var(--section-bg-lightblue)]" faqSectionData={faqSection} />
 			<FooterTopCta />

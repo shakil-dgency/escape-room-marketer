@@ -1,6 +1,7 @@
 import DedicatedTeam from "@/components/DedicatedTeam";
 import FooterTopCta from "@/components/FooterTopCta";
 import KeyServeice from "@/components/KeyServeice";
+import ReportGraph from "@/components/ReportGraph";
 import ConversionMarketing from "@/components/service/ConversionMarketing";
 import FaqSection from "@/components/service/FaqSection";
 import Hero from "@/components/service/Hero";
@@ -28,17 +29,18 @@ function LandingPageAgency(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Hero
-				thirdPic="/serveice/landingPageAgency/illo-PagesAndBills-Desktop.svg"
 				title="We’re The Landing Page Agency
-        That Makes You More Money"
+                That Makes You More Money"
 				pera="When you’re focusing on digital marketing, don’t forget about landing pages.
-        Landing pages with clickable call-to-actions and copy that have gone through a/b testing = unreal results."
+                Landing pages with clickable call-to-actions and copy that have gone through a/b testing = unreal results."
+				firstPic="/serveice/landingPageAgency/landing-page-agency-hero-left-escape-room-marketer-01-01.svg"
+				secondPic="/serveice/landingPageAgency/landing-page-agency-hero-right-escape-room-marketer-01-01.svg"
 			/>
 			<OurWork ourWorkData={ourWork} />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<Payperclick />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
-			<ListOfServeice listOfServeiceData={listOfServeice} bodyColor="bg-[var(--section-bg-lightblue)]"/>
+			<ListOfServeice listOfServeiceData={listOfServeice} bodyColor="bg-[var(--section-bg-lightblue)]" />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 			<KeyServeice bodyColor="bg-[var(--section-bg-lightred)]" cardColor="bg-[#ffffff]" keyServeiceData={keyserveice} />
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
@@ -63,6 +65,12 @@ function LandingPageAgency(props) {
                 pressure on us to deliver awesomeness from the first impression."
 			/>
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
+			<ReportGraph
+				bodyColor="bg-[var(--section-bg-lightred)]"
+				title="Reporting & Communication Tailored Exactly How You Want It"
+				pera="Choose from custom dashboards and scheduled meetings to quick texts or Slack. If you're into it, we're into it."
+			/>
+			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
 			<FaqSection bodyColor="bg-[var(--section-bg-lightblue)]" faqSectionData={faqSection} />
 			<FooterTopCta />
 		</div>

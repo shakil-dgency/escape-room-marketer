@@ -49,7 +49,7 @@ function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 					</div> */}
 					<div className="block md:hidden pt-4">
 						<div className="flex justify-center">
-							<button className="font-circular bg-[#ff5056] py-3 px-8 text-white lg:text-lg 2xl:text-2xl rounded font-semibold">
+							<button className="font-graphik bg-[#ff5056] py-3 px-8 text-white lg:text-lg 2xl:text-2xl rounded ">
 								Get Your Free Marketing Plan
 							</button>
 						</div>
@@ -69,7 +69,7 @@ function Hero({ firstPic, secondPic, thirdPic, title, pera }) {
 						/>
 					)}
 					<div className="hidden md:block">
-						<button className="bg-[#ff5056] py-3 px-8 text-white lg:text-lg 2xl:text-2xl rounded font-semibold">Get Your Free Marketing Plan</button>
+						<button className=" bg-[#ff5056] py-3 px-8 text-white lg:text-lg 2xl:text-2xl rounded font-[500]">Get Your Free Marketing Plan</button>
 						<p className="font-graphik text-center pt-4 text-lg">
 							Get 17+ new marketing ideas <br /> that are better than what you have
 						</p>

@@ -1,14 +1,16 @@
 "use client";
-import CaseStudy from "@/components/CaseStudy";
+import CaseStudySection from "@/components/CaseStudySection";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-function Team() {
+function Team(props) {
 	const [cardColleps1, setCardColleps1] = useState(false);
 	const [cardColleps2, setCardColleps2] = useState(false);
+
+	const [caseCard, setCaseCard] = useState(props.cardData);
 	return (
 		<div className="pt-[4.5rem] md:pt-[6rem] ">
 			<div className="break_line image bg-[url('/page_broke.png')] h-[75px] bg-[length:1600px_90px] bg-center -mt-10 bg-[var(--section-bg-lightblue)]"></div>
@@ -249,10 +251,20 @@ function Team() {
 				</div>
 			</div>
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center "></div>
-			<CaseStudy />
+			<CaseStudySection caseStudyCard={caseCard} />
 			<div className="break_line image bg-[url('/test_break.svg')] h-[90px] w-full bg-[length:2500px_90px] absolute z-10 -mt-8  bg-center "></div>
 		</div>
 	);
+}
+
+export async function getServerSideProps(context) {
+	// Fetch data from external API
+	let data = await fetch("http://localhost:3000/api/casestudycard");
+	let cardData = await data.json();
+	// Pass data to the page via props
+	return {
+		props: { cardData },
+	};
 }
 
 export default Team;

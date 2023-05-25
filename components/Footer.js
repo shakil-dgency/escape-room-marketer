@@ -13,7 +13,7 @@ function Footer() {
 				Escaperoom Marketer
 			</h1> */}
 			<div className="flex justify-center pt-24">
-				<Image src="/logo.png" alt="logo" height={100} width={200} />
+				<Image src="/logo.svg" alt="logo" height={100} width={200} />
 			</div>
 			<div className="flex justify-center flex-wrap gap-10 py-14 border-b-2">
 				<div className="location flex flex-col items-center">

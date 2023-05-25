@@ -91,6 +91,8 @@ function Navbar() {
 		});
 	});
 
+	//for mobile sidebar sub menu list
+
 	const handleSidebarService = (e) => {
 		setOpen(!open);
 
@@ -107,6 +109,12 @@ function Navbar() {
 				this.classList.add("text-red-500");
 			});
 		}
+	};
+
+	//for mobile sidebar menu common function
+	const handleMainSingleMenu = () => {
+		setSidebarOpen(false);
+		document.body.classList.remove("overflow-hidden");
 	};
 
 	const handleResourcePopup = () => {
@@ -255,7 +263,7 @@ function Navbar() {
 									</Link>
 								</li>
 								<li>
-									<Link href={"/service/facebookAdsAgency"} id="1" className="serveice_list group ">
+									<Link href={"/service/facebook-ads-agency"} id="1" className="serveice_list group ">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/facebook_ads_agency.png" alt="" height={60} width={80} className="" />
@@ -271,7 +279,7 @@ function Navbar() {
 									</Link>
 								</li>
 								<li>
-									<Link href={"/service/googleAdsAgency"} id="2" className="serveice_list group">
+									<Link href={"/service/google-ads-agency"} id="2" className="serveice_list group">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/google_ads_agency.png" alt="" height={60} width={80} className="" />
@@ -286,7 +294,7 @@ function Navbar() {
 									</Link>{" "}
 								</li>
 								<li>
-									<Link href={"/service/semAgency"} id="3" className="serveice_list group">
+									<Link href={"/service/sem-agency"} id="3" className="serveice_list group">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/sem_management.png" alt="" height={60} width={80} className="" />
@@ -302,7 +310,7 @@ function Navbar() {
 									</Link>{" "}
 								</li>
 								<li>
-									<Link href={"/service/ppcManagement"} id="4" className="serveice_list group">
+									<Link href={"/service/ppc-management"} id="4" className="serveice_list group">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/ppc_management.png" alt="" height={60} width={80} className="" />
@@ -320,7 +328,7 @@ function Navbar() {
 							<ul className="flex flex-col gap-4 row-start-1 row-end-4">
 								<h3 className=" text-[16px] font-semibold pb-2 ">SEO</h3>
 								<li>
-									<Link href={"/service/contentMarketingAgency"} id="5" className="serveice_list group">
+									<Link href={"/service/content-marketing-agency"} id="5" className="serveice_list group">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/content_marketing_agency.svg" alt="" height={60} width={80} className="" />
@@ -335,7 +343,7 @@ function Navbar() {
 									</Link>
 								</li>
 								<li>
-									<Link href={"/service/seoAgency"} id="6" className="serveice_list group">
+									<Link href={"/service/seo-agency"} id="6" className="serveice_list group">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/seo_agency.svg" alt="" height={60} width={80} className="" />
@@ -350,7 +358,7 @@ function Navbar() {
 									</Link>
 								</li>
 								<li>
-									<Link href={"/service/linkBuildingService"} id="7" className="serveice_list group">
+									<Link href={"/service/link-building-service"} id="7" className="serveice_list group">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/link_building_service.svg" alt="" height={60} width={80} className="" />
@@ -368,7 +376,7 @@ function Navbar() {
 							<ul className="flex flex-col gap-4 row-start-1 row-end-4">
 								<h3 className=" text-[16px] font-semibold  pb-2">CONVERSION</h3>
 								<li>
-									<Link href={"/service/conversionRateOptimization"} id="8" className="serveice_list group">
+									<Link href={"/service/conversion-rate-optimization"} id="8" className="serveice_list group">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/conversion_rate.svg" alt="" height={60} width={80} className="" />
@@ -384,7 +392,7 @@ function Navbar() {
 									</Link>
 								</li>
 								<li>
-									<Link href={"/service/landingPageAgency"} id="9" className="serveice_list group">
+									<Link href={"/service/landing-page-agency"} id="9" className="serveice_list group">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/landing_page_agency.svg" alt="" height={60} width={80} className="" />
@@ -400,7 +408,7 @@ function Navbar() {
 									</Link>
 								</li>
 								<li>
-									<Link href={"/service/landingPageDesign"} id="10" className="serveice_list group">
+									<Link href={"/service/landing-page-design"} id="10" className="serveice_list group">
 										<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 											<div className="">
 												<Image src="/navbar/landing_page_design.svg" alt="" height={60} width={80} className="" />
@@ -418,7 +426,7 @@ function Navbar() {
 							</ul>
 							<ul className="col-start-2 row-start-4">
 								<h3 className=" text-[16px] font-semibold  pb-2">EMAIL MARKETING</h3>
-								<Link href={"/service/emailMarketingAgency"} id="11" className="serveice_list group">
+								<Link href={"/service/email-marketing-agency"} id="11" className="serveice_list group">
 									<div className="flex items-center gap-2  p-2 rounded shadow bg-[#F5FAFF] group-hover:bg-[#FFF7F5]">
 										<div className="">
 											<Image src="/navbar/email_marketing.svg" alt="" height={60} width={80} className="" />
@@ -471,27 +479,27 @@ function Navbar() {
 									</div>
 									<div className="pl-14 flex flex-col gap-1 text-[16px]">
 										<li>
-											<Link href={"/service/ppcAgency"} id="012" className="serveice_list whitespace-nowrap flex items-center gap-1">
+											<Link href={"/service/ppc-agency"} id="012" className="serveice_list whitespace-nowrap flex items-center gap-1">
 												PPC Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/facebookAdsAgency"} id="013" className="serveice_list whitespace-nowrap flex items-center gap-1">
+											<Link href={"/service/facebook-ads-agency"} id="013" className="serveice_list whitespace-nowrap flex items-center gap-1">
 												Facebook Ads Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/googleAdsAgency"} id="014" className="serveice_list whitespace-nowrap flex items-center gap-1">
+											<Link href={"/service/google-ads-agency"} id="014" className="serveice_list whitespace-nowrap flex items-center gap-1">
 												Google Ads Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>{" "}
 										</li>
 										<li>
-											<Link href={"/service/semAgency"} id="015" className="serveice_list flex items-center gap-1">
+											<Link href={"/service/sem-agency"} id="015" className="serveice_list flex items-center gap-1">
 												SEM Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>{" "}
 										</li>
 										<li>
-											<Link href={"/service/ppcManagement"} id="016" className="serveice_list flex items-center gap-1">
+											<Link href={"/service/ppc-management"} id="016" className="serveice_list flex items-center gap-1">
 												PPC Management <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
@@ -509,17 +517,17 @@ function Navbar() {
 									</div>
 									<div className="pl-14 flex flex-col gap-1 text-[16px]">
 										<li>
-											<Link href={"/service/contentMarketingAgency"} id="017" className="serveice_list  whitespace-nowrap flex items-center gap-1">
+											<Link href={"/service/content-marketing-agency"} id="017" className="serveice_list  whitespace-nowrap flex items-center gap-1">
 												Content Marketing Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/seoAgency"} id="018" className="serveice_list flex items-center gap-1">
+											<Link href={"/service/seo-agency"} id="018" className="serveice_list flex items-center gap-1">
 												SEO Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/linkBuildingService"} id="019" className="serveice_list flex items-center gap-1">
+											<Link href={"/service/link-building-service"} id="019" className="serveice_list flex items-center gap-1">
 												Link Building Services <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
@@ -537,17 +545,21 @@ function Navbar() {
 									</div>
 									<div className="pl-14 flex flex-col gap-1 text-[16px]">
 										<li>
-											<Link href={"/service/conversionRateOptimization"} id="020" className="serveice_list whitespace-nowrap flex items-center gap-1">
+											<Link
+												href={"/service/conversion-rate-optimization"}
+												id="020"
+												className="serveice_list whitespace-nowrap flex items-center gap-1"
+											>
 												Conversion Rate Optimization <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/landingPageAgency"} id="021" className="serveice_list whitespace-nowrap flex items-center gap-1">
+											<Link href={"/service/landing-page-agency"} id="021" className="serveice_list whitespace-nowrap flex items-center gap-1">
 												Landing Page Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
 										<li>
-											<Link href={"/service/landingPageDesign"} id="022" className="serveice_list flex items-center gap-1">
+											<Link href={"/service/landing-page-design"} id="022" className="serveice_list flex items-center gap-1">
 												Landing Page Design <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 											</Link>
 										</li>
@@ -565,24 +577,32 @@ function Navbar() {
 									</div>
 
 									<li>
-										<Link href={"/service/emailMarketingAgency"} id="023" className="serveice_list pl-14 text-[16px] flex items-center gap-1">
+										<Link href={"/service/email-marketing-agency"} id="023" className="serveice_list pl-14 text-[16px] flex items-center gap-1">
 											Email Marketing Agency <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 										</Link>
 									</li>
 								</ul>
 							</div>
-							<li className="text-[18px] pt-3">RESULTS</li>
-							<li className="text-[18px] pt-3">TEAM</li>
+							<li className="text-[18px] pt-3">
+								<Link href={"/quizzes"} onClick={handleMainSingleMenu}>
+									QUIZZES
+								</Link>
+							</li>
+							<li className="text-[18px] pt-3">
+								<Link href={"/team"} onClick={handleMainSingleMenu}>
+									TEAM
+								</Link>
+							</li>
 							<li className="text-[18px] pt-3">BLOG</li>
 							<li onClick={handleResourcePopup} id="elementID" className="text-[18px] pt-3 flex items-center gap-2 text-red-500 ">
-								RESOURCES <MdKeyboardArrowDown className={`text-2xl  transition-transform duration-300 ${mobileOpen ? "rotate-180" : ""}`} />
+								RESULTS <MdKeyboardArrowDown className={`text-2xl  transition-transform duration-300 ${mobileOpen ? "rotate-180" : ""}`} />
 							</li>
 							<div className="border-b-[3px] border-red-500 w-[100px] -mt-2"></div>
 							<div className={`pl-6  ${mobileOpen ? "block" : "hidden"}`}>
 								<ul>
 									<li id="mQ1">
-										<Link href={"/resources/quizzes"} className="serveice_list whitespace-nowrap flex items-center gap-1 mb-3">
-											Quizzes <MdKeyboardArrowRight className="text-xl mt-[3px]" />
+										<Link href={"/results/testimonial"} className="serveice_list whitespace-nowrap flex items-center gap-1 mb-3">
+											TESTIMONIAL <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 										</Link>
 									</li>
 									<li id="mQ2">
