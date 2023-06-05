@@ -7,7 +7,6 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import CaseStudyCard from "./CaseStudyCard";
 
 function CaseStudySection({ caseStudyCard }) {
-	console.log(caseStudyCard.case_card.map((d) => d.title));
 	return (
 		<div>
 			<div id="case" className="g-page_structure  bg-[var(--section-bg-lightblue)]">
@@ -19,7 +18,7 @@ function CaseStudySection({ caseStudyCard }) {
 					to Bing ads, and everything in between.
 				</p>
 
-				<div className="lg:w-[1000px] mx-auto mt-14 grid grid-cols-2 gap-4">
+				<div className="lg:w-[1000px] mx-auto mt-14 grid md:grid-cols-2  gap-4">
 					{caseStudyCard.case_card.slice(0, 4).map((d) => {
 						return <CaseStudyCard key={d.id} item={d} />;
 					})}

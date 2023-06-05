@@ -160,7 +160,9 @@ function Navbar() {
 					</Link>
 					<div className="nav_elements flex gap-4 md:gap-10 items-center ">
 						<ul className="hidden lg:flex gap-5 font-[600] transform transition-transform translate-x-full absolute top-0 right-0 md:transform-none md:static ">
-							<li>PRICING</li>
+							<li>
+								<Link href={"/pricing"}>PRICING</Link>
+							</li>
 							<li ref={serviceBtnRef} onClick={handlePopup} className="group cursor-pointer flex items-center gap-1">
 								SERVICES{" "}
 								<MdKeyboardArrowDown className={`arrow_rotate text-xl transition-transform duration-300 ${serviceMenubar ? "rotate-180" : ""}`} />

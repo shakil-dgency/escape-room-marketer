@@ -10,8 +10,8 @@ function CaseStudyCard({ item }) {
 					<div className="">
 						<Image src="/results/testimonial/client-logo.svg" alt="" height={100} width={80} className="mx-auto pb-6" />
 						<button className="bg-red-500 text-white mb-2 mx-5 py-1 px-3 font-medium ">{item.category}</button>
-						<p className="text-lg md:text-xl 2xl:text-[28px] text-white ">{item.title}</p>
-						<Link href={"/team/caseStudy1"}>
+						<p className="text-lg md:text-[20px] 2xl:text-[28px] leading-[1.4] text-white ">{item.title}</p>
+						<Link href={`/team/${item.slug}`}>
 							<button className="text-lg bg-white px-4 py-1 rounded-md font-medium mt-4 mb-4">Read Case Study</button>
 						</Link>
 					</div>

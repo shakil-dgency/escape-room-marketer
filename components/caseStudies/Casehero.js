@@ -1,13 +1,12 @@
-import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import { BiChevronLeft } from "react-icons/bi";
-import Router from "next/router";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 function Casehero({ heading }) {
-	const route = Router.pathname;
+	const router = useRouter();
 	const backToPreviousPage = () => {
-		Router.back();
+		router.back();
 	};
 	return (
 		<div>
