@@ -13,19 +13,19 @@
 				{
 					"id": "I2",
 					"item_title": "Facebook Ads Management",
-					"price": 100,
+					"price": 150,
 					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
 				},
 				{
 					"id": "I3",
 					"item_title": "Google Ads Management",
-					"price": 100,
+					"price": 130,
 					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
 				},
 				{
 					"id": "I4",
 					"item_title": "SEM Management",
-					"price": 100,
+					"price": 140,
 					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
 				}
 			]
@@ -43,7 +43,7 @@
 				{
 					"id": "I6",
 					"item_title": "Template Design",
-					"price": 100,
+					"price": 120,
 					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
 				}
 			]
@@ -55,13 +55,13 @@
 				{
 					"id": "I7",
 					"item_title": "Conversion Rate Optimization",
-					"price": 100,
+					"price": 130,
 					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
 				},
 				{
 					"id": "I8",
 					"item_title": "Landing Page Agency",
-					"price": 100,
+					"price": 110,
 					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
 				},
 				{
@@ -79,25 +79,19 @@
 				{
 					"id": "I10",
 					"item_title": "Content Marketing",
-					"price": 100,
+					"price": 110,
 					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
 				},
 				{
 					"id": "I11",
-					"item_title": "Content Marketing",
-					"price": 100,
+					"item_title": "Seo Agency",
+					"price": 130,
 					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
 				},
 				{
 					"id": "I12",
-					"item_title": "Google Ads Management",
-					"price": 100,
-					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
-				},
-				{
-					"id": "I13",
 					"item_title": "Link Building Services",
-					"price": 100,
+					"price": 150,
 					"description": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart."
 				}
 			]

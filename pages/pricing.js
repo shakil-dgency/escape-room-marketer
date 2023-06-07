@@ -22,14 +22,16 @@ function Pricing(props) {
 			<div className="break_line image bg-[url('/section_break.svg')] h-[80px] bg-[length:2500px_90px]  bg-center rotate-180"></div>
 
 			<div className=" g-page_structure bg-[var(--section-bg-lightred)]">
-				<div className="bg-white rounded-md drop-shadow-md pb-14">
-					<h1 className="g__section-heading pt-14   text-center mx-auto font-extrabold lg:w-[75%] xl:w-[70%] 2xl:w-[90%]">
-						Pricing Palooza: Rocking the Deals, Jamming with Savings! Prices Shrink and Smiles Grow
-					</h1>
-					<div className="">
-						<Image src="/pricing/doller.svg" alt="" height={100} width={500} className="mx-auto pt-4" />
+				<div className="pb-14">
+					<div className="bg-white rounded-md drop-shadow-md pb-14">
+						<h1 className="g__section-heading pt-14   text-center mx-auto font-extrabold lg:w-[75%] xl:w-[70%] 2xl:w-[90%]">
+							Pricing Palooza: Rocking the Deals, Jamming with Savings! Prices Shrink and Smiles Grow
+						</h1>
+						<div className="">
+							<Image src="/pricing/doller.svg" alt="" height={100} width={500} className="mx-auto pt-4" />
+						</div>
+						<PricingCalculator pricingData={pricingData} />
 					</div>
-					<PricingCalculator pricingData={pricingData} />
 				</div>
 			</div>
 		</div>
