@@ -463,7 +463,11 @@ function Navbar() {
 							<RxCross2 className=" stroke-[0.5]" />
 						</div>
 						<ul className="font-[600] flex flex-col gap-3  mb-12">
-							<li className="text-[18px] pt-3">PRICING</li>
+							<li className="text-[18px] pt-3">
+								<Link href={"/pricing"} onClick={handleMainSingleMenu}>
+									PRICING
+								</Link>
+							</li>
 							<li onClick={handleSidebarService} className="group cursor-pointer flex items-center gap-2 text-[18px] pt-3 text-red-500">
 								SERVICES <MdKeyboardArrowDown className={`arrow_rotate text-2xl transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
 							</li>
@@ -603,7 +607,11 @@ function Navbar() {
 							<div className={`pl-6  ${mobileOpen ? "block" : "hidden"}`}>
 								<ul>
 									<li id="mQ1">
-										<Link href={"/results/testimonial"} className="serveice_list whitespace-nowrap flex items-center gap-1 mb-3">
+										<Link
+											href={"/results/testimonial"}
+											onClick={handleMainSingleMenu}
+											className="serveice_list whitespace-nowrap flex items-center gap-1 mb-3"
+										>
 											TESTIMONIAL <MdKeyboardArrowRight className="text-xl mt-[3px]" />
 										</Link>
 									</li>
