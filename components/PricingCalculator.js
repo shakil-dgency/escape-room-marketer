@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BsInfoCircle } from "react-icons/bs";
 import { HiOutlineInformationCircle } from "react-icons/hi";
@@ -7,6 +7,7 @@ import { HiOutlineInformationCircle } from "react-icons/hi";
 let obj = {};
 let finalobj = {};
 let prevObjectLength;
+let serviceItemIndex = [];
 
 function PricingCalculator({ pricingData }) {
 	const [category, setCategory] = useState(null);
@@ -18,6 +19,8 @@ function PricingCalculator({ pricingData }) {
 	let [totalDiscountSum, setTotalDiscountSum] = useState(0);
 
 	const [nameField, setNameField] = useState();
+
+	let itemRef = useRef();
 
 	const marketingCategoryHandler = (index) => {
 		if (category === index) {
@@ -37,6 +40,7 @@ function PricingCalculator({ pricingData }) {
 	const serveiceSelectHandler = (itemIndex, itemId, name, price) => {
 		setItemCategory(itemIndex);
 		const x = document.getElementById(itemId);
+		const itemCheck = document.getElementById(itemIndex + 100);
 		// to render this Component, have to change state
 		setToggle(!toggle);
 
@@ -46,6 +50,8 @@ function PricingCalculator({ pricingData }) {
 					delete obj[key];
 					x.classList.remove("text-red-500");
 					x.classList.remove("bg-[var(--section-bg-lightred)]");
+					itemCheck.classList.remove("border-red-500");
+					itemCheck.firstChild.classList.remove("bg-red-500");
 				}
 			});
 		} else {
@@ -53,6 +59,9 @@ function PricingCalculator({ pricingData }) {
 			x.classList.add("bg-[var(--section-bg-lightred)]");
 			obj[name] = price;
 			prevObjectLength = Object.keys(obj).length;
+			itemCheck.classList.remove("border-gray-500");
+			itemCheck.classList.add("border-red-500");
+			itemCheck.firstChild.classList.add("bg-red-500");
 		}
 
 		if (prevObjectLength > Object.keys(obj).length) {
@@ -136,7 +145,7 @@ function PricingCalculator({ pricingData }) {
 										/>
 									</div>
 									<div
-										className={` ml-4 transition-transform duration-500 ${
+										className={` ml-7 transition-transform duration-500 ${
 											firstItemOpen === true && i === 0 ? "block" : category === i && category !== null ? "block" : "hidden"
 										} `}
 									>
@@ -144,23 +153,32 @@ function PricingCalculator({ pricingData }) {
 										{data.main_item &&
 											data.main_item.map((item, a) => {
 												return (
-													<div
-														onClick={() => serveiceSelectHandler(a, item.id, item.item_title, item.price)}
-														className={`${
-															itemCategory === a ? "" : ""
-														} flex items-center bg-[var(--section-bg-lightblue)] md:hover:bg-[var(--section-bg-lightred)] rounded-md shadow hover:drop-shadow-md mb-2 md:mb-5 px-1 md:px-4 md:py-1`}
-														key={item.id}
-														id={item.id}
-													>
-														<div className="group flex items-center gap-2 md:gap-4 w-full">
-															<Image src="/navbar/ppc_agency.png" alt="" height={60} width={60} className="" />
-															<p className="font-graphik md:text-lg font-medium md:group-hover:text-red-500 ">{item.item_title}</p>
-														</div>
-														{/* <Image src="/pricing/tooltip.svg" alt="" height={60} width={20} className="absolute right-4 bg-red-500" /> */}
-														<div className="group ">
-															<HiOutlineInformationCircle className=" text-center  text-[#6B7280] text-[20px] md:hover:text-red-500" />
-															<div className="hidden group-hover:block absolute ml-2 bottom-[80px] left-[-20px] md:top-[-50%] md:left-[100%] md:-right-[100%] md:translate-y-[25%] bg-[var(--section-bg-lightred)] px-4 py-2">
-																<p className="">{item.description}</p>
+													<div className="" key={item.id}>
+														<div
+															onClick={() => serveiceSelectHandler(a, item.id, item.item_title, item.price)}
+															className={`${
+																itemCategory === a ? "" : ""
+															} flex items-center bg-[var(--section-bg-lightblue)] md:hover:bg-[var(--section-bg-lightred)] rounded-md shadow hover:drop-shadow-md mb-2 md:mb-5 px-1 md:px-4 md:py-1`}
+															id={item.id}
+														>
+															<div
+																id={a + 100}
+																className={`
+																	
+																w-5 h-5 border-gray-500  border-2 -ml-10 mr-2 rounded-full flex justify-center items-center`}
+															>
+																<div className="w-3 h-3   rounded-full"></div>
+															</div>
+															<div className="group flex items-center gap-2 md:gap-4 w-full">
+																<Image src="/navbar/ppc_agency.png" alt="" height={60} width={60} className="" />
+																<p className="font-graphik md:text-lg font-medium md:group-hover:text-red-500 ">{item.item_title}</p>
+															</div>
+															{/* <Image src="/pricing/tooltip.svg" alt="" height={60} width={20} className="absolute right-4 bg-red-500" /> */}
+															<div className="group ">
+																<HiOutlineInformationCircle className=" text-center  text-[#6B7280] text-[20px] md:hover:text-red-500" />
+																<div className="hidden group-hover:block absolute ml-2 bottom-[80px] left-[-20px] md:bottom-3 md:top-[-50%] md:left-[100%] md:-right-[100%] md:translate-y-[25%] bg-[var(--section-bg-lightred)] px-4 py-2">
+																	<p className="">{item.description}</p>
+																</div>
 															</div>
 														</div>
 													</div>
